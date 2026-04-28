@@ -2792,9 +2792,9 @@
     #productPageView .article-block[style*="padding: 16px;"] {
       padding: 16px !important;
       border: 0 !important;
-      background: #fff !important;
-      border-radius: 22px !important;
-      box-shadow: var(--shadow-card) !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
 
     #productPageView #productResultsActiveFilters,
@@ -2808,8 +2808,41 @@
       margin-top: 6px;
       border: none;
       border-radius: 0;
-      box-shadow: 0 6px 6px -4px rgba(29, 52, 97, 0.12), 2px 4px 6px -4px rgba(29, 52, 97, 0.06), -2px 4px 6px -4px rgba(29, 52, 97, 0.06);
+      box-shadow: none;
       background: transparent;
+    }
+
+    #productPageView .editorial-card .list-item.product-editorial-link {
+      display: block;
+      position: relative;
+      padding-right: 40px;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #productPageView .editorial-card .list-item.product-editorial-link strong {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    #productPageView .editorial-card .list-item.product-editorial-link::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 22px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 12h12' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 6l6 6-6 6' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      transition: transform 180ms ease;
+    }
+
+    #productPageView .editorial-card .list-item.product-editorial-link:hover::after {
+      transform: translateY(-50%) translateX(4px);
     }
 
     #productPageView #productResultsGrid .product-result-card {
@@ -4032,6 +4065,64 @@
       border: 1px solid rgba(255, 255, 255, 0.32) !important;
       outline: 0 !important;
       box-shadow: none !important;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links .link-ghost,
+    .home-hero:not(.hero-variant-full) .home-intro-links .link-ghost:focus-visible {
+      display: inline-flex;
+      align-items: center;
+      min-height: 0;
+      padding: 6px 16px;
+      background: rgba(88, 181, 226, 0.20);
+      color: #fff;
+      border-color: rgba(164, 226, 248, 0.42) !important;
+      border-width: 1.5px;
+      border-style: solid;
+      border-radius: 999px;
+      box-shadow: none !important;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.2;
+      white-space: nowrap;
+      transform: none;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links .link-ghost:hover {
+      background: rgba(108, 194, 234, 0.28);
+      color: #fff;
+      border-color: rgba(194, 238, 252, 0.58) !important;
+      transform: none;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links.is-orange-variant .link-ghost,
+    .home-hero:not(.hero-variant-full) .home-intro-links.is-orange-variant .link-ghost:focus-visible {
+      background: #fff;
+      color: #B85C2E;
+      border-color: #B85C2E !important;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links.is-orange-variant .link-ghost:hover {
+      background: #fcf4ef;
+      color: #B85C2E;
+      border-color: #B85C2E !important;
+      transform: none;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links-inner {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 720px !important;
+    }
+
+    .home-hero:not(.hero-variant-full) .home-intro-links-inner > div[style*="flex-basis"] {
+      flex-basis: 100% !important;
+      width: 100% !important;
+      display: flex !important;
+    }
+
+    .home-hero:not(.hero-variant-full) p {
+      text-shadow: 0 1px 2px rgba(14, 32, 72, 0.32);
     }
 
     .home-hero .hero-brand-visual {
@@ -5734,6 +5825,15 @@
       padding: 28px !important;
     }
 
+    #productPageView .tabs-shell,
+    #productPageView .article-block,
+    #productPageView .editorial-card {
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
     #infoPageView .benefit-item,
     #shopHowView .benefit-item {
       background: transparent !important;
@@ -7313,7 +7413,7 @@
           <button type="button" class="home-intro-links-toggle" id="homeIntroLinksToggle" aria-label="Visa valfria genvägar"></button>
           <div class="home-intro-links" style="border: 2px dashed #9ca3af; background: #fafafa; padding: 14px; margin: 0 0 16px;">
             <div class="home-intro-links-inner" style="display: flex; gap: 8px; flex-wrap: wrap; max-width: 560px;">
-              <a class="link-ghost" href="#">Jag vill hitta en standard</a>
+              <a class="link-ghost" id="homeFindStandardLink" href="#">Jag vill hitta en standard</a>
               <a class="link-ghost" href="#">Jag vill f&ouml;rst&aring; hur standardisering fungerar</a>
               <div style="flex-basis: 100%;">
                 <a class="link-ghost" href="#" id="homeDeltaIntroLink">Jag vill f&ouml;rst&aring; hur SEK arbetar</a>
@@ -8908,15 +9008,15 @@
           <div class="editorial-card">
             <div class="eyebrow">Redaktören tipsar</div>
             <h3>Utvalda produkter</h3>
-            <div class="list-item" style="border-top: 0; padding-top: 0;"><strong>Handbok 444</strong><br />Kort puff om en särskilt relevant eller aktuell produkt som redaktören vill lyfta fram.</div>
-            <div class="list-item"><strong>SEK e-Standard</strong><br />Kort puff om abonnemang eller digital tjänst kopplad till standarder.</div>
+            <a class="list-item product-editorial-link" href="#" style="border-top: 0; padding-top: 0;"><strong>Handbok 444</strong><br />Kort puff om en särskilt relevant eller aktuell produkt som redaktören vill lyfta fram.</a>
+            <a class="list-item product-editorial-link" href="#"><strong>SEK e-Standard</strong><br />Kort puff om abonnemang eller digital tjänst kopplad till standarder.</a>
           </div>
 
           <div class="editorial-card">
             <div class="eyebrow">Uppdaterade produkter</div>
             <h3>Senast uppdaterat</h3>
-            <div class="list-item" style="border-top: 0; padding-top: 0;"><strong>SS-EN 60364</strong><br />Exempel på ny eller uppdaterad produkt som kan visas i ett separat block.</div>
-            <div class="list-item"><strong>ISO/IEC 27001</strong><br />Ytterligare exempel på produkt som nyligen uppdaterats eller lagts till.</div>
+            <a class="list-item product-editorial-link" href="#" style="border-top: 0; padding-top: 0;"><strong>SS-EN 60364</strong><br />Exempel på ny eller uppdaterad produkt som kan visas i ett separat block.</a>
+            <a class="list-item product-editorial-link" href="#"><strong>ISO/IEC 27001</strong><br />Ytterligare exempel på produkt som nyligen uppdaterats eller lagts till.</a>
           </div>
         </div>
       </div>
@@ -9200,6 +9300,7 @@
     const searchRowLogoLink = document.getElementById('searchRowLogoLink');
     const menuDeltaPageLink = document.getElementById('menuDeltaPageLink');
     const homeDeltaCtaLink = document.getElementById('homeDeltaCtaLink');
+    const homeFindStandardLink = document.getElementById('homeFindStandardLink');
     const homeDeltaIntroLink = document.getElementById('homeDeltaIntroLink');
     const homeDeltaRightCardLink = document.getElementById('homeDeltaRightCardLink');
     const homeSectionDeltaLink = document.getElementById('homeSectionDeltaLink');
@@ -10767,6 +10868,10 @@
     }
 
     function dismissHeroIntroLinks(event) {
+      const clickedFindStandardLink = event.currentTarget?.id === 'homeFindStandardLink';
+      if (clickedFindStandardLink && homeHero && !homeHero.classList.contains('hero-variant-full')) {
+        return;
+      }
       event.preventDefault();
       event.stopImmediatePropagation();
       if (!homeIntroLinks || !homeHero) return;
@@ -10868,6 +10973,13 @@
     if (homeIntroLinks) {
       homeIntroLinks.querySelectorAll('.link-ghost').forEach((link) => {
         link.addEventListener('click', dismissHeroIntroLinks);
+      });
+    }
+    if (homeFindStandardLink) {
+      homeFindStandardLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (!homeHero || homeHero.classList.contains('hero-variant-full') || !homeIntroLinks) return;
+        homeIntroLinks.classList.toggle('is-orange-variant');
       });
     }
     if (homeIntroLinksToggle) homeIntroLinksToggle.addEventListener('click', restoreHeroIntroLinks);
