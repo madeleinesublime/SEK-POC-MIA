@@ -884,6 +884,29 @@
       opacity: 1;
     }
 
+    .header-search-popular-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 34px;
+      padding: 0 16px;
+      background: #ffffff;
+      color: #B85C2E;
+      border: 1.5px solid #B85C2E;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .header-search-popular-chip:hover {
+      background: #faf7f2;
+      color: #B85C2E;
+    }
+
     @media (max-width: 900px) {
       .header-search-drawer {
         padding: 18px 24px;
@@ -7265,13 +7288,13 @@
           </div>
           <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:720px;margin:18px auto 0;">
             <span style="font-size:13px;color:#1a1a1a;font-weight:500;white-space:nowrap;">Populära sökningar:</span>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Solceller</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Laddstationer</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">SS-EN 62446</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Lågspänning</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Jordning</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Elmätning</button>
-            <button type="button" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();" onmouseover="this.style.background='#faf7f2';this.style.color='#B85C2E';" onmouseout="this.style.background='#ffffff';this.style.color='#B85C2E';" style="background:#ffffff;color:#B85C2E;border:1.5px solid #B85C2E;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:background 0.15s,color 0.15s;">Kablar och ledningar</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Solceller</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Laddstationer</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">SS-EN 62446</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Lågspänning</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Jordning</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Elmätning</button>
+            <button type="button" class="header-search-popular-chip" onclick="document.getElementById('headerSearchInput').value=this.textContent;document.getElementById('headerSearchInput').focus();">Kablar och ledningar</button>
           </div>
         </div>
       </div>
@@ -8858,7 +8881,17 @@
             <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor ut <a href="#" style="color: #B85C2E; text-decoration: underline; font-weight: 600;">SEK:s kommittéarbete</a> och bidra med din expertis.</p>
             <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Anmäl ditt intresse <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
           </div>
-        
+
+          <div class="faktablock" style="background:#1d3461;border-radius:8px;padding:28px;margin:10px 0 0;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:#66c6ec !important;">Visste du att</div>
+            <p style="font-size:18px;font-weight:600;line-height:1.5;margin:0 0 20px;color:#fff !important;">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec och representerar Sverige i det globala standardiseringsarbetet.</p>
+            <ul style="margin:0;padding-left:20px;color:rgba(255,255,255,0.85);font-size:15px;line-height:1.8;">
+              <li style="color:#fff !important;">Mer än 1 500 svenska experter deltar aktivt i kommittéarbete</li>
+              <li style="color:#fff !important;">Standarder berör allt från elinstallationer till förnybar energi</li>
+              <li style="color:#fff !important;">Ny standard kan ta 3–5 år att ta fram</li>
+            </ul>
+          </div>
+
 </aside>
       </div>
     </div>
