@@ -126,7 +126,7 @@
       background: var(--surface);
       margin-bottom: 0;
       border-bottom: 0;
-      z-index: 50;
+      z-index: 210;
     }
 
     .utility-nav {
@@ -1470,7 +1470,7 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      z-index: 100;
+      z-index: 500;
     }
 
     .modal-overlay.open {
@@ -5525,6 +5525,8 @@
       font-size: 15px;
       line-height: 1.5;
       position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
       padding-right: 72px;
       cursor: pointer;
     }
@@ -5535,7 +5537,7 @@
       width: 184px;
       height: 134px;
       margin: 0;
-      border-radius: 8px;
+      border-radius: 0;
       overflow: hidden;
       background: rgba(29, 52, 97, 0.06);
     }
@@ -5595,7 +5597,7 @@
     .home-editorial-grid.show-images .news-item-content {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 6px;
     }
 
     .home-editorial-grid.show-images .news-item-content > :not(.event-item-meta):not(strong):not(.news-item-excerpt) {
@@ -5610,7 +5612,7 @@
       display: inline-block;
       font-size: 18px;
       line-height: 1.2;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       text-decoration: none !important;
     }
 
@@ -6299,10 +6301,11 @@
       display: flex;
       align-items: center;
       width: 100%;
-      height: 52px;
       border-bottom: 1px solid #d8dee8;
-      background: #fff;
+      background: #f2f3f5;
       flex-shrink: 0;
+      padding: 8px 16px 8px 0;
+      gap: 10px;
     }
     .mobile-menu-search-field {
       position: relative;
@@ -6314,15 +6317,16 @@
     }
     .mobile-menu-search-field img {
       position: absolute;
-      left: 16px;
-      width: 20px;
-      height: 20px;
+      left: 14px;
+      width: 18px;
+      height: 18px;
       pointer-events: none;
+      opacity: 0.6;
     }
     .mobile-menu-search-field input {
       width: 100%;
       height: 100%;
-      padding: 0 12px 0 46px;
+      padding: 0 12px 0 42px;
       border: 0 !important;
       background: transparent !important;
       box-shadow: none !important;
@@ -6331,13 +6335,13 @@
       outline: none;
     }
     .mobile-menu-search-field input::placeholder {
-      color: rgba(29, 52, 97, 0.6);
+      color: rgba(29, 52, 97, 0.5);
       font-size: 13px;
     }
     .mobile-menu-search .hero-search-submit {
       flex: 0 0 auto;
       height: 42px;
-      margin: 0 16px 0 0;
+      margin: 0;
       padding: 0 20px;
       border: 0;
       border-radius: 999px;
@@ -6921,43 +6925,44 @@
       border-color: #A55229 !important;
     }
 
-    /* ── Scroll-till-toppen-knapp ─────────────────────────────────── */
-    #scrollToTopBtn {
+    /* ── Chattbubbla ───────────────────────────────────────────────── */
+    #chatBubbleBtn {
       position: fixed;
       bottom: 28px;
       right: max(24px, calc(50vw - 600px + 24px));
       z-index: 500;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #B85C2E;
-      border: none;
-      cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(29, 52, 97, 0.2);
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(8px);
-      transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s;
+      gap: 10px;
+      padding: 13px 20px;
+      background: var(--copper);
+      border: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(184, 92, 46, 0.35);
+      cursor: pointer;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
     }
-    #scrollToTopBtn.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
+    #chatBubbleBtn:hover {
+      background: #a55229;
+      box-shadow: 0 6px 20px rgba(184, 92, 46, 0.45);
+      transform: translateY(-2px);
     }
-    #scrollToTopBtn:hover {
-      background: #A55229;
-    }
-    #scrollToTopBtn svg {
-      width: 22px;
-      height: 22px;
+    #chatBubbleBtn svg {
+      width: 20px;
+      height: 20px;
       stroke: #fff;
       fill: none;
       stroke-width: 2;
       stroke-linecap: round;
       stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    #chatBubbleBtn span {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      font-family: inherit;
     }
     /* ── Marinblå punktlista i artiklar ────────────────────────── */
     .article-ul {
@@ -7039,8 +7044,6 @@
         </div>
       </div>
 
-      <div class="search-overlay" id="searchOverlay"></div>
-
       <!-- Mobil sök-takeover -->
       <div class="mobile-search-takeover" id="mobileSearchTakeover" aria-modal="true" role="dialog" aria-label="Sök">
         <div class="mobile-search-takeover-topbar">
@@ -7117,7 +7120,7 @@
                   <a href="#" id="menuProductsPageLink">K&ouml;p produkter</a>
                   <a href="#">Kommande standarder</a>
                   <a href="#">Om v&aring;r webbshop</a>
-                  <a href="#">Erbjudanden</a>
+                  <div class="mega-menu-title">Erbjudanden</div>
                 </div>
 
                 <div class="mega-menu-col">
@@ -7163,6 +7166,7 @@
         </nav>
       </div>
     </header>
+  <div class="search-overlay" id="searchOverlay"></div>
 
   <!-- ── Mobilheader (visas vid <1100px) ───────────────────────── -->
   <header class="mobile-header" id="mobileHeader">
@@ -9253,12 +9257,7 @@
                   </ul>
                 </section>
                 <section class="shop-mega-group">
-                  <a href="#" class="shop-mega-heading-link">
-                    <h3>Erbjudanden</h3>
-                    <span class="shop-mega-heading-link-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 24 24"><path d="M5 12h11"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </span>
-                  </a>
+                  <h3>Erbjudanden</h3>
                   <ul>
                     <li><a href="#">Starterbjudande f&ouml;r f&ouml;retag</a></li>
                     <li><a href="#">Starterbjudande f&ouml;r skolor</a></li>
@@ -10516,7 +10515,13 @@
       const searchOverlay = document.getElementById('searchOverlay');
       headerSearchDrawer.classList.add('open');
       headerSearchDrawer.setAttribute('aria-hidden', 'false');
-      if (searchOverlay) searchOverlay.classList.add('open');
+      if (searchOverlay) {
+        requestAnimationFrame(() => {
+          const drawerBottom = headerSearchDrawer.getBoundingClientRect().bottom;
+          searchOverlay.style.top = drawerBottom + 'px';
+          searchOverlay.classList.add('open');
+        });
+      }
       if (header) header.classList.add('search-open');
       siteSearchLink.setAttribute('aria-expanded', 'true');
       if (headerSearchInput) headerSearchInput.focus();
@@ -10528,7 +10533,10 @@
       const searchOverlay = document.getElementById('searchOverlay');
       headerSearchDrawer.classList.remove('open');
       headerSearchDrawer.setAttribute('aria-hidden', 'true');
-      if (searchOverlay) searchOverlay.classList.remove('open');
+      if (searchOverlay) {
+        searchOverlay.classList.remove('open');
+        searchOverlay.style.top = '';
+      }
       if (header) header.classList.remove('search-open');
       siteSearchLink.setAttribute('aria-expanded', 'false');
       if (lastTrigger) lastTrigger.focus();
@@ -10997,7 +11005,7 @@
         <a href="#" class="mobile-menu-subitem">Standarder och direktiv</a>
         <a href="#" class="mobile-menu-subitem">Abonnemang (e-Standarder)</a>
         <a href="#" class="mobile-menu-subitem">Tjänster</a>
-        <a href="#" class="mobile-menu-section-link">Erbjudanden <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+        <div class="mobile-menu-section-title">Erbjudanden</div>
         <a href="#" class="mobile-menu-subitem">Starterbjudande för företag</a>
         <a href="#" class="mobile-menu-subitem">Starterbjudande för skolor</a>
         <a href="#" class="mobile-menu-subitem">Studentrabatt</a>
@@ -11188,28 +11196,13 @@
       window.addEventListener('resize', updateSearchPlaceholder);
     })();
   </script>
-  <button id="scrollToTopBtn" aria-label="Scrolla till toppen">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  <button id="chatBubbleBtn" aria-label="Hitta svar på dina frågor">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>Hitta svar på dina frågor</span>
   </button>
 
 
   <script>
-    (function() {
-      const btn = document.getElementById('scrollToTopBtn');
-      if (!btn) return;
-
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 400) {
-          btn.classList.add('visible');
-        } else {
-          btn.classList.remove('visible');
-        }
-      }, { passive: true });
-
-      btn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    })();
   </script>
   <script>
   (function() {
