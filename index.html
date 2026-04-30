@@ -2249,22 +2249,28 @@
 
     .home-shop-product-link {
       position: relative;
+      isolation: isolate;
       display: block;
-      padding: 14px 34px 12px 10px;
-      margin: 0 -10px;
+      padding: 14px 34px 12px 0;
       border-top: 1px solid rgba(29, 52, 97, 0.12);
       text-decoration: none;
       color: var(--text);
+    }
+
+    .home-shop-product-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -10px;
+      right: -8px;
       background: transparent;
       transition: background 160ms ease;
+      z-index: -1;
     }
 
-    .home-shop-product-link:hover {
+    .home-shop-product-link:hover::before {
       background: #f2f3f5;
-    }
-
-    .home-shop-product-link::after {
-      right: 8px;
     }
 
     .home-shop-product-link:first-of-type {
