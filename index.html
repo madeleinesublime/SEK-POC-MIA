@@ -6611,14 +6611,17 @@
       }
 
       .home-editorial-grid .list-item {
-        padding-top: 14px !important;
-        padding-bottom: 14px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+      }
+      .home-editorial-grid .list-block .list-item:first-of-type {
+        padding-top: 20px !important;
       }
 
       /* Ge andra list-block border-top i mobil */
       .home-editorial-grid .list-block + .list-block .list-item:first-of-type {
         border-top: 1px solid rgba(29, 52, 97, 0.14) !important;
-        padding-top: 14px !important;
+        padding-top: 20px !important;
       }
 
       /* Nyheter med bild – bild ovanför, rubrik understruken, ingen pil */
@@ -6928,41 +6931,47 @@
     /* ── Chattbubbla ───────────────────────────────────────────────── */
     #chatBubbleBtn {
       position: fixed;
-      bottom: 28px;
+      bottom: 44px;
       right: max(24px, calc(50vw - 600px + 24px));
       z-index: 500;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 13px 20px;
+      justify-content: center;
+      width: 148px;
+      padding: 16px 20px 18px;
       background: var(--copper);
       border: none;
-      border-radius: 999px;
-      box-shadow: 0 4px 16px rgba(184, 92, 46, 0.35);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(29, 52, 97, 0.22), 0 2px 8px rgba(29, 52, 97, 0.12);
       cursor: pointer;
-      transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.2s;
+    }
+    #chatBubbleBtn::after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      right: 14px;
+      width: 0;
+      height: 0;
+      border-right: 14px solid var(--copper);
+      border-bottom: 14px solid transparent;
+      transition: border-right-color 0.15s;
     }
     #chatBubbleBtn:hover {
       background: #a55229;
-      box-shadow: 0 6px 20px rgba(184, 92, 46, 0.45);
-      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(29, 52, 97, 0.28), 0 3px 10px rgba(29, 52, 97, 0.14);
+      transform: translateY(-3px);
     }
-    #chatBubbleBtn svg {
-      width: 20px;
-      height: 20px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
+    #chatBubbleBtn:hover::after {
+      border-right-color: #a55229;
     }
     #chatBubbleBtn span {
       font-size: 15px;
       font-weight: 700;
+      line-height: 1.35;
       color: #fff;
-      white-space: nowrap;
       font-family: inherit;
+      text-align: center;
     }
     /* ── Marinblå punktlista i artiklar ────────────────────────── */
     .article-ul {
@@ -11197,8 +11206,7 @@
     })();
   </script>
   <button id="chatBubbleBtn" aria-label="Hitta svar på dina frågor">
-    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <span>Hitta svar på dina frågor</span>
+    <span>Hitta svar på<br>dina frågor</span>
   </button>
 
 
