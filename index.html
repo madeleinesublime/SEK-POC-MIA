@@ -37,6 +37,7 @@
       background: #ffffff;
       color: var(--text);
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     .page h1,
@@ -58,6 +59,7 @@
     html,
     body {
       padding: 0;
+      overflow-x: hidden;
     }
 
     .skip-link {
@@ -2119,7 +2121,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       margin-top: 14px;
       padding-top: 0;
     }
@@ -3804,6 +3806,12 @@
         padding: 40px 24px 28px;
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
+      }
+
+      .home-entry-cards {
+        grid-template-columns: minmax(0, 1fr) !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
       }
 
       .home-committee-highlight-inner {
@@ -6533,9 +6541,9 @@
         display: grid !important;
         grid-template-columns: auto 1fr !important;
         grid-template-rows: auto auto !important;
-        column-gap: 16px !important;
+        column-gap: 24px !important;
         row-gap: 0 !important;
-        align-items: start !important;
+        align-items: center !important;
         text-align: left !important;
         width: 100% !important;
       }
@@ -6611,7 +6619,7 @@
       }
 
       .home-editorial-grid .list-item {
-        padding-top: 20px !important;
+        padding-top: 24px !important;
         padding-bottom: 20px !important;
       }
       .home-editorial-grid .list-block .list-item:first-of-type {
@@ -6621,7 +6629,7 @@
       /* Ge andra list-block border-top i mobil */
       .home-editorial-grid .list-block + .list-block .list-item:first-of-type {
         border-top: 1px solid rgba(29, 52, 97, 0.14) !important;
-        padding-top: 20px !important;
+        padding-top: 24px !important;
       }
 
       /* Nyheter med bild – bild ovanför, rubrik understruken, ingen pil */
@@ -6764,11 +6772,11 @@
     }
 
     .footer-grid {
-      max-width: 1200px;
+      max-width: 1280px;
       width: 100%;
       margin: 0 auto !important;
-      padding: 0 !important;
-      width: min(1200px, calc(100% - 96px)) !important;
+      padding: 0 24px !important;
+      width: min(1280px, calc(100% - 48px)) !important;
       display: grid;
       grid-template-columns: 1.2fr 1fr 1fr 1fr;
       gap: 20px;
@@ -6777,7 +6785,6 @@
 
     @media (max-width: 768px) {
       .footer-grid {
-        padding: 0 16px !important;
         grid-template-columns: 1fr !important;
         gap: 0 !important;
       }
@@ -6905,6 +6912,14 @@
 
   
     @media (max-width: 600px) {
+      #chatBubbleBtn {
+        right: 16px !important;
+        bottom: 40px !important;
+        width: 130px !important;
+      }
+      #chatBubbleBtn span {
+        font-size: 12px !important;
+      }
       /* I show-images mobil: ta bort pil-utrymme */
       .home-editorial-grid.show-images .list-item {
         padding-right: 0 !important;
