@@ -37,7 +37,7 @@
       background: #ffffff;
       color: var(--text);
       line-height: 1.5;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     .page h1,
@@ -59,7 +59,10 @@
     html,
     body {
       padding: 0;
-      overflow-x: hidden;
+    }
+
+    html {
+      overflow-x: clip;
     }
 
     .skip-link {
@@ -1086,20 +1089,23 @@
 
     .home-hero .cta,
     #infoPageView .cta,
-    #shopHowView .cta {
+    #shopHowView .cta,
+    #committeeSignupView .cta {
       display: inline-flex;
       align-items: center;
       gap: 10px;
     }
 
     #infoPageView .cta,
-    #shopHowView .cta {
+    #shopHowView .cta,
+    #committeeSignupView .cta {
       box-shadow: none !important;
     }
 
     .home-hero .cta::after,
     #infoPageView .cta::after,
-    #shopHowView .cta::after {
+    #shopHowView .cta::after,
+    #committeeSignupView .cta::after {
       content: "";
       width: 16px;
       height: 16px;
@@ -1113,17 +1119,20 @@
 
     .home-hero .cta:hover::after,
     #infoPageView .cta:hover::after,
-    #shopHowView .cta:hover::after {
+    #shopHowView .cta:hover::after,
+    #committeeSignupView .cta:hover::after {
       transform: translateX(4px);
     }
 
     #infoPageView .cta::after,
-    #shopHowView .cta::after {
+    #shopHowView .cta::after,
+    #committeeSignupView .cta::after {
       display: none;
     }
 
     #infoPageView .cta.cta-with-arrow::after,
-    #shopHowView .cta.cta-with-arrow::after {
+    #shopHowView .cta.cta-with-arrow::after,
+    #committeeSignupView .cta.cta-with-arrow::after {
       display: inline-block;
     }
 
@@ -1330,7 +1339,8 @@
     }
 
     #infoPageView .article-media,
-    #shopHowView .article-media {
+    #shopHowView .article-media,
+    #committeeSignupView .article-media {
       border-radius: 8px;
       overflow: hidden;
     }
@@ -3683,6 +3693,7 @@
 
     #infoPageView,
     #shopHowView,
+    #committeeSignupView,
     #productPageView,
     #productDetailView,
     #myPagesView {
@@ -3785,7 +3796,8 @@
     .page-hero,
     .home-editorial-grid .list-block,
     #infoPageView .article-block:first-child,
-    #shopHowView .article-block:first-child {
+    #shopHowView .article-block:first-child,
+    #committeeSignupView .article-block:first-child {
       background:
         linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
     }
@@ -3838,6 +3850,38 @@
 
       .direct-search-flow {
         grid-template-columns: 1fr;
+      }
+
+      #committeeSignupView .content-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      #committeeSignupView .content-layout > div:first-child,
+      #committeeSignupView .content-layout > aside {
+        grid-column: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      #committeeSignupView .content-layout > div:first-child {
+        grid-row: 1 !important;
+      }
+
+      #committeeSignupView .content-layout > aside {
+        grid-row: 2 !important;
+        align-self: stretch !important;
+      }
+
+      #committeeSignupView .content-layout > aside > .sidebar-block,
+      #committeeSignupView .content-layout > aside > .faktablock,
+      #committeeSignupView .content-layout > div:first-child .article-block,
+      #committeeSignupView .committee-related-content,
+      #committeeSignupView .committee-related-grid {
+        width: 100% !important;
+        max-width: 100% !important;
       }
 
       .logo-copy {
@@ -4097,6 +4141,9 @@
       background: #1d3461;
       color: #fff;
       padding: 14px calc(50vw - 50% + 24px);
+      position: relative;
+      z-index: 1;
+      overflow: visible;
     }
 
     .footer-legal-inner {
@@ -4105,6 +4152,8 @@
       font-size: 13px;
       line-height: 1.4;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     footer,
@@ -4155,7 +4204,8 @@
     }
 
     #infoPageView .sidebar-block:last-child .list-item,
-    #shopHowView .sidebar-block:last-child .list-item {
+    #shopHowView .sidebar-block:last-child .list-item,
+    #committeeSignupView .sidebar-block:last-child .list-item {
       text-decoration: none;
       cursor: pointer;
       position: relative;
@@ -4164,7 +4214,8 @@
     }
 
     #infoPageView .sidebar-block:last-child .list-item::after,
-    #shopHowView .sidebar-block:last-child .list-item::after {
+    #shopHowView .sidebar-block:last-child .list-item::after,
+    #committeeSignupView .sidebar-block:last-child .list-item::after {
       content: "";
       position: absolute;
       right: 0;
@@ -4180,12 +4231,14 @@
     }
 
     #infoPageView .sidebar-block:last-child .list-item:hover::after,
-    #shopHowView .sidebar-block:last-child .list-item:hover::after {
+    #shopHowView .sidebar-block:last-child .list-item:hover::after,
+    #committeeSignupView .sidebar-block:last-child .list-item:hover::after {
       transform: translateY(-50%) translateX(4px);
     }
 
     #infoPageView aside .sidebar-block:not(:last-child) .link-ghost,
-    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost {
+    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost,
+    #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost {
       display: block !important;
       min-height: auto !important;
       padding: 12px 30px 12px 0 !important;
@@ -4200,12 +4253,14 @@
     }
 
     #infoPageView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost,
-    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost {
+    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost,
+    #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost {
       border-top: 1px solid rgba(29, 52, 97, 0.12) !important;
     }
 
     #infoPageView aside .sidebar-block:not(:last-child) .link-ghost::after,
-    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost::after {
+    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost::after,
+    #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost::after {
       content: "";
       position: absolute;
       right: 0;
@@ -4221,39 +4276,59 @@
     }
 
     #infoPageView aside .sidebar-block:not(:last-child) .link-ghost:hover::after,
-    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost:hover::after {
+    #shopHowView aside .sidebar-block:not(:last-child) .link-ghost:hover::after,
+    #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost:hover::after {
       transform: translateY(-50%) translateX(4px);
     }
 
     #infoPageView .page-ingress,
     #shopHowView .page-ingress,
+    #committeeSignupView .page-ingress,
     #infoPageView .article-block p,
     #shopHowView .article-block p,
+    #committeeSignupView .article-block p,
     #infoPageView .benefit-copy,
     #shopHowView .benefit-copy,
+    #committeeSignupView .benefit-copy,
     #infoPageView .faq-answer,
     #shopHowView .faq-answer,
+    #committeeSignupView .faq-answer,
     #infoPageView .sidebar-block p,
-    #shopHowView .sidebar-block p {
+    #shopHowView .sidebar-block p,
+    #committeeSignupView .sidebar-block p {
       color: var(--text) !important;
     }
 
     #infoPageView .faq-question,
-    #shopHowView .faq-question {
+    #shopHowView .faq-question,
+    #committeeSignupView .faq-question {
       color: var(--text) !important;
     }
 
     #infoPageView .faq-question::after,
-    #shopHowView .faq-question::after {
+    #shopHowView .faq-question::after,
+    #committeeSignupView .faq-question::after {
       color: var(--text) !important;
+    }
+
+    #shopHowView .page-ingress,
+    #committeeSignupView .page-ingress {
+      font-size: 20px;
+      line-height: 1.45;
     }
 
     #infoPageView .page-breadcrumb-row,
     #shopHowView .page-breadcrumb-row,
+    #committeeSignupView .page-breadcrumb-row,
     #productPageView .page-breadcrumb-row {
       position: relative;
       margin-top: 0;
       padding-top: 20px;
+    }
+
+    #committeeSignupView .page-breadcrumb-row {
+      margin: 24px 0 28px;
+      padding-top: 22px;
     }
 
     #infoPageView .page-breadcrumb-row::before,
@@ -4639,7 +4714,7 @@
       top: 0;
       z-index: 90;
       overflow: visible;
-      border-bottom: 1px solid #d8dee8;
+      border-bottom: 1px solid #c8d0dc !important;
       transition: padding 180ms ease, box-shadow 180ms ease;
     }
 
@@ -4807,6 +4882,7 @@
     header.header-layout-variant.is-compact {
       padding: 2px 0 0 !important;
       box-shadow: none;
+      border-bottom: 1px solid #c8d0dc !important;
     }
 
     header.header-layout-variant.is-compact::after {
@@ -4814,14 +4890,7 @@
     }
 
     header.header-layout-variant.is-compact::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -10px;
-      height: 12px;
-      pointer-events: none;
-      background: linear-gradient(to bottom, rgba(17, 24, 39, 0.10), rgba(17, 24, 39, 0.00));
+      content: none;
     }
 
     header.header-layout-variant.is-compact .utility-nav {
@@ -5699,8 +5768,16 @@
       color: var(--primary-dark);
     }
 
+    .committee-action-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
     #infoPageView .content-layout > div:first-child .article-block,
-    #shopHowView .content-layout > div:first-child .article-block {
+    #shopHowView .content-layout > div:first-child .article-block,
+    #committeeSignupView .content-layout > div:first-child .article-block {
       background: transparent !important;
       padding: 0 !important;
       box-shadow: none !important;
@@ -5709,30 +5786,47 @@
     }
 
     #infoPageView .content-layout > div:first-child .article-block + .article-block,
-    #shopHowView .content-layout > div:first-child .article-block + .article-block {
+    #shopHowView .content-layout > div:first-child .article-block + .article-block,
+    #committeeSignupView .content-layout > div:first-child .article-block + .article-block {
       margin-top: 36px !important;
     }
 
     #infoPageView .content-layout,
-    #shopHowView .content-layout {
-      grid-template-columns: minmax(0, 1fr) 360px !important;
-      gap: 56px !important;
-      align-items: start;
+    #shopHowView .content-layout,
+    #committeeSignupView .content-layout {
       margin-bottom: 40px;
     }
 
-    #infoPageView .content-layout > div:first-child,
-    #shopHowView .content-layout > div:first-child {
-      max-width: 760px;
+    @media (min-width: 901px) {
+      #infoPageView .content-layout,
+      #shopHowView .content-layout,
+      #committeeSignupView .content-layout {
+        grid-template-columns: minmax(0, 1fr) 360px !important;
+        gap: 56px !important;
+        align-items: start;
+      }
+
+      #infoPageView .content-layout > div:first-child,
+      #shopHowView .content-layout > div:first-child,
+      #committeeSignupView .content-layout > div:first-child {
+        max-width: 760px;
+      }
+
+      #shopHowView .content-layout > aside,
+      #committeeSignupView .content-layout > aside {
+        margin-top: 76px;
+      }
     }
 
     #infoPageView .page-title,
-    #shopHowView .page-title {
+    #shopHowView .page-title,
+    #committeeSignupView .page-title {
       margin-top: 18px;
     }
 
     #infoPageView aside .sidebar-block:first-child,
-    #shopHowView aside .sidebar-block:first-child {
+    #shopHowView aside .sidebar-block:first-child,
+    #committeeSignupView aside .sidebar-block:first-child {
       margin-top: 18px;
     }
 
@@ -5758,7 +5852,8 @@
     }
 
     #infoPageView .benefit-item,
-    #shopHowView .benefit-item {
+    #shopHowView .benefit-item,
+    #committeeSignupView .benefit-item {
       background: transparent !important;
       border: 0 !important;
       border-top: 1px solid rgba(29, 52, 97, 0.14) !important;
@@ -5767,20 +5862,23 @@
     }
 
     #infoPageView .benefit-item:first-of-type,
-    #shopHowView .benefit-item:first-of-type {
+    #shopHowView .benefit-item:first-of-type,
+    #committeeSignupView .benefit-item:first-of-type {
       border-top: 0 !important;
       padding-top: 0 !important;
     }
 
     #infoPageView .faq-list,
-    #shopHowView .faq-list {
+    #shopHowView .faq-list,
+    #committeeSignupView .faq-list {
       display: grid;
       gap: 0;
       border-top: 1.5px solid #B85C2E;
     }
 
     #infoPageView .faq-item,
-    #shopHowView .faq-item {
+    #shopHowView .faq-item,
+    #committeeSignupView .faq-item {
       border-bottom: 1.5px solid #B85C2E;
       border-top: none;
       padding: 0 16px;
@@ -5788,7 +5886,8 @@
     }
 
     #infoPageView .faq-question,
-    #shopHowView .faq-question {
+    #shopHowView .faq-question,
+    #committeeSignupView .faq-question {
       width: 100%;
       border: 0;
       background: transparent;
@@ -5803,7 +5902,8 @@
     }
 
     #infoPageView .faq-question::after,
-    #shopHowView .faq-question::after {
+    #shopHowView .faq-question::after,
+    #committeeSignupView .faq-question::after {
       content: "";
       position: absolute;
       right: 0px;
@@ -5819,12 +5919,14 @@
     }
 
     #infoPageView .faq-question[aria-expanded="true"]::after,
-    #shopHowView .faq-question[aria-expanded="true"]::after {
+    #shopHowView .faq-question[aria-expanded="true"]::after,
+    #committeeSignupView .faq-question[aria-expanded="true"]::after {
       transform: translateY(-50%) rotate(180deg);
     }
 
     #infoPageView .faq-answer,
-    #shopHowView .faq-answer {
+    #shopHowView .faq-answer,
+    #committeeSignupView .faq-answer {
       display: none;
       padding: 0 24px 20px 0;
       color: var(--accent);
@@ -5835,7 +5937,8 @@
     }
 
     #infoPageView .faq-answer.open,
-    #shopHowView .faq-answer.open {
+    #shopHowView .faq-answer.open,
+    #committeeSignupView .faq-answer.open {
       display: block;
     }
 
@@ -5886,7 +5989,7 @@
       bottom: 0;
       width: 50%;
       cursor: pointer;
-      clip-path: polygon(21% 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(244.6px 0, 100% 0, 100% 100%, 0 100%);
       background-color: transparent !important;
       z-index: 0;
       pointer-events: auto;
@@ -5903,12 +6006,12 @@
       bottom: 0;
       width: 1px;
       background: rgba(255, 255, 255, 0.18);
-      transform: skewX(-16deg);
+      transform: skewX(-27.42deg);
       transform-origin: top left;
     }
 
     .home-hero .home-hero-photo[aria-hidden="true"] {
-      clip-path: polygon(21% 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(244.6px 0, 100% 0, 100% 100%, 0 100%);
       background-color: transparent !important;
       box-shadow: none !important;
       border: 0 !important;
@@ -5993,9 +6096,7 @@
         justify-content: space-between;
         padding: 12px 20px;
         background: #fff;
-        border-bottom: none;
-        box-shadow: 0 2px 8px rgba(29, 52, 97, 0.15);
-        box-shadow: 0 4px 12px rgba(29, 52, 97, 0.1);
+        border-bottom: 1px solid #c8d0dc;
         position: sticky;
         top: 0;
         z-index: 90;
@@ -6412,7 +6513,8 @@
     }
     /* Beige bakgrund på öppen FAQ-rad */
     .faq-item:has(.faq-answer.open),
-    #shopHowView .faq-item:has(.faq-answer.open) {
+    #shopHowView .faq-item:has(.faq-answer.open),
+    #committeeSignupView .faq-item:has(.faq-answer.open) {
       background: #faf7f2;
     }
 
@@ -6433,32 +6535,184 @@
       color: rgba(255,255,255,0.6) !important;
     }
 
-    #shopHowView .sidebar-block {
-      box-shadow: 0 6px 6px -4px rgba(29, 52, 97, 0.12), 2px 4px 6px -4px rgba(29, 52, 97, 0.06), -2px 4px 6px -4px rgba(29, 52, 97, 0.06) !important;
-      border-radius: 0 !important;
+    #shopHowView .sidebar-block,
+    #committeeSignupView .sidebar-block {
+      box-shadow: none !important;
+      border-radius: 8px !important;
     }
 
-    #shopHowView .content-layout > aside {
+    #shopHowView .content-layout > aside,
+    #committeeSignupView .content-layout > aside {
       display: flex;
       flex-direction: column;
       gap: 32px;
     }
 
     #shopHowView .content-layout > aside > .sidebar-block,
-    #shopHowView .content-layout > aside > .faktablock {
+    #shopHowView .content-layout > aside > .faktablock,
+    #committeeSignupView .content-layout > aside > .sidebar-block,
+    #committeeSignupView .content-layout > aside > .faktablock {
       margin: 0 !important;
     }
 
-    #shopHowView .article-block h2 {
+    #shopHowView .content-layout > aside > .sidebar-block,
+    #shopHowView .content-layout > aside > .faktablock,
+    #committeeSignupView .content-layout > aside > .sidebar-block,
+    #committeeSignupView .content-layout > aside > .faktablock {
+      background: #faf7f2;
+      box-shadow: none;
+      border-radius: 8px;
+    }
+
+    #committeeSignupView .content-layout > aside > .sidebar-block h3 {
+      margin-bottom: 16px;
+    }
+
+    #committeeSignupView .content-layout > aside > .sidebar-block h3 + p {
+      margin-top: 0;
+    }
+
+    #committeeSignupView .content-layout > aside > .sidebar-block.sidebar-block--shadow {
+      box-shadow: var(--shadow-card);
+    }
+
+    #shopHowView .article-block h2,
+    #committeeSignupView .article-block h2 {
       margin: 40px 0 12px;
     }
 
-    #shopHowView .article-block > h2:first-child {
+    #shopHowView .article-block > h2:first-child,
+    #committeeSignupView .article-block > h2:first-child {
       margin-top: 48px;
     }
 
-    #shopHowView .article-block h2 + p {
+    #shopHowView .article-block h2 + p,
+    #committeeSignupView .article-block h2 + p {
       margin-top: 0;
+    }
+
+    .committee-related-content {
+      margin-top: 48px;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .committee-related-content h2 {
+      margin: 0 !important;
+    }
+
+    .committee-related-content h2::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin-top: 14px;
+      border-top: 2px solid var(--primary);
+    }
+
+    .committee-related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .committee-related-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
+      padding: 28px;
+      background: #faf7f2;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: none;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .committee-related-card-link {
+      position: absolute;
+      right: 28px;
+      bottom: 28px;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 999px;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+      transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+    .committee-related-card:hover .committee-related-card-link,
+    .committee-related-card-link:hover {
+      background-color: #dfe7f1;
+      transform: translateX(2px);
+    }
+
+    .committee-related-card-title {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      max-width: 16ch;
+      font-weight: 700;
+    }
+
+    .committee-related-card-title:hover {
+      color: var(--text);
+    }
+
+    .committee-related-card-figure {
+      margin: 0;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: rgba(29, 52, 97, 0.08);
+    }
+
+    .committee-related-card-figure[hidden] {
+      display: none;
+    }
+
+    .committee-related-card-figure img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .committee-related-card p {
+      margin: 0;
+      max-width: calc(100% - 58px);
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--accent);
+    }
+
+    .committee-related-card-body {
+      display: block;
+    }
+
+    @media (min-width: 601px) {
+      .committee-related-card-title {
+        font-size: 20px;
+        line-height: 1.2;
+      }
     }
 
     .sidebar-block a[style*="inline-flex"] {
@@ -6756,7 +7010,7 @@
     #siteFooter {
       background: #1d3461 !important;
       color: rgba(255,255,255,0.9) !important;
-      padding: 48px 0 32px !important;
+      padding: 48px 0 72px !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
       border: none !important;
@@ -6765,6 +7019,8 @@
       margin-top: 0 !important;
       margin-left: calc(50% - 50vw) !important;
       margin-right: calc(50% - 50vw) !important;
+      position: relative;
+      overflow: hidden;
     }
 
     #siteFooter * {
@@ -6781,6 +7037,19 @@
       grid-template-columns: 1.2fr 1fr 1fr 1fr;
       gap: 20px;
       background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-decor {
+      position: absolute;
+      right: 22px;
+      bottom: 18px;
+      width: 210px;
+      height: auto;
+      pointer-events: auto;
+      cursor: pointer;
+      z-index: 0;
     }
 
     @media (max-width: 768px) {
@@ -6887,6 +7156,18 @@
     }
 
     @media (max-width: 768px) {
+      .committee-related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .committee-related-card {
+        padding: 22px 20px 20px;
+      }
+
+      .committee-related-card-title {
+        font-size: 18px;
+      }
+
       .footer-grid {
         width: calc(100vw - 32px) !important;
         grid-template-columns: 1fr !important;
@@ -6907,6 +7188,9 @@
       }
       .footer-member-logos {
         margin-bottom: 20px;
+      }
+      .footer-decor {
+        display: none;
       }
     }
 
@@ -6990,7 +7274,7 @@
     }
     /* ── Marinblå punktlista i artiklar ────────────────────────── */
     .article-ul {
-      margin: 16px 0 20px 0;
+      margin: 16px 0 20px 12px;
       padding: 0;
       list-style: none;
     }
@@ -8523,7 +8807,7 @@
 
     <div id="shopHowView" class="view hidden">
       <div class="page-breadcrumb-row">
-        <div class="breadcrumb"><a href="#" id="breadcrumbShopHowHomeLink">Start</a> &gt; <a href="#" id="breadcrumbShopHowProductsLink">K&ouml;p produkter</a> &gt; <span class="breadcrumb-current">S&aring; handlar du</span></div>
+        <div class="breadcrumb"><a href="#" id="breadcrumbShopHowHomeLink">Start</a> &gt; <span class="breadcrumb-current">K&ouml;p produkter</span> &gt; <span class="breadcrumb-current">S&aring; handlar du</span></div>
       </div>
 
       <div class="content-layout">
@@ -8995,6 +9279,118 @@
         </aside>
       </div>
     </div>
+
+    <div id="committeeSignupView" class="view hidden">
+      <div class="page-breadcrumb-row">
+        <div class="breadcrumb">
+          <span class="breadcrumb-current">Delta &amp; P&aring;verka</span> &gt;
+          <a href="#" onclick="return false;" style="color: var(--copper);">Tekniska Kommitt&eacute;er</a> &gt;
+          <span class="breadcrumb-current">Anm&auml;l dig</span>
+        </div>
+      </div>
+      <div class="content-layout">
+        <div>
+          <div class="article-block">
+            <h1 class="page-title">Bli kommitt&eacute;deltagare</h1>
+            <p class="page-ingress">Omkring 800 experter fr&aring;n olika svenska f&ouml;retag, myndigheter, organisationer, h&ouml;gskolor och universitet deltar i den elektrotekniska standardiseringen, som i de flesta fall &auml;r ett internationellt samarbete.</p>
+            <p>Alla svenska f&ouml;retag, myndigheter, organisationer, h&ouml;gskolor och universitet kan delta i standardiseringsarbetet i SEK Svensk Elstandards tekniska kommitt&eacute;er och vara med och p&aring;verka internationell standard.</p>
+            <ul class="article-ul">
+              <li>F&aring; tidig insyn i kommande krav, standarder och internationella processer.</li>
+              <li>Bidra med din verksamhets erfarenheter och p&aring;verka inneh&aring;llet i framtida standarder.</li>
+              <li>Bygg n&auml;tverk med experter fr&aring;n n&auml;ringsliv, myndigheter och akademi.</li>
+              <li>St&auml;rk din organisations kunskap och position inom aktuella teknikomr&aring;den.</li>
+            </ul>
+            <p>Som exportland &auml;r det viktigt att vi deltar i det internationella standardiseringsarbetet. Eftersom standarden f&ouml;r v&aring;ra produkter s&auml;tts internationellt, g&auml;ller det att vi f&aring;r geh&ouml;r f&ouml;r v&aring;ra &ouml;nskem&aring;l f&ouml;r att kunna beh&aring;lla en bred export av produkter.</p>
+            <p>Deltagarna i SEKs tekniska kommitt&eacute;er har tillg&aring;ng till all information och dokumentation inom sina respektive teknikomr&aring;den. Genom att aktivt delta i IECs tekniska kommitt&eacute;er, och som experter i olika arbetsgrupper och projekt &auml;r de med och p&aring;verkar internationell standard. Det ger dem m&ouml;jlighet att vara initiativtagare och hindra konkurrenterna fr&aring;n att ensamma s&auml;tta standarderna och best&auml;mma spelreglerna.</p>
+          </div>
+          <div class="article-block">
+            <h2>Kom vidare i ditt deltagande</h2>
+            <p>I st&auml;llet f&ouml;r att g&ouml;mma de viktigaste v&auml;garna i sidokolumnen kan sidan lyfta dem h&auml;r i huvudfl&ouml;det. Det g&ouml;r informationssidan tydligare och mer handlingsdriven.</p>
+            <div class="committee-action-btns">
+              <a href="#" class="cta" onclick="return false;">Bli kommitt&eacute;deltagare</a>
+              <a href="#" class="cta-outline" onclick="return false;">Hitta tekniska kommitt&eacute;er</a>
+            </div>
+          </div>
+          <div class="article-block">
+            <h2>Vanliga fr&aring;gor</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Hur blir man kommitt&eacute;deltagare?</button>
+                <div class="faq-answer">H&auml;r kan en kort f&ouml;rklaring beskriva hur man anm&auml;ler intresse, vilka steg som f&ouml;ljer och hur deltagande i tekniska kommitt&eacute;er fungerar i praktiken.</div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Vad kostar det?</button>
+                <div class="faq-answer">H&auml;r kan sidan beskriva kostnader, medlemskap, eventuella avgifter och vad som ing&aring;r beroende p&aring; vilken typ av deltagande det g&auml;ller.</div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Hur mycket tid beh&ouml;ver man l&auml;gga?</button>
+                <div class="faq-answer">Visa att arbetsinsatsen kan se olika ut beroende p&aring; omr&aring;de, roll och aktivitet, men att bes&ouml;karen f&aring;r hj&auml;lp att f&ouml;rst&aring; omfattningen innan den g&aring;r vidare.</div>
+              </div>
+            </div>
+          </div>
+          <div class="article-block committee-related-content">
+            <h2>Relaterat inneh&aring;ll</h2>
+            <div class="committee-related-grid">
+              <article class="committee-related-card" data-card-href="#">
+                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure1">Avgifter och f&ouml;ruts&auml;ttningar</button>
+                <figure class="committee-related-card-figure" id="committeeRelatedFigure1" hidden>
+                  <img src="frame-91.png" alt="Avgifter och förutsättningar" style="object-position: center 30%;" />
+                </figure>
+                <div class="committee-related-card-body">
+                  <p>L&auml;s om avgifter, ansvar och vilka praktiska f&ouml;ruts&auml;ttningar som g&auml;ller n&auml;r ditt f&ouml;retag vill delta i kommitt&eacute;arbetet.</p>
+                  <a class="committee-related-card-link" href="#" aria-label="Gå till Avgifter och förutsättningar"></a>
+                </div>
+              </article>
+              <article class="committee-related-card" data-card-href="#">
+                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure2">Prislista</button>
+                <figure class="committee-related-card-figure" id="committeeRelatedFigure2" hidden>
+                  <img src="frame-91.png" alt="Prislista" style="object-position: center 48%;" />
+                </figure>
+                <div class="committee-related-card-body">
+                  <p>Se aktuella priser f&ouml;r deltagande, till&auml;ggstj&auml;nster och andra kostnader kopplade till standardiseringsarbetet.</p>
+                  <a class="committee-related-card-link" href="#" aria-label="Gå till Prislista"></a>
+                </div>
+              </article>
+              <article class="committee-related-card" data-card-href="#">
+                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure3">Arbetsordning</button>
+                <figure class="committee-related-card-figure" id="committeeRelatedFigure3" hidden>
+                  <img src="frame-91.png" alt="Arbetsordning" style="object-position: center 60%;" />
+                </figure>
+                <div class="committee-related-card-body">
+                  <p>F&aring; en tydlig bild av hur kommitt&eacute;arbetet bedrivs, hur beslut fattas och hur arbetet f&ouml;ljs upp &ouml;ver tid.</p>
+                  <a class="committee-related-card-link" href="#" aria-label="Gå till Arbetsordning"></a>
+                </div>
+              </article>
+              <article class="committee-related-card" data-card-href="#">
+                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure4">Vill du bli kontaktad?</button>
+                <figure class="committee-related-card-figure" id="committeeRelatedFigure4" hidden>
+                  <img src="frame-91.png" alt="Vill du bli kontaktad?" style="object-position: center 72%;" />
+                </figure>
+                <div class="committee-related-card-body">
+                  <p>Fyll i dina kontaktuppgifter s&aring; hj&auml;lper vi dig vidare till r&auml;tt kommitt&eacute;, kontaktperson eller n&auml;sta steg i processen.</p>
+                  <a class="committee-related-card-link" href="#" aria-label="Gå till Vill du bli kontaktad?"></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <aside>
+          <div class="sidebar-block">
+            <h3>Varf&ouml;r delta?</h3>
+            <p>Som kommitt&eacute;deltagare &auml;r du med och formar standarder som p&aring;verkar din bransch. Du f&aring;r tidig insyn i nya krav och bygger n&auml;tverk med ledande experter.</p>
+          </div>
+          <div class="sidebar-block">
+            <h3>Vad h&auml;nder sedan?</h3>
+            <p>Efter att vi mottagit din anm&auml;lan kontaktar en av v&aring;ra kommitt&eacute;samordnare dig inom 5 arbetsdagar f&ouml;r att diskutera l&auml;mplig kommitt&eacute; och n&auml;sta steg.</p>
+          </div>
+          <div class="sidebar-block sidebar-block--shadow">
+            <h3>Ska de ha skugga</h3>
+            <p>Kontakta oss p&aring; <a href="mailto:kommitte@sek.se">kommitte@sek.se</a> eller ring 08-444 14 00.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
     </main>
 
     <footer id="siteFooter" class="footer-dark">
@@ -9059,7 +9455,7 @@
             <div class="footer-link-item"><a href="#">Cookies</a></div>
           </div>
         </div>
-
+        <img class="footer-decor" src="footer-korv.svg" alt="" aria-hidden="true" />
       </div>
     </footer>
     
@@ -9496,10 +9892,9 @@
             <div class="shop-mega-columns">
               <div class="shop-mega-col">
                 <section class="shop-mega-group">
-                  <a href="#" class="shop-mega-heading-link">
-                    <h3>Alla tekniska kommitt&eacute;er</h3>
-                    <span class="shop-mega-heading-link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h11"></path><path d="M12 5l7 7-7 7"></path></svg></span>
-                  </a>
+                  <div class="shop-mega-heading-link">
+                    <h3>Tekniska Kommitt&eacute;er</h3>
+                  </div>
                   <ul>
                     <li><a href="#">Anm&auml;l dig till en kommitt&eacute;</a></li>
                     <li><a href="#">Alla tekniska kommitt&eacute;er</a></li>
@@ -9522,10 +9917,9 @@
               </div>
               <div class="shop-mega-col">
                 <section class="shop-mega-group">
-                  <a href="#" class="shop-mega-heading-link">
+                  <div class="shop-mega-heading-link">
                     <h3>Alla SEK Forum</h3>
-                    <span class="shop-mega-heading-link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h11"></path><path d="M12 5l7 7-7 7"></path></svg></span>
-                  </a>
+                  </div>
                   <ul>
                     <li><a href="#">Anm&auml;lan Forum-deltagare</a></li>
                     <li><a href="#">SEK Forum</a></li>
@@ -9810,6 +10204,7 @@
     const shopHowView = document.getElementById('shopHowView');
     const productPageView = document.getElementById('productPageView');
     const productDetailView = document.getElementById('productDetailView');
+    const committeeSignupView = document.getElementById('committeeSignupView');
 
     const siteSearchLink = document.getElementById('siteSearchLink');
     const headerSearchDrawer = document.getElementById('headerSearchDrawer');
@@ -10440,14 +10835,37 @@
       }
     }
 
-    function showHomeView(event) {
-      if (event) event.preventDefault();
-      homeView.classList.remove('hidden');
+    function closeAllMegaMenus() {
+      document.querySelectorAll('.is-open').forEach(el => {
+        if (el.classList.contains('shop-mega-panel') || el.id === 'headerMegaOverlay' ||
+            el.classList.contains('delta-mega-panel') || el.id === 'omSekPanel') {
+          el.classList.remove('is-open');
+          el.setAttribute('aria-hidden', 'true');
+        }
+      });
+      document.querySelectorAll('a.mega-open').forEach(a => {
+        a.classList.remove('mega-open');
+        a.setAttribute('aria-expanded', 'false');
+      });
+      const overlay = document.getElementById('headerMegaOverlay');
+      if (overlay) { overlay.classList.remove('is-open'); overlay.setAttribute('aria-hidden', 'true'); }
+    }
+
+    function hideAllViews() {
+      closeAllMegaMenus();
+      homeView.classList.add('hidden');
       myPagesView.classList.add('hidden');
       infoPageView.classList.add('hidden');
       if (shopHowView) shopHowView.classList.add('hidden');
       productPageView.classList.add('hidden');
       if (productDetailView) productDetailView.classList.add('hidden');
+      if (committeeSignupView) committeeSignupView.classList.add('hidden');
+    }
+
+    function showHomeView(event) {
+      if (event) event.preventDefault();
+      hideAllViews();
+      homeView.classList.remove('hidden');
       if (deltaLink) deltaLink.classList.remove('is-active');
       if (webshopLink) webshopLink.classList.remove('is-active');
       accountWrap.classList.remove('open');
@@ -10456,12 +10874,8 @@
 
     function showInfoPage(event) {
       if (event) event.preventDefault();
-      homeView.classList.add('hidden');
-      myPagesView.classList.add('hidden');
+      hideAllViews();
       infoPageView.classList.remove('hidden');
-      if (shopHowView) shopHowView.classList.add('hidden');
-      productPageView.classList.add('hidden');
-      if (productDetailView) productDetailView.classList.add('hidden');
       if (deltaLink) deltaLink.classList.add('is-active');
       if (webshopLink) webshopLink.classList.remove('is-active');
       setMenuOpenState(false);
@@ -10470,12 +10884,8 @@
 
     function showProductPage(event) {
       if (event) event.preventDefault();
-      homeView.classList.add('hidden');
-      myPagesView.classList.add('hidden');
-      infoPageView.classList.add('hidden');
-      if (shopHowView) shopHowView.classList.add('hidden');
+      hideAllViews();
       productPageView.classList.remove('hidden');
-      if (productDetailView) productDetailView.classList.add('hidden');
       if (deltaLink) deltaLink.classList.remove('is-active');
       if (webshopLink) webshopLink.classList.add('is-active');
       setMenuOpenState(false);
@@ -10485,11 +10895,7 @@
 
     function showProductDetailPage(event) {
       if (event) event.preventDefault();
-      homeView.classList.add('hidden');
-      myPagesView.classList.add('hidden');
-      infoPageView.classList.add('hidden');
-      if (shopHowView) shopHowView.classList.add('hidden');
-      productPageView.classList.add('hidden');
+      hideAllViews();
       if (productDetailView) productDetailView.classList.remove('hidden');
       if (deltaLink) deltaLink.classList.remove('is-active');
       if (webshopLink) webshopLink.classList.add('is-active');
@@ -10499,12 +10905,8 @@
 
     function showMyPages(event) {
       if (event) event.preventDefault();
-      homeView.classList.add('hidden');
+      hideAllViews();
       myPagesView.classList.remove('hidden');
-      infoPageView.classList.add('hidden');
-      if (shopHowView) shopHowView.classList.add('hidden');
-      productPageView.classList.add('hidden');
-      if (productDetailView) productDetailView.classList.add('hidden');
       if (deltaLink) deltaLink.classList.remove('is-active');
       if (webshopLink) webshopLink.classList.remove('is-active');
       accountWrap.classList.remove('open');
@@ -10515,14 +10917,20 @@
 
     function showShopHowPage(event) {
       if (event) event.preventDefault();
-      homeView.classList.add('hidden');
-      myPagesView.classList.add('hidden');
-      infoPageView.classList.add('hidden');
+      hideAllViews();
       if (shopHowView) shopHowView.classList.remove('hidden');
-      productPageView.classList.add('hidden');
-      if (productDetailView) productDetailView.classList.add('hidden');
       if (deltaLink) deltaLink.classList.remove('is-active');
       if (webshopLink) webshopLink.classList.add('is-active');
+      setMenuOpenState(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showCommitteeSignupPage(event) {
+      if (event) event.preventDefault();
+      hideAllViews();
+      committeeSignupView.classList.remove('hidden');
+      if (deltaLink) deltaLink.classList.add('is-active');
+      if (webshopLink) webshopLink.classList.remove('is-active');
       setMenuOpenState(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -10754,6 +11162,15 @@
     if (breadcrumbShopHowProductsLink) breadcrumbShopHowProductsLink.addEventListener('click', showProductPage);
     if (breadcrumbProductsHomeLink) breadcrumbProductsHomeLink.addEventListener('click', showHomeView);
     if (breadcrumbMyPagesHomeLink) breadcrumbMyPagesHomeLink.addEventListener('click', showHomeView);
+
+    // Anmäl dig – kommittédeltagare
+    const homeCommitteeJoinLink = document.getElementById('homeCommitteeJoinLink');
+    if (homeCommitteeJoinLink) homeCommitteeJoinLink.addEventListener('click', showCommitteeSignupPage);
+    document.querySelectorAll('a.mobile-menu-subitem, li > a').forEach(el => {
+      if (el.textContent.trim() === 'Anmäl dig till en kommitté') {
+        el.addEventListener('click', showCommitteeSignupPage);
+      }
+    });
     if (breadcrumbProductBackLink) breadcrumbProductBackLink.addEventListener('click', showProductPage);
     if (goToProductSearchFromSubscription) goToProductSearchFromSubscription.addEventListener('click', showProductPage);
     if (addToEstandardButton) addToEstandardButton.addEventListener('click', (event) => {
@@ -11048,8 +11465,8 @@
           <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
           Tillbaka <span class="mobile-menu-back-label">/ Delta &amp; Påverka</span>
         </button>
-        <div class="mobile-menu-section-title">Alla tekniska kommittéer</div>
-        <a href="#" class="mobile-menu-subitem">Anmäl dig till en kommitté</a>
+        <div class="mobile-menu-section-title">Tekniska Kommittéer</div>
+        <a href="#" class="mobile-menu-subitem" id="mobileCommitteeSignupLink">Anmäl dig till en kommitté</a>
         <a href="#" class="mobile-menu-subitem">Alla tekniska kommittéer</a>
         <a href="#" class="mobile-menu-subitem">Teknisk kommitté</a>
         <div class="mobile-menu-section-title">Om kommittéarbete</div>
@@ -11184,6 +11601,14 @@
           if (shopHowView) shopHowView.classList.remove('hidden');
         });
       }
+
+      const mobileCommitteeSignupLink = document.getElementById('mobileCommitteeSignupLink');
+      if (mobileCommitteeSignupLink) {
+        mobileCommitteeSignupLink.addEventListener('click', (e) => {
+          closeMenu();
+          showCommitteeSignupPage(e);
+        });
+      }
     })();
   </script>
 
@@ -11199,6 +11624,39 @@
           body.setAttribute('hidden', '');
         } else {
           body.removeAttribute('hidden');
+        }
+      });
+    });
+
+    const footerDecor = document.querySelector('.footer-decor');
+    if (footerDecor) {
+      footerDecor.addEventListener('click', function() {
+        if (window.innerWidth <= 768) return;
+        this.style.display = 'none';
+      });
+    }
+
+    document.querySelectorAll('.committee-related-card-title').forEach(button => {
+      button.addEventListener('click', function() {
+        const figureId = this.getAttribute('aria-controls');
+        const figure = figureId ? document.getElementById(figureId) : null;
+        if (!figure) return;
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        if (expanded) {
+          figure.setAttribute('hidden', '');
+        } else {
+          figure.removeAttribute('hidden');
+        }
+      });
+    });
+
+    document.querySelectorAll('.committee-related-card').forEach(card => {
+      card.addEventListener('click', function(event) {
+        if (event.target.closest('.committee-related-card-title')) return;
+        const link = this.querySelector('.committee-related-card-link');
+        if (link) {
+          link.click();
         }
       });
     });
