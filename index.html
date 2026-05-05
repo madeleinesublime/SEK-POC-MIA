@@ -1306,6 +1306,7 @@
     .product-result-card h3 {
       color: var(--text);
       letter-spacing: -0.02em;
+      line-height: 1.2;
     }
 
     .home-editorial-grid,
@@ -2040,7 +2041,7 @@
     .home-entry-cards .home-entry-cards-header h2 {
       margin: 0 0 16px;
       font-size: 24px;
-      line-height: 1.15;
+      line-height: 1.2;
       color: var(--text);
       letter-spacing: -0.03em;
     }
@@ -2399,7 +2400,7 @@
       margin: 0 0 14px;
       max-width: none;
       font-size: 24px;
-      line-height: 1.15;
+      line-height: 1.2;
       letter-spacing: -0.03em;
       color: #2f2f2f;
     }
@@ -3573,7 +3574,7 @@
 
     .faq-item {
       border-top: 1px dashed var(--line);
-      padding-top: 10px;
+      
     }
 
     .faq-question {
@@ -7327,6 +7328,11 @@
         padding: 22px 20px 20px;
       }
 
+      .committee-related-card-link {
+        right: 20px;
+        bottom: 20px;
+      }
+
       .committee-related-card-title {
         font-size: 18px;
       }
@@ -7485,10 +7491,10 @@
     .home-editorial-grid-header h3,
     .home-quotes-block h2 {
       font-size: 24px !important;
-      line-height: 1.15 !important;
+      line-height: 1.2 !important;
     }
 
-  
+
     /* Sektionsrubriker desktop – 28px */
     @media (min-width: 601px) {
       .home-entry-cards-header h2,
@@ -7497,11 +7503,11 @@
       .home-shop-highlight-copy h3,
       .home-shop-highlight-list h3 {
         font-size: 28px !important;
-        line-height: 1.12 !important;
+        line-height: 1.2 !important;
       }
       .home-quotes-block h2 {
         font-size: 28px !important;
-        line-height: 1.12 !important;
+        line-height: 1.2 !important;
       }
     }
 
@@ -7893,7 +7899,7 @@
 
     <section id="homeQuotesBlock" class="home-quotes-block" style="margin: 0 calc(50% - 50vw) 28px; background: #1d3461; padding: 56px 0;">
       <div class="page">
-        <h2 style="color:#fff;font-size:28px;font-weight:700;letter-spacing:-0.02em;margin:0 0 32px;line-height:1.12;">Så här tycker våra kunder</h2>
+        <h2 style="color:#fff;font-size:28px;font-weight:700;letter-spacing:-0.02em;margin:0 0 32px;line-height:1.2;">Så här tycker våra kunder</h2>
         <div class="quotes-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:0 8px;">
           <div style="padding:24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;">
             <img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:80px;height:80px;border-radius:50%;object-fit:cover;box-shadow: 0 0 0 2px #1d3461, 0 0 0 4.5px #B85C2E;" alt="Anna Lindström" />
@@ -11428,10 +11434,6 @@ av den elektrotekniska utvecklingen</h1>
       guidesSupportLinkEl.addEventListener('click', showEmcPage);
     }
 
-    const mobileGuiderLinkEl = document.getElementById('mobileGuiderLink');
-    if (mobileGuiderLinkEl) {
-      mobileGuiderLinkEl.addEventListener('click', showEmcPage);
-    }
 
     document.addEventListener('click', (event) => {
       const productDetailTrigger = event.target.closest('[data-open-product-detail="true"]');
@@ -11975,6 +11977,14 @@ av den elektrotekniska utvecklingen</h1>
         mobileCommitteeSignupLink.addEventListener('click', (e) => {
           closeMenu();
           showCommitteeSignupPage(e);
+        });
+      }
+
+      const mobileGuiderBtn = document.getElementById('mobileGuiderLink');
+      if (mobileGuiderBtn) {
+        mobileGuiderBtn.addEventListener('click', (e) => {
+          closeMenu();
+          showEmcPage(e);
         });
       }
     })();
