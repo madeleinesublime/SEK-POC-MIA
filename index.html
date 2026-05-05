@@ -1053,9 +1053,9 @@
       background: none !important;
       border: none !important;
       border-radius: 0 !important;
-      color: #111 !important;
-      font-size: 14px !important;
-      font-weight: 500 !important;
+      color: var(--text) !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
       cursor: pointer !important;
       text-decoration: none !important;
       font-family: inherit !important;
@@ -1063,27 +1063,22 @@
       min-height: auto !important;
       min-width: auto !important;
       box-shadow: none !important;
-      transition: transform 0.15s ease !important;
     }
 
     .link-arrow::after {
-      content: "→";
-      font-size: 15px;
-      transition: transform 0.15s ease;
-    }
-
-    .link-arrow:hover {
-      color: #111;
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      transition: transform 180ms ease;
     }
 
     .link-arrow:hover::after {
-      transform: translateX(3px);
-    }
-
-    .emc-block-link svg {
-      transition: transform 0.15s ease;
-    }
-    .emc-block-link:hover svg {
       transform: translateX(3px);
     }
 
@@ -2052,7 +2047,7 @@
 
     .home-entry-cards .home-entry-cards-header p {
       margin: 0;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.45;
       color: var(--accent);
     }
@@ -3942,7 +3937,7 @@
       border-top: 0;
       border-bottom: 0;
       margin: -1px calc(50% - 50vw) 0;
-      padding: 0 0 12px;
+      padding: 0 0 24px;
       background:
         linear-gradient(135deg, #007db8 0%, #0096D1 52%, #0aa0d8 100%);
     }
@@ -4069,6 +4064,57 @@
 
     .home-hero .hero-search-submit:focus-visible {
       outline-offset: 2px;
+    }
+
+    .home-hero .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .home-hero .hero-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      min-height: 40px;
+      border: 1px solid var(--copper);
+      border-radius: 999px;
+      background: var(--copper);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 160ms ease, border-color 160ms ease;
+    }
+
+    .home-hero .hero-cta-primary:hover {
+      background: #A55229;
+      border-color: #A55229;
+    }
+
+    .home-hero .hero-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      min-height: 40px;
+      border: 1.5px solid var(--copper);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--copper);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 160ms ease;
+    }
+
+    .home-hero .hero-cta-secondary:hover {
+      background: #faf7f2;
+      color: var(--copper);
     }
 
     .home-hero .cta {
@@ -4305,6 +4351,7 @@
       text-decoration: none !important;
       position: relative;
       color: var(--text) !important;
+      font-size: 15px !important;
     }
 
     #committeeSignupView .committee-sidebar-links .link-ghost + .link-ghost {
@@ -4371,20 +4418,6 @@
       line-height: 1.45;
     }
 
-    #infoPageView .page-breadcrumb-row,
-    #shopHowView .page-breadcrumb-row,
-    #committeeSignupView .page-breadcrumb-row,
-    #productPageView .page-breadcrumb-row,
-    #emcGuideView .page-breadcrumb-row {
-      position: relative;
-      margin-top: 0;
-      padding-top: 36px;
-    }
-
-    #committeeSignupView .page-breadcrumb-row {
-      margin: 24px 0 28px;
-      padding-top: 22px;
-    }
 
     .page-breadcrumb-row::before,
     #productDetailView .page-hero::before {
@@ -4399,7 +4432,7 @@
     }
 
     .page-breadcrumb-row {
-      margin: 16px 0 24px;
+        margin: 36px 0 24px;
     }
 
     .page-breadcrumb-row .breadcrumb {
@@ -5842,13 +5875,21 @@
       margin-bottom: 40px;
     }
 
-    #emcGuideView .article-block {
-      padding-left: 0;
-      padding-right: 0;
+    #emcGuideView .content-layout > div:first-child .article-block {
+      background: transparent !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    #emcGuideView .content-layout > div:first-child .article-block + .article-block {
+      margin-top: 36px !important;
     }
 
     #emcGuideView .content-layout > div:first-child {
       max-width: 760px;
+      padding-top: 18px;
     }
 
     @media (min-width: 901px) {
@@ -6001,7 +6042,7 @@
     .home-hero {
       overflow: hidden;
       background: #009bd9 !important;
-      min-height: 472px;
+      
     }
 
     .home-hero.is-dark {
@@ -6283,7 +6324,7 @@
       bottom: 0;
       width: min(380px, 90vw);
       background: #fff;
-      z-index: 201;
+      z-index: 601;
       transform: translateX(100%);
       transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
@@ -6705,9 +6746,22 @@
 
     .committee-related-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
       margin-top: 22px;
+    }
+
+    #committeeSignupView > .committee-related-content,
+    #emcGuideView > .committee-related-content {
+      background: transparent !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      box-shadow: none !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      margin-top: 0 !important;
+      padding-top: 32px !important;
+      padding-bottom: 32px !important;
     }
 
     .committee-related-card {
@@ -7156,14 +7210,7 @@
     }
 
     .footer-decor {
-      position: absolute;
-      right: 22px;
-      bottom: 18px;
-      width: 210px;
-      height: auto;
-      pointer-events: auto;
-      cursor: pointer;
-      z-index: 0;
+    display: none;
     }
 
     @media (max-width: 768px) {
@@ -7195,6 +7242,7 @@
     .footer-col strong {
       background: transparent !important;
       color: rgba(255,255,255,0.85) !important;
+      font-size: 15px !important;
     }
 
     .footer-acc-btn {
@@ -7416,6 +7464,8 @@
       .home-hero h2 {
         font-size: 38px !important;
         line-height: 1.1 !important;
+        margin: 24px 0px;
+        width: 70%;
       }
     }
 
@@ -7425,7 +7475,7 @@
       .home-hero h2 {
         font-size: 48px !important;
         line-height: 1.1 !important;
-        margin-bottom: 0 !important;
+        margin: 0 !important;
       }
     }
 
@@ -7518,7 +7568,7 @@
 
     @media (min-width: 901px) and (max-width: 1200px) {
       .home-hero .hero-shell > div:first-child {
-        padding-top: 24px !important;
+        padding-top: 64px !important;
       }
       .home-hero {
         min-height: unset !important;
@@ -7702,16 +7752,20 @@
       <div class="home-hero-photo" aria-hidden="true"></div>
       <div class="panel hero-shell" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: stretch;">
         <div>
-          <h2>Standarder<br />som formar<br />framtidens el</h2>
+          <h2>Standarder som formar<br />framtidens el</h2>
           <p>
             Vi fastst&auml;ller all svensk standard inom elomr&aring;det
           </p>
-          <div class="hero-search-row" role="search" aria-label="Sök i hero">
+          <div id="heroSearchRow" class="hero-search-row" role="search" aria-label="Sök i hero">
             <div class="hero-search-field">
               <img src="icon-search.svg" alt="" aria-hidden="true" />
               <input type="text" placeholder="S&ouml;k efter standard" id="heroSearchInput" aria-label="Sök efter standard" />
             </div>
-            <button type="button" class="hero-search-submit">S&ouml;k</button>
+            <button type="button" class="hero-search-submit" onclick="heroShowCTA()">S&ouml;k</button>
+          </div>
+          <div id="heroCTARow" class="hero-cta-row" style="display:none;" aria-hidden="true">
+            <button type="button" class="hero-cta-primary" onclick="heroHideCTA()">Sök efter en standard</button>
+            <button type="button" class="hero-cta-secondary" onclick="heroHideCTA()">Gå med i en kommitté</button>
           </div>
           <a href="#" class="hero-mobile-search-cta cta" id="heroMobileSearchCta">S&ouml;k standard</a>
         </div>
@@ -8971,7 +9025,7 @@
             <div style="padding: 16px 28px 28px;">
               <h3 style="margin: 0 0 8px; font-size: 20px;">Handböcker från SEK</h3>
               <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text);">Våra handböcker ger praktisk vägledning direkt kopplad till gällande standarder. Finns som <a href="#" style="color: #B85C2E; text-decoration: underline; font-weight: 600;">e-bok och i tryckt format</a> – välj det som passar dig bäst.</p>
-              <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Utforska handböcker <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+              <a href="#" class="link-arrow">Utforska handböcker</a>
             </div>
           </div>
 
@@ -8979,7 +9033,7 @@
           <div class="sidebar-block" style="margin-top: 20px;">
             <h3 style="margin: 0 0 8px; font-size: 20px;">Bli kommittédeltagare</h3>
             <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor ut <a href="#" style="color: #B85C2E; text-decoration: underline; font-weight: 600;">SEK:s kommittéarbete</a> och bidra med din expertis.</p>
-            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Anmäl ditt intresse <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+            <a href="#" class="link-arrow">Anmäl ditt intresse</a>
           </div>
 
           <!-- Faktapuff i högerspalten -->
@@ -9142,7 +9196,7 @@
             <div style="padding: 16px 28px 28px;">
               <h3 style="margin: 0 0 8px; font-size: 20px;">Handböcker från SEK</h3>
               <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text);">Våra handböcker ger praktisk vägledning direkt kopplad till gällande standarder. Finns som <a href="#" style="color: #B85C2E; text-decoration: underline; font-weight: 600;">e-bok och i tryckt format</a> – välj det som passar dig bäst.</p>
-              <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Utforska handböcker <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+              <a href="#" class="link-arrow">Utforska handböcker</a>
             </div>
           </div>
 
@@ -9150,7 +9204,7 @@
           <div class="sidebar-block" style="margin-top: 10px;">
             <h3 style="margin: 0 0 8px; font-size: 20px;">Bli kommittédeltagare</h3>
             <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor ut <a href="#" style="color: #B85C2E; text-decoration: underline; font-weight: 600;">SEK:s kommittéarbete</a> och bidra med din expertis.</p>
-            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Anmäl ditt intresse <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+            <a href="#" class="link-arrow">Anmäl ditt intresse</a>
           </div>
 
           <div class="faktablock" style="background:#1d3461;border-radius:8px;padding:28px;margin:10px 0 0;">
@@ -9518,51 +9572,6 @@ av den elektrotekniska utvecklingen</h1>
             </div>
             <div class="page-updated">Senast uppdaterad: 26 april 2026</div>
           </div>
-          <div class="article-block committee-related-content">
-            <h2>Relaterat inneh&aring;ll</h2>
-            <div class="committee-related-grid">
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure1">Avgifter och f&ouml;ruts&auml;ttningar</button>
-                <figure class="committee-related-card-figure" id="committeeRelatedFigure1" hidden>
-                  <img src="frame-91.png" alt="Avgifter och förutsättningar" style="object-position: center 30%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>L&auml;s om avgifter, ansvar och vilka praktiska f&ouml;ruts&auml;ttningar som g&auml;ller n&auml;r ditt f&ouml;retag vill delta i kommitt&eacute;arbetet.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Avgifter och förutsättningar"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure2">Prislista</button>
-                <figure class="committee-related-card-figure" id="committeeRelatedFigure2" hidden>
-                  <img src="frame-91.png" alt="Prislista" style="object-position: center 48%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>Se aktuella priser f&ouml;r deltagande, till&auml;ggstj&auml;nster och andra kostnader kopplade till standardiseringsarbetet.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Prislista"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure3">Arbetsordning</button>
-                <figure class="committee-related-card-figure" id="committeeRelatedFigure3" hidden>
-                  <img src="frame-91.png" alt="Arbetsordning" style="object-position: center 60%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>F&aring; en tydlig bild av hur kommitt&eacute;arbetet bedrivs, hur beslut fattas och hur arbetet f&ouml;ljs upp &ouml;ver tid.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Arbetsordning"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure4">Vill du bli kontaktad?</button>
-                <figure class="committee-related-card-figure" id="committeeRelatedFigure4" hidden>
-                  <img src="frame-91.png" alt="Vill du bli kontaktad?" style="object-position: center 72%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>Fyll i dina kontaktuppgifter s&aring; hj&auml;lper vi dig vidare till r&auml;tt kommitt&eacute;, kontaktperson eller n&auml;sta steg i processen.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Vill du bli kontaktad?"></a>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
         <aside>
           <div class="sidebar-block" style="padding: 0; overflow: hidden;">
@@ -9595,6 +9604,41 @@ av den elektrotekniska utvecklingen</h1>
           </div>
         </aside>
       </div>
+      <div class="article-block committee-related-content">
+        <h2>Relaterat inneh&aring;ll</h2>
+        <div class="committee-related-grid">
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure1">Avgifter och f&ouml;ruts&auml;ttningar</button>
+            <figure class="committee-related-card-figure" id="committeeRelatedFigure1" hidden>
+              <img src="frame-91.png" alt="Avgifter och förutsättningar" style="object-position: center 30%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>L&auml;s om avgifter, ansvar och vilka praktiska f&ouml;ruts&auml;ttningar som g&auml;ller n&auml;r ditt f&ouml;retag vill delta i kommitt&eacute;arbetet.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till Avgifter och förutsättningar"></a>
+            </div>
+          </article>
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure2">Prislista</button>
+            <figure class="committee-related-card-figure" id="committeeRelatedFigure2" hidden>
+              <img src="frame-91.png" alt="Prislista" style="object-position: center 48%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>Se aktuella priser f&ouml;r deltagande, till&auml;ggstj&auml;nster och andra kostnader kopplade till standardiseringsarbetet.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till Prislista"></a>
+            </div>
+          </article>
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="committeeRelatedFigure3">Arbetsordning</button>
+            <figure class="committee-related-card-figure" id="committeeRelatedFigure3" hidden>
+              <img src="frame-91.png" alt="Arbetsordning" style="object-position: center 60%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>F&aring; en tydlig bild av hur kommitt&eacute;arbetet bedrivs, hur beslut fattas och hur arbetet f&ouml;ljs upp &ouml;ver tid.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till Arbetsordning"></a>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
 
     <div id="emcGuideView" class="view hidden">
@@ -9622,7 +9666,7 @@ av den elektrotekniska utvecklingen</h1>
               <div style="flex:1;">
                 <h2 style="margin:0 0 14px;">Checklista EMC</h2>
                 <p style="margin:0 0 12px;font-size:15px;line-height:1.6;">F&#246;r att underl&#228;tta har SEK tagit fram en checklista f&#246;r EMC. Genom att ta h&#228;nsyn till och f&#246;rh&#229;lla sig till EMC fr&#229;n b&#246;rjan vid en installation, kan du s&#228;kerst&#228;lla att elinstallationen efterlever alla krav och du undviker d&#228;rmed kostsamma konsekvenser.</p>
-              <a href="#" class="emc-block-link" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Checklista EMC <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+              <a href="#" class="link-arrow">Checklista EMC</a>
               </div>
             </div>
           </div>
@@ -9634,57 +9678,47 @@ av den elektrotekniska utvecklingen</h1>
               <div style="flex:1;">
                 <h2 style="margin:0 0 14px;">Elektrikerpoddens avsnitt om EMC</h2>
                 <p style="margin:0 0 12px;font-size:15px;line-height:1.6;">Lyssna p&#229; Elektrikerpoddens avsnitt om EMC, som bland annat tar upp vikten av god EMC och ansvar. Experter fr&#229;n Els&#228;kerhetsverket och SEK Svensk Elstandard delar med sig av sin kunskap f&#246;r att &#246;ka medvetenheten och kompetensen om EMC.</p>
-              <a href="#" class="emc-block-link" style="display:inline-flex;align-items:center;gap:6px;color:#2f3135;font-size:14px;font-weight:600;text-decoration:none;">Elektrikerpodden <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h11"/><path d="M12 5l7 7-7 7"/></svg></a>
+              <a href="#" class="link-arrow">Elektrikerpodden</a>
               </div>
             </div>
           </div>
             <div class="page-updated">Senast uppdaterad: 2026-04-06</div>
           </div>
-          <div class="article-block committee-related-content">
-            <h2>Relaterat inneh&aring;ll</h2>
-            <div class="committee-related-grid">
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure1">Checklista EMC</button>
-                <figure class="committee-related-card-figure" id="emcRelatedFigure1" hidden>
-                  <img src="frame-91.png" alt="Checklista EMC" style="object-position: center 30%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>Anv&auml;nd v&aring;r checklista f&ouml;r att s&auml;kerst&auml;lla att din produkt uppfyller EMC-kraven innan provning och certifiering.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Checklista EMC"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure2">EMC-standarder</button>
-                <figure class="committee-related-card-figure" id="emcRelatedFigure2" hidden>
-                  <img src="frame-91.png" alt="EMC-standarder" style="object-position: center 48%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>Se relevanta standarder inom EMC-omr&aring;det, inklusive m&auml;tmetoder, gr&auml;nsv&auml;rden och provningsf&ouml;rfaranden.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till EMC-standarder"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure3">Kurser inom EMC</button>
-                <figure class="committee-related-card-figure" id="emcRelatedFigure3" hidden>
-                  <img src="frame-91.png" alt="Kurser inom EMC" style="object-position: center 60%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>F&ouml;rdjupa din kunskap om EMC genom v&aring;ra utbildningar – f&ouml;r konstrukt&ouml;rer, testingrej&ouml;rer och produktansvariga.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Kurser inom EMC"></a>
-                </div>
-              </article>
-              <article class="committee-related-card" data-card-href="#">
-                <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure4">Kontakta oss</button>
-                <figure class="committee-related-card-figure" id="emcRelatedFigure4" hidden>
-                  <img src="frame-91.png" alt="Kontakta oss" style="object-position: center 72%;" />
-                </figure>
-                <div class="committee-related-card-body">
-                  <p>Har du fr&aring;gor om EMC-krav, standarder eller provning? V&aring;ra experter hj&auml;lper dig g&auml;rna vidare.</p>
-                  <a class="committee-related-card-link" href="#" aria-label="Gå till Kontakta oss"></a>
-                </div>
-              </article>
+        </div>
+      </div>
+      <div class="article-block committee-related-content">
+        <h2>Relaterat inneh&aring;ll</h2>
+        <div class="committee-related-grid">
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure1">Checklista EMC</button>
+            <figure class="committee-related-card-figure" id="emcRelatedFigure1" hidden>
+              <img src="frame-91.png" alt="Checklista EMC" style="object-position: center 30%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>Anv&auml;nd v&aring;r checklista f&ouml;r att s&auml;kerst&auml;lla att din produkt uppfyller EMC-kraven innan provning och certifiering.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till Checklista EMC"></a>
             </div>
-          </div>
+          </article>
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure2">EMC-standarder</button>
+            <figure class="committee-related-card-figure" id="emcRelatedFigure2" hidden>
+              <img src="frame-91.png" alt="EMC-standarder" style="object-position: center 48%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>Se relevanta standarder inom EMC-omr&aring;det, inklusive m&auml;tmetoder, gr&auml;nsv&auml;rden och provningsf&ouml;rfaranden.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till EMC-standarder"></a>
+            </div>
+          </article>
+          <article class="committee-related-card" data-card-href="#">
+            <button type="button" class="committee-related-card-title" aria-expanded="false" aria-controls="emcRelatedFigure3">Kurser inom EMC</button>
+            <figure class="committee-related-card-figure" id="emcRelatedFigure3" hidden>
+              <img src="frame-91.png" alt="Kurser inom EMC" style="object-position: center 60%;" />
+            </figure>
+            <div class="committee-related-card-body">
+              <p>F&ouml;rdjupa din kunskap om EMC genom v&aring;ra utbildningar – f&ouml;r konstrukt&ouml;rer, testingrej&ouml;rer och produktansvariga.</p>
+              <a class="committee-related-card-link" href="#" aria-label="Gå till Kurser inom EMC"></a>
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -11394,6 +11428,11 @@ av den elektrotekniska utvecklingen</h1>
       guidesSupportLinkEl.addEventListener('click', showEmcPage);
     }
 
+    const mobileGuiderLinkEl = document.getElementById('mobileGuiderLink');
+    if (mobileGuiderLinkEl) {
+      mobileGuiderLinkEl.addEventListener('click', showEmcPage);
+    }
+
     document.addEventListener('click', (event) => {
       const productDetailTrigger = event.target.closest('[data-open-product-detail="true"]');
       if (productDetailTrigger) {
@@ -11443,10 +11482,12 @@ av den elektrotekniska utvecklingen</h1>
     if (mobileSearchClose) mobileSearchClose.addEventListener('click', closeMobileSearch);
 
     const mobileLogoLink = document.getElementById('mobileLogoLink');
-    if (mobileLogoLink) mobileLogoLink.addEventListener('click', () => {
+    if (mobileLogoLink) mobileLogoLink.addEventListener('click', (e) => {
+      e.preventDefault();
       if (mobileSearchTakeover && mobileSearchTakeover.classList.contains('open')) {
         closeMobileSearch();
       }
+      showHomeView();
     });
 
     mobileSearchChips.forEach(chip => {
@@ -11734,9 +11775,8 @@ av den elektrotekniska utvecklingen</h1>
           <span class="mobile-menu-item-label">Delta &amp; Påverka</span>
           <span class="mobile-menu-item-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </button>
-        <button class="mobile-menu-item" data-submenu="submenuGuider">
+        <button class="mobile-menu-item" id="mobileGuiderLink">
           <span class="mobile-menu-item-label">Guider &amp; Stöd</span>
-          <span class="mobile-menu-item-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </button>
         <button class="mobile-menu-item" data-submenu="submenuKurser">
           <span class="mobile-menu-item-label">Kurser &amp; event</span>
@@ -11992,6 +12032,24 @@ av den elektrotekniska utvecklingen</h1>
 
 
   <script>
+    function heroShowCTA() {
+      var searchRow = document.getElementById('heroSearchRow');
+      var ctaRow = document.getElementById('heroCTARow');
+      if (!searchRow || !ctaRow) return;
+      searchRow.style.display = 'none';
+      ctaRow.style.display = 'flex';
+      ctaRow.removeAttribute('aria-hidden');
+    }
+
+    function heroHideCTA() {
+      var searchRow = document.getElementById('heroSearchRow');
+      var ctaRow = document.getElementById('heroCTARow');
+      if (!searchRow || !ctaRow) return;
+      ctaRow.style.display = 'none';
+      ctaRow.setAttribute('aria-hidden', 'true');
+      searchRow.style.display = 'flex';
+    }
+
     (function() {
       function updateSearchPlaceholder() {
         const input = document.getElementById('heroSearchInput');
