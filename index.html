@@ -4281,6 +4281,43 @@
       transform: translateY(-50%) translateX(4px);
     }
 
+    #committeeSignupView .committee-sidebar-links .link-ghost {
+      display: block !important;
+      min-height: auto !important;
+      padding: 12px 30px 12px 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+      position: relative;
+      color: var(--text) !important;
+    }
+
+    #committeeSignupView .committee-sidebar-links .link-ghost + .link-ghost {
+      border-top: 1px solid rgba(29, 52, 97, 0.12) !important;
+    }
+
+    #committeeSignupView .committee-sidebar-links .link-ghost::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      transition: transform 180ms ease;
+    }
+
+    #committeeSignupView .committee-sidebar-links .link-ghost:hover::after {
+      transform: translateY(-50%) translateX(4px);
+    }
+
     #infoPageView .page-ingress,
     #shopHowView .page-ingress,
     #committeeSignupView .page-ingress,
@@ -4309,6 +4346,10 @@
     #shopHowView .faq-question::after,
     #committeeSignupView .faq-question::after {
       color: var(--text) !important;
+    }
+
+    #committeeSignupView .page-title {
+      margin-bottom: 20px;
     }
 
     #shopHowView .page-ingress,
@@ -5866,7 +5907,6 @@
     #committeeSignupView .faq-item {
       border-bottom: 1.5px solid #B85C2E;
       border-top: none;
-      padding: 0 16px;
       overflow: hidden;
     }
 
@@ -9323,42 +9363,45 @@
       <div class="content-layout">
         <div>
           <div class="article-block">
-            <h1 class="page-title">Bli kommitt&eacute;deltagare</h1>
-            <p class="page-ingress">Omkring 800 experter fr&aring;n olika svenska f&ouml;retag, myndigheter, organisationer, h&ouml;gskolor och universitet deltar i den elektrotekniska standardiseringen, som i de flesta fall &auml;r ett internationellt samarbete.</p>
-            <p>Alla svenska f&ouml;retag, myndigheter, organisationer, h&ouml;gskolor och universitet kan delta i standardiseringsarbetet i SEK Svensk Elstandards tekniska kommitt&eacute;er och vara med och p&aring;verka internationell standard.</p>
-            <ul class="article-ul">
-              <li>F&aring; tidig insyn i kommande krav, standarder och internationella processer.</li>
-              <li>Bidra med din verksamhets erfarenheter och p&aring;verka inneh&aring;llet i framtida standarder.</li>
-              <li>Bygg n&auml;tverk med experter fr&aring;n n&auml;ringsliv, myndigheter och akademi.</li>
-              <li>St&auml;rk din organisations kunskap och position inom aktuella teknikomr&aring;den.</li>
-            </ul>
-            <p>Som exportland &auml;r det viktigt att vi deltar i det internationella standardiseringsarbetet. Eftersom standarden f&ouml;r v&aring;ra produkter s&auml;tts internationellt, g&auml;ller det att vi f&aring;r geh&ouml;r f&ouml;r v&aring;ra &ouml;nskem&aring;l f&ouml;r att kunna beh&aring;lla en bred export av produkter.</p>
-            <p>Deltagarna i SEKs tekniska kommitt&eacute;er har tillg&aring;ng till all information och dokumentation inom sina respektive teknikomr&aring;den. Genom att aktivt delta i IECs tekniska kommitt&eacute;er, och som experter i olika arbetsgrupper och projekt &auml;r de med och p&aring;verkar internationell standard. Det ger dem m&ouml;jlighet att vara initiativtagare och hindra konkurrenterna fr&aring;n att ensamma s&auml;tta standarderna och best&auml;mma spelreglerna.</p>
+            <h1 class="page-title">Bli deltagare och ligg i framkant
+av den elektrotekniska utvecklingen</h1>
+            <p class="page-ingress">Att delta i standardiseringsarbetet innebär att arbeta internationellt för att utveckla framtidens elektrotekniska lösningar. För företag som deltar betyder det en möjlighet att ligga i framkant av den elektrotekniska utvecklingen. En unik chans att verka på en internationell arena med nya affärsmöjligheter, kontakter och samarbeten.</p>
+            <h2>Var med och p&aring;verka framtidens elektrotekniska l&ouml;sningar</h2>
+            <p>Idag &auml;r vi omkring 800 experter i &ouml;ver 100 olika tekniska kommitt&eacute;er som utvecklar internationell standard f&ouml;r allt ifr&aring;n vindgeneratorer, sakernas internet och elbilsdrift, till vattenturbiner, medicinteknik och &aring;skskydd.</p>
+            <p>Genom SEK Svensk Elstandard representerar vi Sverige och deltar i standardiseringsarbetet i olika internationella kommitt&eacute;er s&aring; att vi kan f&aring; geh&ouml;r f&ouml;r v&aring;ra &ouml;nskem&aring;l. Standardiseringsarbetet som g&ouml;rs i dag kommer att g&auml;lla under m&aring;nga &aring;r. De som inte &auml;r med f&aring;r anpassa sig till vad vi som deltar har best&auml;mt.</p>
+            <div class="shop-handbooks-layout" style="display:flex;gap:40px;align-items:flex-start;margin:36px 0;">
+              <div style="flex:0 0 50%;">
+                <img src="committee-future-tech.png" alt="Digital elektroteknisk utveckling" style="width:100%;display:block;border-radius:0;" />
+              </div>
+              <div style="flex:1;">
+                <h3 style="margin:0 0 18px;font-size:17px;line-height:1.2;">Det &auml;r nu framtidens elektrotekniska l&ouml;sningar utarbetas</h3>
+                <p style="margin:0 0 12px;font-size:15px;line-height:1.6;">Den &ouml;kade digitaliseringen g&ouml;r att utvecklingen g&aring;r fortare &auml;n n&aring;gonsin. En rad nya teknikomr&aring;den m&aring;ste f&aring;ngas upp i standardiseringsarbetet, b&aring;de nya id&eacute;er och infallsvinklar beh&ouml;vs. Ju fler &ouml;gon och infallsvinklar desto b&auml;ttre.</p>
+              </div>
+            </div>
+            <h2>Standardiseringsarbetet skapar aff&auml;rsnytta, st&auml;rker varum&auml;rket och aff&auml;rerna</h2>
+            <p>Som deltagare i standardiseringsarbetet har vi tillg&aring;ng till all information och dokumentation inom v&aring;ra teknikomr&aring;den.</p>
+            <p>Genom att delta i IECs tekniska kommitt&eacute;er som experter i olika arbetsgrupper och projekt har vi stora m&ouml;jligheter att p&aring;verka internationell standard. V&aring;ra organisationer skaffar sig f&ouml;rspr&aring;ng i b&aring;de tid och kunskap, samtidigt som vi p&aring;verkar framtidens tekniska regler.</p>
+            <h2>Visa ditt engagemang i standardiseringsarbetet med SEKs deltagarm&auml;rke</h2>
+            <p>Du f&aring;r tillg&aring;ng till SEKs deltagarm&auml;rke efter att du har g&aring;tt v&aring;r introduktionskurs f&ouml;r nya ledam&ouml;ter och experter. M&auml;rket kan anv&auml;ndas i din e-postsignatur f&ouml;r att l&auml;nka direkt till den tekniska kommitt&eacute; d&auml;r du &auml;r aktiv.</p>
+            <p>Introduktionskursen &auml;r kostnadsfri och ger en introduktion till hur standardiseringsarbetet fungerar, hur du b&auml;st utnyttjar de olika databaserna du har till ditt f&ouml;rfogande samt hur du som deltagare kan f&aring; ut mest av ditt engagemang. &Auml;ven om du redan g&aring;tt kursen tidigare &auml;r du varmt v&auml;lkommen att delta igen &ndash; inneh&aring;llet uppdateras regelbundet och &auml;r relevant &auml;ven f&ouml;r erfarna deltagare. <a href="#">Se datum f&ouml;r v&aring;ra kommande introduktionskurser och boka h&auml;r.</a></p>
+            <div style="display:flex;gap:20px;align-items:flex-start;margin: 52px 0 32px;">
+              <div style="font-size:120px;line-height:0.8;color:#0096D1;font-family:Georgia,serif;flex:0 0 auto;margin-top:4px;">&ldquo;</div>
+              <div>
+                <p style="font-size:20px;line-height:1.5;font-weight:500;color:var(--text);margin:0 0 12px;">Det &auml;r inspirerande att arbeta tillsammans med andra deltagare f&ouml;r att tillsammans ta fram och kvalitetss&auml;kra framtida arbetss&auml;tt.</p>
+                <p style="font-size:14px;color:#6b7280;margin:0;font-weight:600;">Anna Andersson, deltagare teknisk kommitt&eacute; 123</p>
+              </div>
+            </div>
           </div>
           <div class="article-block">
-            <h2>Kom vidare i ditt deltagande</h2>
-            <p>I st&auml;llet f&ouml;r att g&ouml;mma de viktigaste v&auml;garna i sidokolumnen kan sidan lyfta dem h&auml;r i huvudfl&ouml;det. Det g&ouml;r informationssidan tydligare och mer handlingsdriven.</p>
+            <h2>Serviceavgiften f&ouml;r deltagande i SEKs verksamhet best&aring;r av tv&aring; delar</h2>
+            <p>En del utg&ouml;rs av en grundavgift p&aring; 3 000 kr per ledamot och &aring;r, oberoende av antal kommitt&eacute;er man &auml;r ledamot i. Grundavgiftens prim&auml;ra syfte &auml;r att t&auml;cka administrativa kostnader f&ouml;r SEKs kansli.</p>
+            <p>Den andra delen av avgiften, kallad kommitt&eacute;avgift, ber&auml;knas utifr&aring;n respektive SEK-kommitt&eacute;s p&aring;g&aring;ende projekt inom IEC- och CENELEC-kommitt&eacute;er. Denna del t&auml;cker till st&ouml;rsta del avgifter och verksamheter inom IEC och CENELEC.</p>
+            <p>Ledam&ouml;ter som representerar universitet och h&ouml;gskolor eller ideella milj&ouml;- och konsumentorganisationer betalar ingen avgift.</p>
+            <p>Deltagande i SEK temagrupper &auml;r avgiftsfritt. Temagrupperna arbetar med bredare och allm&auml;nnare fr&aring;gest&auml;llningar f&ouml;r omr&aring;den av mer &ouml;vergripande karakt&auml;r.</p>
             <div class="committee-action-btns">
-              <a href="#" class="cta" onclick="return false;">Bli kommitt&eacute;deltagare</a>
-              <a href="#" class="cta-outline" onclick="return false;">Hitta tekniska kommitt&eacute;er</a>
+              <a href="#" class="cta" onclick="return false;">Anm&auml;l dig till en teknisk kommitt&eacute;</a>
             </div>
-          </div>
-          <div class="article-block">
-            <h2>Vanliga fr&aring;gor</h2>
-            <div class="faq-list">
-              <div class="faq-item">
-                <button type="button" class="faq-question" aria-expanded="false">Hur blir man kommitt&eacute;deltagare?</button>
-                <div class="faq-answer">H&auml;r kan en kort f&ouml;rklaring beskriva hur man anm&auml;ler intresse, vilka steg som f&ouml;ljer och hur deltagande i tekniska kommitt&eacute;er fungerar i praktiken.</div>
-              </div>
-              <div class="faq-item">
-                <button type="button" class="faq-question" aria-expanded="false">Vad kostar det?</button>
-                <div class="faq-answer">H&auml;r kan sidan beskriva kostnader, medlemskap, eventuella avgifter och vad som ing&aring;r beroende p&aring; vilken typ av deltagande det g&auml;ller.</div>
-              </div>
-              <div class="faq-item">
-                <button type="button" class="faq-question" aria-expanded="false">Hur mycket tid beh&ouml;ver man l&auml;gga?</button>
-                <div class="faq-answer">Visa att arbetsinsatsen kan se olika ut beroende p&aring; omr&aring;de, roll och aktivitet, men att bes&ouml;karen f&aring;r hj&auml;lp att f&ouml;rst&aring; omfattningen innan den g&aring;r vidare.</div>
-              </div>
-            </div>
+            <div class="page-updated">Senast uppdaterad: 26 april 2026</div>
           </div>
           <div class="article-block committee-related-content">
             <h2>Relaterat inneh&aring;ll</h2>
@@ -9406,6 +9449,36 @@
             </div>
           </div>
         </div>
+        <aside>
+          <div class="sidebar-block" style="padding: 0; overflow: hidden;">
+            <img src="committee-badge.png" alt="SEK Svensk Elstandard deltagarm&auml;rke" style="width:100%;display:block;border-radius:0;" />
+          </div>
+
+          <div class="sidebar-block committee-sidebar-links" style="margin-top: 20px;">
+            <h3>L&auml;nkar</h3>
+            <a href="#" class="link-ghost">Avgifter och f&ouml;ruts&auml;ttningar</a>
+            <a href="#" class="link-ghost">Prislista</a>
+            <a href="#" class="link-ghost">Arbetsordning</a>
+          </div>
+
+          <div class="sidebar-block" style="margin-top: 20px;">
+            <h3>Vanliga fr&aring;gor</h3>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Hur blir man kommitt&eacute;deltagare?</button>
+                <div class="faq-answer">H&auml;r kan en kort f&ouml;rklaring beskriva hur man anm&auml;ler intresse, vilka steg som f&ouml;ljer och hur deltagande i tekniska kommitt&eacute;er fungerar i praktiken.</div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Vad kostar det?</button>
+                <div class="faq-answer">H&auml;r kan sidan beskriva kostnader, medlemskap, eventuella avgifter och vad som ing&aring;r beroende p&aring; vilken typ av deltagande det g&auml;ller.</div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">Hur mycket tid beh&ouml;ver man l&auml;gga?</button>
+                <div class="faq-answer">Visa att arbetsinsatsen kan se olika ut beroende p&aring; omr&aring;de, roll och aktivitet, men att bes&ouml;karen f&aring;r hj&auml;lp att f&ouml;rst&aring; omfattningen innan den g&aring;r vidare.</div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
 
