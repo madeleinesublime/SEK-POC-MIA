@@ -2210,6 +2210,11 @@
       min-width: 0;
     }
 
+    .home-shop-highlight-list .home-editorial-grid-header {
+      padding-top: 0;
+      margin-bottom: 12px;
+    }
+
     .home-shop-highlight-copy h3,
     .home-shop-highlight-list h3 {
       margin: 0 0 12px;
@@ -2280,7 +2285,7 @@
     }
 
     .home-shop-product-link:hover::before {
-      background: #f2f3f5;
+      background: #fafafa;
     }
 
     .home-shop-product-link:first-of-type {
@@ -5005,8 +5010,8 @@
     }
 
     .header-layout-variant .header-pill .utility-link-icon img {
-      width: 13px;
-      height: 13px;
+      width: 14px;
+      height: 14px;
     }
 
     .header-layout-variant .menu-wrap {
@@ -6298,22 +6303,22 @@
       }
 
       .mobile-header-btn svg {
-        width: 22px;
-        height: 22px;
+        width: 28px;
+        height: 28px;
         stroke: currentColor;
         fill: none;
         stroke-width: 1.8;
         stroke-linecap: round;
         stroke-linejoin: round;
-        flex: 0 0 22px;
+        flex: 0 0 28px;
       }
 
       .mobile-header-btn img {
-        width: 22px;
-        height: 22px;
+        width: 28px;
+        height: 28px;
         display: block;
         object-fit: contain;
-        flex: 0 0 22px;
+        flex: 0 0 28px;
       }
 
       .mobile-header-btn .mobile-btn-label {
@@ -7673,7 +7678,7 @@
           <a href="#" aria-label="Kundvagn"><span class="utility-link-label">Kundvagn</span></a>
           <a href="#" aria-label="Kurser &amp; event"><span class="utility-link-label">Kurser &amp; event</span></a>
           <div class="account-wrap" id="accountWrap">
-            <a href="#" aria-label="Logga in" id="myPagesLink" aria-haspopup="dialog"><span class="utility-link-icon" aria-hidden="true"><img src="icon-user.svg" alt="" /></span><span class="utility-link-label">Logga in</span></a>
+            <a href="#" aria-label="Logga in" id="myPagesLink"><span class="utility-link-icon" aria-hidden="true"><img src="icon-user.svg" alt="" /></span><span class="utility-link-label">Logga in</span></a>
             <div class="account-panel" id="accountPanel">
               <a href="#" id="accountGoToMyPages">G&aring; till Mina sidor</a>
               <a href="#" id="accountLogoutLink">Logga ut</a>
@@ -7869,7 +7874,10 @@
       </div>
 
       <div class="home-shop-highlight-list">
-        <h3>Popul&auml;ra produkter</h3>
+        <div class="home-editorial-grid-header">
+          <h3>Popul&auml;ra produkter</h3>
+          <a class="link-ghost" href="#">Se alla produkter</a>
+        </div>
         <div class="home-shop-product-list">
           <a class="home-shop-product-link" href="#">
             <span class="home-shop-product-title">SS 436 40 00 Elinstallationsreglerna</span>
@@ -7884,7 +7892,6 @@
             <span class="home-shop-product-date">2026-04-21</span>
           </a>
         </div>
-        <a class="home-shop-more" href="#">Se alla produkter</a>
       </div>
     </section>
 
@@ -9898,32 +9905,6 @@ av den elektrotekniska utvecklingen</h1>
       </div>
     </div>
 
-    <div class="modal-overlay" id="loginModalOverlay" aria-hidden="true">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
-        <div class="modal-header">
-          <div>
-            <div class="eyebrow">Inloggning</div>
-            <h2 class="modal-title" id="loginModalTitle">Mina sidor</h2>
-          </div>
-          <button type="button" class="modal-close" id="loginModalClose" aria-label="Stäng">&#10005;</button>
-        </div>
-        <p style="margin: 0 0 16px; line-height: 1.5; color: var(--accent);">
-          Logga in för att se dina produkter, abonnemang och orderhistorik, eller för att komma åt ditt arbete i tekniska kommittéer. Har du flera roller samlas dina tjänster här.
-        </p>
-        <div class="form-row">
-          <label for="loginEmail">E-post</label>
-          <input id="loginEmail" type="email" placeholder="namn@epost.se" />
-        </div>
-        <div class="form-row">
-          <label for="loginPassword">Lösenord</label>
-          <input id="loginPassword" type="password" placeholder="••••••••" />
-        </div>
-        <div class="modal-actions">
-          <a class="cta" href="#" id="loginSubmitButton">Logga in</a>
-          <a class="cta-outline" href="#">Glömt lösenord?</a>
-        </div>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -10627,9 +10608,7 @@ av den elektrotekniska utvecklingen</h1>
     const headerSearchDrawer = document.getElementById('headerSearchDrawer');
     const headerSearchInput = document.getElementById('headerSearchInput');
     const headerSearchClose = document.getElementById('headerSearchClose');
-    const loginModalOverlay = document.getElementById('loginModalOverlay');
-    const loginModalClose = document.getElementById('loginModalClose');
-    const loginSubmitButton = document.getElementById('loginSubmitButton');
+
 
     const heroCategoryButtons = document.querySelectorAll('#heroCategoryButtons .type-btn');
     const heroStandardNumberInput = document.getElementById('heroStandardNumberInput');
@@ -11582,15 +11561,9 @@ av den elektrotekniska utvecklingen</h1>
       }
     });
 
-    myPagesLink.addEventListener('click', openLoginModal);
-    if (menuMyPagesLink) menuMyPagesLink.addEventListener('click', openLoginModal);
+    myPagesLink.addEventListener('click', (e) => e.preventDefault());
     if (accountGoToMyPages) accountGoToMyPages.addEventListener('click', showMyPages);
     if (accountLogoutLink) accountLogoutLink.addEventListener('click', logOutDemo);
-    loginSubmitButton.addEventListener('click', logInDemo);
-    loginModalClose.addEventListener('click', closeLoginModal);
-    loginModalOverlay.addEventListener('click', (event) => {
-      if (event.target === loginModalOverlay) closeLoginModal();
-    });
 
     // deltaLink click handled by mega panel
     if (logoHomeLink) logoHomeLink.addEventListener('click', showHomeView);
@@ -11799,9 +11772,7 @@ av den elektrotekniska utvecklingen</h1>
       if (profileEditPanel) profileEditPanel.classList.add('hidden');
     });
 
-    loginModalOverlay.addEventListener('keydown', (event) => trapFocus(loginModalOverlay, event));
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && loginModalOverlay.classList.contains('open')) closeLoginModal();
       if (event.key === 'Escape' && headerSearchDrawer && headerSearchDrawer.classList.contains('open')) closeSiteSearch();
       if (event.key === 'Escape' && accountWrap.classList.contains('open')) accountWrap.classList.remove('open');
     });
