@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEK – Komponentbibliotek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Layout enbart för komponentbiblioteket */
+    body { background: #f8f9fb; margin: 0; }
+    .ds-page { max-width: 960px; margin: 0 auto; padding: 48px 24px 96px; }
+    .ds-section { margin-bottom: 64px; }
+    .ds-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid #e0e4eb;
+      padding-bottom: 10px;
+      margin: 0 0 32px;
+    }
+    .ds-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+    .ds-swatch { display: flex; flex-direction: column; gap: 6px; }
+    .ds-swatch-color { width: 72px; height: 72px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.07); }
+    .ds-swatch-label { font-size: 11px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="ds-page">
+
+    <h1 style="font-size:28px;font-weight:800;color:var(--primary-dark);margin:0 0 8px;">SEK Designsystem</h1>
+    <p style="color:var(--muted);margin:0 0 56px;">Komponenter och tokens från POC:en, samlade på ett ställe.</p>
+
+    <!-- ── Färger ─────────────────────────────────────────────── -->
+    <section class="ds-section">
+      <h2 class="ds-section-title">Varumärkesfärger</h2>
+      <div class="ds-row">
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--primary);"></div>
+          <span class="ds-swatch-label">--primary<br>→ copper</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--copper);"></div>
+          <span class="ds-swatch-label">--copper<br>#B85C2E</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--copper-dark);"></div>
+          <span class="ds-swatch-label">--copper-dark<br>#A55229</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--brand-blue);"></div>
+          <span class="ds-swatch-label">--brand-blue<br>#009bd9</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--navy);"></div>
+          <span class="ds-swatch-label">--navy<br>#1d3461</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section">
+      <h2 class="ds-section-title">Text</h2>
+      <div class="ds-row">
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--text);"></div>
+          <span class="ds-swatch-label">--text<br>#2f3135</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--muted);"></div>
+          <span class="ds-swatch-label">--muted<br>#66707c</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section">
+      <h2 class="ds-section-title">Ytor &amp; grå</h2>
+      <div class="ds-row">
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--surface);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--surface<br>#ffffff</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-pale);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--gray-pale<br>#fafafa</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--warm-white);"></div>
+          <span class="ds-swatch-label">--warm-white<br>#faf7f2</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-soft);"></div>
+          <span class="ds-swatch-label">--gray-soft<br>#f2f3f5</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-faint);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--gray-faint<br>#f8f8f8</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-light);"></div>
+          <span class="ds-swatch-label">--gray-light<br>#ECEEF2</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-mid);"></div>
+          <span class="ds-swatch-label">--gray-mid<br>#DFE3EA</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--line);"></div>
+          <span class="ds-swatch-label">--line<br>#d6dfeb</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--gray-strong);"></div>
+          <span class="ds-swatch-label">--gray-strong<br>#c8d0dc</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section">
+      <h2 class="ds-section-title">Status</h2>
+      <div class="ds-row">
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--success);"></div>
+          <span class="ds-swatch-label">--success<br>#166534</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--success-bg);"></div>
+          <span class="ds-swatch-label">--success-bg<br>#dcfce7</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--error);"></div>
+          <span class="ds-swatch-label">--error<br>#b91c1c</span>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-color" style="background:var(--error-bg);"></div>
+          <span class="ds-swatch-label">--error-bg<br>#fee2e2</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Knappar ────────────────────────────────────────────── -->
+    <section class="ds-section">
+      <h2 class="ds-section-title">Knappar</h2>
+      <div class="ds-row" style="align-items:center;">
+        <a class="cta" href="#">Primary</a>
+        <a class="cta cta-ghost" href="#">Ghost</a>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
