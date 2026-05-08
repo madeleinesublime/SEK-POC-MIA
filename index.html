@@ -20,8 +20,8 @@
       --primary: #009bd9;
       --primary-dark: #1d3461;
       --copper: #B85C2E;
-      --gray-light: #F4F5F7;
-      --gray-mid: #E9EDF3;
+      --gray-light: #ECEEF2;
+      --gray-mid: #DFE3EA;
       --focus: #009bd9;
       --focus-offset-bg: #ffffff;
       --shadow-soft: 0 16px 36px rgba(29, 52, 97, 0.08);
@@ -611,7 +611,10 @@
     .mobile-search-takeover {
       display: none;
       position: fixed;
-      inset: 0;
+      top: var(--mobile-header-h, 60px);
+      left: 0;
+      right: 0;
+      bottom: 0;
       z-index: 300;
       background: #fff;
       flex-direction: column;
@@ -2369,7 +2372,7 @@
     }
 
     .home-shop-more {
-      align-self: center;
+      align-self: flex-start;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -2415,13 +2418,13 @@
       width: min(1280px, calc(100% - 48px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(420px, 0.82fr);
+      grid-template-columns: minmax(0, 1.28fr) minmax(360px, 0.72fr);
       gap: 0;
       align-items: stretch;
     }
 
     .home-committee-highlight-copy {
-      padding: 46px 30px 48px 24px;
+      padding: 46px 0px 48px 24px;
       min-width: 0;
     }
 
@@ -2551,7 +2554,7 @@
 
     .home-committee-feature {
       min-width: 0;
-      padding-right: 24px;
+      padding-right: 16px;
     }
 
     .home-committee-feature-icon {
@@ -5767,7 +5770,7 @@
 
     .home-editorial-grid .news-item-image img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 4 / 3;
       display: block;
       object-fit: cover;
       object-position: center;
@@ -6321,9 +6324,14 @@
         padding: 12px 20px;
         background: #fff;
         border-bottom: 1px solid #c8d0dc !important;
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: 90;
+      }
+      #mainContent {
+        padding-top: 77px;
       }
 
       .mobile-header-logo img {
@@ -6366,15 +6374,31 @@
         background: #f2f3f5;
       }
 
-      .mobile-header-btn svg {
-        width: 28px;
-        height: 28px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 1.8;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        flex: 0 0 28px;
+      .mobile-hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 22px;
+      }
+
+      .mobile-hamburger-bar {
+        display: block;
+        height: 2px;
+        background: currentColor;
+        border-radius: 2px;
+        transition: transform 280ms ease, opacity 200ms ease;
+        transform-origin: center;
+      }
+
+      #mobileMenuBtn.is-open .mobile-hamburger-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      #mobileMenuBtn.is-open .mobile-hamburger-bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      #mobileMenuBtn.is-open .mobile-hamburger-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
       }
 
       .mobile-header-btn img {
@@ -6432,7 +6456,10 @@
     .mobile-menu-overlay {
       display: none;
       position: fixed;
-      inset: 0;
+      top: var(--mobile-header-h, 60px);
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: rgba(29, 52, 97, 0.45);
       z-index: 200;
       opacity: 0;
@@ -6445,7 +6472,7 @@
 
     .mobile-menu-panel {
       position: fixed;
-      top: 0;
+      top: var(--mobile-header-h, 60px);
       right: 0;
       bottom: 0;
       width: min(380px, 90vw);
@@ -7180,7 +7207,7 @@
       }
       .show-images .news-item-image {
         width: 100% !important;
-        height: 180px !important;
+        height: auto !important;
         flex: none !important;
         margin: 0 0 12px !important;
       }
@@ -7661,6 +7688,14 @@
     .shop-handbooks-layout > div {
       flex: 1;
     }
+
+    .shop-handbooks-layout img,
+    .emc-puff-flex img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      display: block;
+    }
     .emc-puff-flex--reverse {
       flex-direction: row-reverse;
     }
@@ -7889,8 +7924,11 @@
       </button>
       <!-- Meny -->
       <button class="mobile-header-btn" type="button" aria-label="Meny" id="mobileMenuBtn">
-        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        <span class="mobile-btn-label">Meny</span>
+        <span class="mobile-hamburger" aria-hidden="true">
+          <span class="mobile-hamburger-bar"></span>
+          <span class="mobile-hamburger-bar"></span>
+          <span class="mobile-hamburger-bar"></span>
+        </span>
       </button>
     </div>
   </header>
@@ -11604,6 +11642,8 @@ av den elektrotekniska utvecklingen</h1>
         closeMobileSearch();
         return;
       }
+      const mobileHeader = document.getElementById('mobileHeader');
+      if (mobileHeader) mobileSearchTakeover.style.top = mobileHeader.getBoundingClientRect().bottom + 'px';
       mobileSearchTakeover.classList.add('open');
       document.body.style.overflow = 'hidden';
       if (mobileSearchInput) setTimeout(() => mobileSearchInput.focus(), 50);
@@ -11892,23 +11932,7 @@ av den elektrotekniska utvecklingen</h1>
 
   <div class="mobile-menu-panel" id="mobileMenuPanel" aria-label="Mobilmeny" role="dialog">
 
-    <!-- Panel-header -->
-    <div class="mobile-menu-header">
-      <span class="mobile-menu-header-title" id="mobileMenuTitle">Meny</span>
-      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Stäng meny">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-
     <div class="mobile-menu-body">
-
-      <div class="mobile-menu-search" role="search" aria-label="Sök på webbplatsen">
-        <div class="mobile-menu-search-field">
-          <img src="icon-search.svg" alt="" aria-hidden="true" />
-          <input type="text" placeholder="Sök standard, handbok, ämne..." aria-label="Sök på webbplatsen" />
-        </div>
-        <button type="button" class="hero-search-submit">Sök</button>
-      </div>
 
       <!-- VY 1: Startvyn -->
       <div class="mobile-menu-view is-active" id="mobileMenuHome">
@@ -12050,19 +12074,25 @@ av den elektrotekniska utvecklingen</h1>
     (function() {
       const panel    = document.getElementById('mobileMenuPanel');
       const overlay  = document.getElementById('mobileMenuOverlay');
-      const closeBtn = document.getElementById('mobileMenuClose');
       const menuBtn  = document.getElementById('mobileMenuBtn');
-      const title    = document.getElementById('mobileMenuTitle');
 
       if (!panel) return;
 
+      function getMobileHeaderBottom() {
+        const mh = document.getElementById('mobileHeader');
+        return mh ? mh.getBoundingClientRect().bottom : 60;
+      }
+
       function openMenu() {
+        const top = getMobileHeaderBottom();
+        panel.style.top = top + 'px';
+        overlay.style.top = top + 'px';
         panel.classList.add('is-open');
         overlay.style.display = 'block';
         requestAnimationFrame(() => overlay.classList.add('is-open'));
         document.body.style.overflow = 'hidden';
         showView('mobileMenuHome');
-        title.textContent = 'Meny';
+        if (menuBtn) menuBtn.classList.add('is-open');
       }
 
       function closeMenu() {
@@ -12070,6 +12100,7 @@ av den elektrotekniska utvecklingen</h1>
         overlay.classList.remove('is-open');
         setTimeout(() => { overlay.style.display = 'none'; }, 300);
         document.body.style.overflow = '';
+        if (menuBtn) menuBtn.classList.remove('is-open');
       }
 
       function showView(id) {
@@ -12078,11 +12109,12 @@ av den elektrotekniska utvecklingen</h1>
         if (view) view.classList.add('is-active');
       }
 
-      // Öppna meny
-      if (menuBtn) menuBtn.addEventListener('click', openMenu);
+      // Öppna/stäng meny
+      if (menuBtn) menuBtn.addEventListener('click', () => {
+        panel.classList.contains('is-open') ? closeMenu() : openMenu();
+      });
 
-      // Stäng
-      closeBtn.addEventListener('click', closeMenu);
+      // Stäng via overlay eller Escape
       overlay.addEventListener('click', closeMenu);
 
       // Escape
@@ -12091,17 +12123,13 @@ av den elektrotekniska utvecklingen</h1>
       // Navigera till undermeny
       document.querySelectorAll('.mobile-menu-item[data-submenu]').forEach(btn => {
         btn.addEventListener('click', () => {
-          const target = btn.dataset.submenu;
-          const label = btn.querySelector('.mobile-menu-item-label').textContent;
-          title.textContent = label;
-          showView(target);
+          showView(btn.dataset.submenu);
         });
       });
 
       // Tillbaka
       document.querySelectorAll('.mobile-menu-back[data-back]').forEach(btn => {
         btn.addEventListener('click', () => {
-          title.textContent = 'Meny';
           showView(btn.dataset.back);
         });
       });
