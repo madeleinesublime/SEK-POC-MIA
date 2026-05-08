@@ -2,7 +2,7 @@
       --bg: #ffffff;
       --surface: #ffffff;
       --line: #d6dfeb;
-      --gray-strong: var(--gray-strong);
+      --gray-strong: #c8d0dc;
       --line-dark: #9eb3cb;
       --text: #2f3135;
       --muted: #66707c;
@@ -17,8 +17,8 @@
       --gray-mid: #DFE3EA;
       --warm-white: #faf7f2;
       --gray-pale: #fafafa;
-      --gray-soft: var(--gray-soft);
-      --gray-faint: var(--gray-faint);
+      --gray-soft: #f2f3f5;
+      --gray-faint: #f8f8f8;
       --success: #166534;
       --success-bg: #dcfce7;
       --error: #b91c1c;
