@@ -2584,8 +2584,8 @@ av den elektrotekniska utvecklingen</h1>
       const shopMegaProductsHeadingLink = shopMegaPanel.querySelector('#shopMegaProductsHeadingLink');
       if (shopMegaProductsHeadingLink) {
         shopMegaProductsHeadingLink.addEventListener('click', (event) => {
+          event.preventDefault();
           closeShopMega();
-          showProductPage(event);
         });
       }
 
@@ -3811,7 +3811,6 @@ av den elektrotekniska utvecklingen</h1>
       isLoggedIn = true;
       closeLoginModal();
       updateLoginUi();
-      showMyPages();
     }
 
     const baseUpdateLoginUi = updateLoginUi;
@@ -3859,7 +3858,6 @@ av den elektrotekniska utvecklingen</h1>
       const productDetailTrigger = event.target.closest('[data-open-product-detail="true"]');
       if (productDetailTrigger) {
         event.preventDefault();
-        showProductDetailPage(event);
         return;
       }
       if (!menuWrap.contains(event.target)) {
@@ -3930,7 +3928,7 @@ av den elektrotekniska utvecklingen</h1>
     });
 
     myPagesLink.addEventListener('click', (e) => e.preventDefault());
-    if (accountGoToMyPages) accountGoToMyPages.addEventListener('click', showMyPages);
+    if (accountGoToMyPages) accountGoToMyPages.addEventListener('click', (e) => e.preventDefault());
     if (accountLogoutLink) accountLogoutLink.addEventListener('click', logOutDemo);
 
     // deltaLink click handled by mega panel
@@ -3940,10 +3938,10 @@ av den elektrotekniska utvecklingen</h1>
     if (homeDeltaCtaLink) homeDeltaCtaLink.addEventListener('click', showInfoPage);
     if (homeDeltaRightCardLink) homeDeltaRightCardLink.addEventListener('click', showInfoPage);
     if (homeSectionDeltaLink) homeSectionDeltaLink.addEventListener('click', showInfoPage);
-    if (menuProductsPageLink) menuProductsPageLink.addEventListener('click', showProductPage);
+    if (menuProductsPageLink) menuProductsPageLink.addEventListener('click', (e) => e.preventDefault());
     if (menuEmcPageLink) menuEmcPageLink.addEventListener('click', showEmcPage);
     if (mobileEmcPageLink) mobileEmcPageLink.addEventListener('click', showEmcPage);
-    if (homeShopHighlightLink) homeShopHighlightLink.addEventListener('click', showProductPage);
+    if (homeShopHighlightLink) homeShopHighlightLink.addEventListener('click', (e) => e.preventDefault());
 
     const homeShopPopularHeading = document.getElementById('homeShopPopularHeading');
     const homeShopExtra45 = document.getElementById('homeShopExtra45');
@@ -3964,7 +3962,7 @@ av den elektrotekniska utvecklingen</h1>
     }
     if (breadcrumbHomeLink) breadcrumbHomeLink.addEventListener('click', showHomeView);
     if (breadcrumbShopHowHomeLink) breadcrumbShopHowHomeLink.addEventListener('click', showHomeView);
-    if (breadcrumbShopHowProductsLink) breadcrumbShopHowProductsLink.addEventListener('click', showProductPage);
+    if (breadcrumbShopHowProductsLink) breadcrumbShopHowProductsLink.addEventListener('click', (e) => e.preventDefault());
     if (breadcrumbProductsHomeLink) breadcrumbProductsHomeLink.addEventListener('click', showHomeView);
     if (breadcrumbMyPagesHomeLink) breadcrumbMyPagesHomeLink.addEventListener('click', showHomeView);
 
@@ -3976,8 +3974,8 @@ av den elektrotekniska utvecklingen</h1>
         el.addEventListener('click', showCommitteeSignupPage);
       }
     });
-    if (breadcrumbProductBackLink) breadcrumbProductBackLink.addEventListener('click', showProductPage);
-    if (goToProductSearchFromSubscription) goToProductSearchFromSubscription.addEventListener('click', showProductPage);
+    if (breadcrumbProductBackLink) breadcrumbProductBackLink.addEventListener('click', (e) => e.preventDefault());
+    if (goToProductSearchFromSubscription) goToProductSearchFromSubscription.addEventListener('click', (e) => e.preventDefault());
     if (addToEstandardButton) addToEstandardButton.addEventListener('click', (event) => {
       event.preventDefault();
     });
