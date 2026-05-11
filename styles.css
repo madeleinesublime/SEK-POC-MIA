@@ -4466,6 +4466,13 @@
     #shopHowView .sidebar-block p,
     #committeeSignupView .sidebar-block p {
       color: var(--text) !important;
+      margin-bottom: 18px;
+    }
+
+    #infoPageView .sidebar-block .link-arrow,
+    #shopHowView .sidebar-block .link-arrow,
+    #committeeSignupView .sidebar-block .link-arrow {
+      margin-top: 14px;
     }
 
     #shopHowView h3 {
@@ -7699,6 +7706,10 @@
     }
     .emc-puff-flex--reverse {
       flex-direction: row-reverse;
+    }
+
+    .emc-puff-flex .link-arrow {
+      margin-top: 12px;
     }
     @media (max-width: 600px) {
       .emc-puff-flex,
