@@ -1986,14 +1986,7 @@
     }
 
     .home-entry-cards::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      bottom: 0;
-      left: calc(50% - 50vw);
-      right: calc(50% - 50vw);
-      background: #ffffff;
+      display: none;
     }
 
     .home-entry-cards .home-entry-cards-header {
@@ -2078,6 +2071,7 @@
       background: transparent;
       padding: 0;
       font-size: 14px;
+      font-weight: 600;
       color: #1d3461;
     }
 
@@ -2089,7 +2083,7 @@
     }
 
     .home-entry-cards .entry-card p {
-      margin: 0 0 18px;
+      margin: 0;
       font-size: 16px;
       line-height: 1.45;
       color: var(--accent);
@@ -5140,16 +5134,8 @@
     }
 
     .home-entry-cards h3 {
-      font-size: 18px !important;
+      font-size: 20px !important;
       line-height: 1.25 !important;
-    }
-
-    @media (min-width: 601px) {
-      .home-entry-cards h3,
-      .home-entry-cards .entry-card h3 {
-        font-size: 20px !important;
-        line-height: 1.25 !important;
-      }
     }
 
     .editorial-grid h3,
@@ -6447,7 +6433,6 @@
       text-align: left;
       cursor: pointer;
       font-family: inherit;
-      max-width: 16ch;
       font-weight: 700;
     }
 
@@ -6456,12 +6441,16 @@
     }
 
 
-    .committee-related-card p {
+    .committee-related-card-body p {
       margin: 0;
       max-width: calc(100% - 58px);
       font-size: 16px;
       line-height: 1.45;
       color: var(--accent);
+    }
+
+    #committeeSignupView .committee-related-card-body p {
+      margin: 0;
     }
 
     .committee-related-card-body {

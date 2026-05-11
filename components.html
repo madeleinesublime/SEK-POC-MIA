@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Layout enbart för komponentbiblioteket */
-    body { background: #f8f9fb; margin: 0; }
+    body { background: #fff; margin: 0; }
     .ds-page { max-width: 960px; margin: 0 auto; padding: 48px 24px 96px; }
     .ds-section { margin-bottom: 64px; }
     .ds-section-title {
@@ -182,13 +182,31 @@
         <div style="display:flex; flex-direction:column; gap:40px;">
 
           <div>
-            <p class="ds-note-label">Eyebrow — 14px, uppercase, letter-spacing 0.08em, line-height 1.2, navy</p>
+            <p class="ds-note-label">Eyebrow — 14px, uppercase, letter-spacing 0.08em, line-height 1.2, navy (med border)</p>
             <span class="eyebrow">Standarder &amp; föreskrifter<br>Svenska Elektriska Kommissionen</span>
           </div>
 
           <div>
-            <p class="ds-note-label">Hero — 48px, weight 800, letter-spacing -0.03em, line-height 1.25</p>
-            <p style="margin:0; font-size:48px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+            <p class="ds-note-label">Puffetikett — 14px, uppercase, letter-spacing 0.08em, weight 600, navy (utan border, i kort)</p>
+            <span style="display:inline-block; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#1d3461; line-height:1.2;">Kommitté</span>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Hero — responsiv, weight 800, letter-spacing -0.03em, line-height 1.25</p>
+            <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-end;">
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥1301px — 48px</p>
+                <p style="margin:0; font-size:48px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+              </div>
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Tablet 901–1300px — 44px</p>
+                <p style="margin:0; font-size:44px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+              </div>
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤900px — 38px</p>
+                <p style="margin:0; font-size:38px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -197,8 +215,17 @@
           </div>
 
           <div>
-            <p class="ds-note-label">H2 — 24px, weight 800, letter-spacing -0.03em, line-height 1.25</p>
-            <h2 style="margin:0; font-size:24px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+            <p class="ds-note-label">H2 — responsiv, weight 800, letter-spacing -0.03em, line-height 1.25</p>
+            <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-end;">
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥601px — 28px</p>
+                <h2 style="margin:0; font-size:28px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+              </div>
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤600px — 24px</p>
+                <h2 style="margin:0; font-size:24px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -216,6 +243,11 @@
           <div>
             <p class="ds-note-label">Ingress — .page-ingress / 20px, line-height 1.45, accent</p>
             <p class="page-ingress" style="margin:0;">Standarder är grunden för säkra och hållbara produkter. Här guidar vi dig genom processen – från val av standard till fullständig implementering i din verksamhet.</p>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Faktablock-lead / korttitel — 18px, weight 600, line-height 1.5, text</p>
+            <p style="margin:0; font-size:18px; font-weight:600; line-height:1.5; color:var(--text);">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec.</p>
           </div>
 
           <div>
@@ -390,9 +422,9 @@
       <!-- Relaterat innehåll -->
       <section class="ds-section">
         <h2 class="ds-section-title">Relaterat innehåll</h2>
-        <div style="max-width:280px;">
+        <div style="max-width:360px;">
           <article class="committee-related-card" style="min-height:0;">
-            <p class="committee-related-card-title">Avgifter och förutsättningar</p>
+            <h3 class="committee-related-card-title">Avgifter och förutsättningar</h3>
             <div class="committee-related-card-body">
               <p>Läs om avgifter, ansvar och vilka praktiska förutsättningar som gäller när ditt företag vill delta i kommittéarbetet.</p>
               <a class="committee-related-card-link" href="#" aria-label="Gå till Avgifter och förutsättningar"></a>
