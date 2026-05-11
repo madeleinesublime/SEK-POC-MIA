@@ -1075,12 +1075,12 @@
     .link-arrow::after {
       content: "";
       display: inline-block;
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       flex-shrink: 0;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 16px 16px;
+      background-size: 20px 20px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       transition: transform 180ms ease;
     }
@@ -1097,7 +1097,6 @@
     }
 
     .home-hero .cta,
-    #infoPageView .cta,
     #shopHowView .cta,
     #committeeSignupView .cta {
       display: inline-flex;
@@ -1105,45 +1104,11 @@
       gap: 10px;
     }
 
-    #infoPageView .cta,
     #shopHowView .cta,
     #committeeSignupView .cta {
       box-shadow: none !important;
     }
 
-    .home-hero .cta::after,
-    #infoPageView .cta::after,
-    #shopHowView .cta::after,
-    #committeeSignupView .cta::after {
-      content: "";
-      width: 16px;
-      height: 16px;
-      flex: 0 0 16px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 16px 16px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      transition: transform 180ms ease;
-    }
-
-    .home-hero .cta:hover::after,
-    #infoPageView .cta:hover::after,
-    #shopHowView .cta:hover::after,
-    #committeeSignupView .cta:hover::after {
-      transform: translateX(4px);
-    }
-
-    #infoPageView .cta::after,
-    #shopHowView .cta::after,
-    #committeeSignupView .cta::after {
-      display: none;
-    }
-
-    #infoPageView .cta.cta-with-arrow::after,
-    #shopHowView .cta.cta-with-arrow::after,
-    #committeeSignupView .cta.cta-with-arrow::after {
-      display: inline-block;
-    }
 
     .link-ghost {
       border: 0;
@@ -1179,7 +1144,7 @@
     .page-title {
       font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
       letter-spacing: -0.03em;
-      color: var(--navy);
+      color: var(--text);
     }
 
     .hero p,
@@ -1348,7 +1313,6 @@
       color: rgba(255, 255, 255, 0.78);
     }
 
-    #infoPageView .article-media,
     #shopHowView .article-media,
     #committeeSignupView .article-media {
       border-radius: 8px;
@@ -1697,8 +1661,8 @@
     }
 
     .page-ingress {
-      font-size: 18px;
-      line-height: 1.5;
+      font-size: 20px;
+      line-height: 1.45;
       color: var(--accent);
       max-width: 58ch;
       margin: 0 0 18px;
@@ -2641,319 +2605,17 @@
 
     .input-width-limit .form-row,
     .input-width-limit input,
-    .input-width-limit .filter-row,
-    .input-width-limit #productPageGuidedStandardSearch {
+    .input-width-limit .filter-row {
       max-width: 100%;
     }
 
-    #productPageView #specificStandardPanel .eyebrow {
-      display: none;
-    }
 
-    #productPageView #specificStandardPanel .filter-row label,
-    #productPageView #specificStandardPanel #productPageGuidedStandardSearch > div:first-child,
-    #productPageView #specificStandardPanel .product-step-label {
-      font-size: 14px !important;
-      font-weight: 600 !important;
-      color: var(--muted) !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.04em !important;
-      margin-bottom: 8px !important;
-    }
-
-    #productPageView #specificStandardPanel .product-step3-label {
-      margin-top: 14px !important;
-    }
-
-    #productPageView .product-step-label .step-number-dark {
-      display: inline-block;
-      margin-right: 6px;
-      font-size: 24px;
-      line-height: 0.85;
-      font-weight: 800;
-      color: var(--text);
-      vertical-align: -3px;
-    }
-
-    #productPageView #productPagePrimaryCategoryChips .filter-chip {
-      display: inline-flex;
-      align-items: center;
-      background: #fff;
-      color: var(--text);
-      border-color: rgba(29, 52, 97, 0.2);
-      border-width: 1px;
-      border-radius: 999px;
-      min-height: 36px;
-      min-width: 0;
-      line-height: 1.2;
-      padding: 8px 16px;
-      box-shadow: none;
-      font-size: 16px;
-    }
-
-    #productPageView #productPagePrimaryCategoryChips .filter-chip.active {
-      background: #fff;
-      border-color: #B85C2E;
-      border-width: 2px;
-      color: var(--text);
-      font-weight: 700;
-      border-radius: 999px;
-      box-shadow: none;
-    }
-
-    #productPageView #productPageGuidedStandardSearch {
-      display: block;
-      margin-top: 22px !important;
-      padding: 0 !important;
-      border: 0 !important;
-      background: transparent !important;
-    }
-
-    #productPageView #productPageStandardNumberInput {
-      width: min(100%, 340px) !important;
-      min-height: 46px;
-      padding: 10px 14px !important;
-      border: 1px solid rgba(29, 52, 97, 0.22) !important;
-      border-radius: 14px !important;
-      background: #fff !important;
-      color: var(--navy) !important;
-      font-size: 16px !important;
-      box-shadow: none !important;
-      margin-bottom: 10px !important;
-    }
-
-    #productPageView #productPageGuidanceHint,
-    #productPageView #productPageSyntaxHelp,
-    #productPageView #productPageSyntaxExamples {
-      font-size: 14px !important;
-      line-height: 1.45 !important;
-      color: #6b7280 !important;
-    }
-
-    #productPageView #productPageSyntaxExamples {
-      margin-top: 8px !important;
-    }
-
-    #productPageView #productPageSyntaxExamples .example-chip {
-      border: 1px dashed var(--line);
-      background: #fafafa;
-      color: var(--muted);
-    }
-
-    #productPageView #productPageGuidedStandardSearch > div[style*="display: flex"] {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: stretch !important;
-      max-width: 452px;
-      margin-bottom: 8px !important;
-    }
-
-    #productPageView #specificStandardPanel .page-ingress {
-      margin-bottom: 22px !important;
-    }
-
-    #productPageView #specificStandardPanel .filter-row {
-      margin-bottom: 20px !important;
-    }
-
-    #productPageView #productPageSyntaxPreview {
-      flex: unset !important;
-      border: 1px dashed rgba(29, 52, 97, 0.28) !important;
-      border-right: 0 !important;
-      border-radius: 14px 0 0 14px !important;
-      background:
-        repeating-linear-gradient(
-          -45deg,
-          rgba(29, 52, 97, 0.06) 0,
-          rgba(29, 52, 97, 0.06) 10px,
-          rgba(255, 255, 255, 0.9) 10px,
-          rgba(255, 255, 255, 0.9) 20px
-        ),
-        #fff !important;
-      padding: 10px 16px !important;
-      font-size: 18px !important;
-      font-weight: 700 !important;
-      color: var(--navy) !important;
-      min-height: 46px !important;
-      display: flex !important;
-      align-items: center !important;
-      box-shadow: none !important;
-    }
-
-    #productPageView #useProductPageSyntaxButton {
-      cursor: pointer;
-    }
-
-    #productPageView #otherSearchPanel .form-row label,
-    #productPageView #otherSearchPanel .filter-row label {
-      font-size: 14px !important;
-      font-weight: 600 !important;
-      color: var(--muted) !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.04em !important;
-      margin-bottom: 8px !important;
-    }
-
-    #productPageView #otherSearchPanel .page-ingress,
-    #productPageView #otherSearchPanel p {
-      max-width: 72ch;
-    }
-
-    #productPageView #otherSearchPanel .search-bar-row {
-      display: grid !important;
-      grid-template-columns: minmax(0, 384px) auto;
-      justify-content: start !important;
-      gap: 0 !important;
-      align-items: end !important;
-      margin-bottom: 20px !important;
-    }
-
-    #productPageView #otherSearchPanel .search-bar-row .form-row {
-      flex: 0 1 auto;
-      width: 384px;
-      margin-bottom: 0 !important;
-    }
-
-    #productPageView #productPageSearchInput {
-      width: 100% !important;
-      min-height: auto !important;
-      padding: 6px 0 !important;
-      border: none !important;
-      border-radius: 0 !important;
-      background: transparent !important;
-      color: var(--text) !important;
-      font-size: 16px !important;
-      box-shadow: none !important;
-    }
-
-    #productPageView #showProductResultsButton {
-      cursor: pointer;
-    }
-
-    #productPageSearchInput {
-      border: none !important;
-      box-shadow: none !important;
-      min-height: auto !important;
-      height: auto !important;
-      border-radius: 0 !important;
-      padding: 6px 0 !important;
-      background: transparent !important;
-    }
 
     .search-bar-row .form-row {
       flex: 1;
       min-width: 0;
     }
 
-    #productPageView #otherSearchPanel .filter-row {
-      margin-top: 0 !important;
-      margin-bottom: 20px !important;
-      padding-top: 0 !important;
-    }
-
-    #productPageView #productPageTypeChips .filter-chip,
-    #productPageView #productPageSecondaryCategoryChips .filter-chip,
-    #productPageView #productPageAreaChips .filter-chip {
-      display: inline-flex;
-      align-items: center;
-      background: #fff;
-      color: var(--text);
-      border-color: rgba(29, 52, 97, 0.2);
-      border-width: 1px;
-      border-radius: 999px;
-      min-height: 36px;
-      min-width: 0;
-      line-height: 1.2;
-      padding: 8px 16px;
-      box-shadow: none;
-      font-size: 16px;
-    }
-
-    #productPageView #productPageTypeChips .filter-chip.active,
-    #productPageView #productPageSecondaryCategoryChips .filter-chip.active,
-    #productPageView #productPageAreaChips .filter-chip.active {
-      background: #fff;
-      border-color: #B85C2E;
-      border-width: 2px;
-      color: var(--text);
-      font-weight: 700;
-      border-radius: 999px;
-      box-shadow: none;
-    }
-
-    #productPageView .results-header .eyebrow {
-      display: none !important;
-    }
-
-    #productPageView .article-block[style*="padding: 16px;"] {
-      padding: 16px !important;
-      border: 0 !important;
-      background: transparent !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-    }
-
-    #productPageView #productResultsActiveFilters,
-    #productPageView .results-header {
-      padding-left: 16px !important;
-      padding-right: 16px !important;
-    }
-
-    #productPageView #productResultsGrid {
-      display: block !important;
-      margin-top: 6px;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      background: transparent;
-    }
-
-    #productPageView .editorial-card .list-item.product-editorial-link {
-      display: block;
-      position: relative;
-      padding-right: 40px;
-      color: var(--text);
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    #productPageView .editorial-card .list-item.product-editorial-link strong {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    #productPageView .editorial-card .list-item.product-editorial-link::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 22px;
-      height: 22px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 22px 22px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 12h12' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 6l6 6-6 6' stroke='%232f3135' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      transition: transform 180ms ease;
-    }
-
-    #productPageView .editorial-card .list-item.product-editorial-link:hover::after {
-      transform: translateY(-50%) translateX(4px);
-    }
-
-    #productPageView #productResultsGrid .product-result-card {
-      border: 0 !important;
-      border-radius: 0 !important;
-      background: transparent !important;
-      box-shadow: none !important;
-      padding: 18px 16px !important;
-      gap: 18px !important;
-      align-items: center !important;
-    }
-
-    #productPageView #productResultsGrid .product-result-card + .product-result-card {
-      border-top: 1px solid rgba(29, 52, 97, 0.14) !important;
-    }
 
 
     @media (max-width: 900px) {
@@ -3050,24 +2712,6 @@
       margin-top: 0 !important;
     }
 
-    #productDetailView .variant-row .link-ghost {
-      background: var(--copper) !important;
-      color: #fff !important;
-      border: 0 !important;
-      border-radius: 999px !important;
-      min-height: 46px !important;
-      padding: 0 22px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      text-decoration: none !important;
-      box-shadow: none !important;
-    }
-
-    #productDetailView .variant-row .link-ghost:hover {
-      background: #b45a2d !important;
-      color: #fff !important;
-    }
 
     @media (max-width: 700px) {
       .variant-row {
@@ -3760,40 +3404,9 @@
       padding: 28px;
     }
 
-    #infoPageView,
     #shopHowView,
-    #committeeSignupView,
-    #productPageView,
-    #productDetailView,
-    #myPagesView {
+    #committeeSignupView {
       padding-bottom: 28px;
-    }
-
-    #productPageView,
-    #productDetailView {
-      position: relative;
-      z-index: 0;
-      background: transparent;
-    }
-
-    #productPageView::before,
-    #productDetailView::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: calc(50% - 50vw);
-      right: calc(50% - 50vw);
-      background: #fff;
-      z-index: -1;
-    }
-
-    #productPageView .tabs-shell,
-    #productPageView .article-block,
-    #productPageView .editorial-card,
-    #productDetailView .article-block,
-    #productDetailView .sidebar-block {
-      background: #fff !important;
     }
 
     .menu-section-toggle[aria-expanded="true"]::after,
@@ -3864,7 +3477,6 @@
 
     .page-hero,
     .home-editorial-grid .list-block,
-    #infoPageView .article-block:first-child,
     #shopHowView .article-block:first-child,
     #committeeSignupView .article-block:first-child {
       background:
@@ -4334,7 +3946,6 @@
       border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    #infoPageView .sidebar-block:last-child .list-item,
     #shopHowView .sidebar-block:last-child .list-item,
     #committeeSignupView .sidebar-block:last-child .list-item {
       text-decoration: none;
@@ -4344,7 +3955,6 @@
       color: var(--text);
     }
 
-    #infoPageView .sidebar-block:last-child .list-item::after,
     #shopHowView .sidebar-block:last-child .list-item::after,
     #committeeSignupView .sidebar-block:last-child .list-item::after {
       content: "";
@@ -4352,22 +3962,20 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 16px 16px;
+      background-size: 20px 20px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       transition: transform 180ms ease;
     }
 
-    #infoPageView .sidebar-block:last-child .list-item:hover::after,
     #shopHowView .sidebar-block:last-child .list-item:hover::after,
     #committeeSignupView .sidebar-block:last-child .list-item:hover::after {
       transform: translateY(-50%) translateX(4px);
     }
 
-    #infoPageView aside .sidebar-block:not(:last-child) .link-ghost,
     #shopHowView aside .sidebar-block:not(:last-child) .link-ghost,
     #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost {
       display: block !important;
@@ -4383,13 +3991,11 @@
       color: var(--text) !important;
     }
 
-    #infoPageView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost,
     #shopHowView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost,
     #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost + .link-ghost {
       border-top: 1px solid rgba(29, 52, 97, 0.12) !important;
     }
 
-    #infoPageView aside .sidebar-block:not(:last-child) .link-ghost::after,
     #shopHowView aside .sidebar-block:not(:last-child) .link-ghost::after,
     #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost::after {
       content: "";
@@ -4397,16 +4003,15 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 16px 16px;
+      background-size: 20px 20px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       transition: transform 180ms ease;
     }
 
-    #infoPageView aside .sidebar-block:not(:last-child) .link-ghost:hover::after,
     #shopHowView aside .sidebar-block:not(:last-child) .link-ghost:hover::after,
     #committeeSignupView aside .sidebar-block:not(:last-child) .link-ghost:hover::after {
       transform: translateY(-50%) translateX(4px);
@@ -4437,11 +4042,11 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 16px 16px;
+      background-size: 20px 20px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12h11' stroke='%232f3135' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M12 5l7 7-7 7' stroke='%232f3135' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       transition: transform 180ms ease;
     }
@@ -4450,26 +4055,20 @@
       transform: translateY(-50%) translateX(4px);
     }
 
-    #infoPageView .page-ingress,
     #shopHowView .page-ingress,
     #committeeSignupView .page-ingress,
-    #infoPageView .article-block p,
     #shopHowView .article-block p,
     #committeeSignupView .article-block p,
-    #infoPageView .benefit-copy,
     #shopHowView .benefit-copy,
     #committeeSignupView .benefit-copy,
-    #infoPageView .faq-answer,
     #shopHowView .faq-answer,
     #committeeSignupView .faq-answer,
-    #infoPageView .sidebar-block p,
     #shopHowView .sidebar-block p,
     #committeeSignupView .sidebar-block p {
       color: var(--text) !important;
       margin-bottom: 18px;
     }
 
-    #infoPageView .sidebar-block .link-arrow,
     #shopHowView .sidebar-block .link-arrow,
     #committeeSignupView .sidebar-block .link-arrow {
       margin-top: 14px;
@@ -4479,13 +4078,11 @@
       font-size: 20px;
     }
 
-    #infoPageView .faq-question,
     #shopHowView .faq-question,
     #committeeSignupView .faq-question {
       color: var(--text) !important;
     }
 
-    #infoPageView .faq-question::after,
     #shopHowView .faq-question::after,
     #committeeSignupView .faq-question::after {
       color: var(--text) !important;
@@ -4495,16 +4092,9 @@
       margin-bottom: 20px;
     }
 
-    #shopHowView .page-ingress,
-    #committeeSignupView .page-ingress,
-    #emcGuideView .page-ingress {
-      font-size: 20px;
-      line-height: 1.45;
-    }
 
 
-    .page-breadcrumb-row::before,
-    #productDetailView .page-hero::before {
+    .page-breadcrumb-row::before {
       content: none;
     }
 
@@ -4523,97 +4113,6 @@
       margin-bottom: 0;
     }
 
-    #productDetailView .page-hero {
-      position: relative;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      background: transparent !important;
-      padding: 16px 0 0 !important;
-      margin: 0 0 20px !important;
-    }
-
-    #productDetailView .page-hero .breadcrumb {
-      margin-bottom: 0 !important;
-    }
-
-    #productPageView .page-breadcrumb-row {
-      margin: 0 0 20px !important;
-      padding-top: 16px;
-    }
-
-    #productPageView .page-breadcrumb-row .breadcrumb,
-    #productDetailView .page-hero .breadcrumb {
-      color: var(--text) !important;
-    }
-
-    #productPageView .page-breadcrumb-row .breadcrumb a,
-    #productDetailView .page-hero .breadcrumb a {
-      color: var(--copper) !important;
-      font-weight: 600 !important;
-    }
-
-    #productPageView .page-breadcrumb-row .breadcrumb-current,
-    #productDetailView .page-hero .breadcrumb-current {
-      color: var(--muted) !important;
-      font-weight: 500 !important;
-    }
-
-    #productPageView .tabs-shell {
-      padding: 0;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    #productPageView .tabs-header {
-      padding: 24px 24px 0;
-      background: #fff;
-    }
-
-    #productPageView .search-tabs {
-      gap: 0;
-      align-items: end;
-      padding-top: 8px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    #productPageView .search-tab {
-      border: 1px solid var(--line);
-      border-bottom: 0;
-      border-radius: 14px 14px 0 0;
-      background: #f8f8f9 !important;
-      color: #B85C2E;
-      font-weight: 600;
-      padding: 13px 18px 12px;
-      margin-right: 6px;
-      min-height: 0;
-      position: relative;
-      top: 1px;
-      transform: none;
-    }
-
-    #productPageView .search-tab:hover {
-      background: #e8e9eb;
-      border-color: var(--line-dark);
-      color: #B85C2E;
-      transform: none;
-    }
-
-    #productPageView .search-tab.active {
-      background: #fff !important;
-      border-color: var(--line);
-      border-bottom: 3px solid #B85C2E;
-      color: var(--text);
-      font-weight: 700;
-      box-shadow: none;
-    }
-
-    #productPageView .tab-panels {
-      border: 0;
-      border-radius: 0 0 var(--radius-md) var(--radius-md);
-      box-shadow: none;
-      padding: 24px;
-    }
 
     .info-page-hero {
       position: relative;
@@ -5494,8 +4993,6 @@
     .home-shop-more,
     .home-committee-inline-link,
     .home-editorial-grid .link-ghost,
-    #infoPageView aside .sidebar-block:not(:last-child) .link-ghost,
-    #infoPageView .sidebar-block:last-child .list-item,
     #shopHowView aside .sidebar-block:not(:last-child) .link-ghost,
     #shopHowView .sidebar-block:last-child .list-item,
     .mega-menu-title {
@@ -5930,7 +5427,6 @@
       margin-top: 24px;
     }
 
-    #infoPageView .content-layout > div:first-child .article-block,
     #shopHowView .content-layout > div:first-child .article-block,
     #committeeSignupView .content-layout > div:first-child .article-block {
       background: transparent !important;
@@ -5940,13 +5436,11 @@
       border-radius: 0 !important;
     }
 
-    #infoPageView .content-layout > div:first-child .article-block + .article-block,
     #shopHowView .content-layout > div:first-child .article-block + .article-block,
     #committeeSignupView .content-layout > div:first-child .article-block + .article-block {
       margin-top: 36px !important;
     }
 
-    #infoPageView .content-layout,
     #shopHowView .content-layout,
     #committeeSignupView .content-layout {
       margin-bottom: 40px;
@@ -5975,7 +5469,6 @@
     }
 
     @media (min-width: 901px) {
-      #infoPageView .content-layout,
       #shopHowView .content-layout,
       #committeeSignupView .content-layout {
         grid-template-columns: minmax(0, 1fr) 360px !important;
@@ -5983,7 +5476,6 @@
         align-items: start;
       }
 
-      #infoPageView .content-layout > div:first-child,
       #shopHowView .content-layout > div:first-child,
       #committeeSignupView .content-layout > div:first-child {
         max-width: 760px;
@@ -5998,40 +5490,16 @@
       }
     }
 
-    #infoPageView .page-title,
     #shopHowView .page-title,
     #committeeSignupView .page-title {
       margin-top: 18px;
     }
 
-    #infoPageView aside .sidebar-block:first-child,
     #shopHowView aside .sidebar-block:first-child,
     #committeeSignupView aside .sidebar-block:first-child {
       margin-top: 18px;
     }
 
-    #productPageView .tabs-shell,
-    #productPageView .article-block,
-    #productPageView .editorial-card,
-    #productDetailView .article-block,
-    #productDetailView .sidebar-block {
-      background: #fff !important;
-      border: none !important;
-      border-radius: var(--radius-md) !important;
-      box-shadow: var(--shadow-card) !important;
-      padding: 28px !important;
-    }
-
-    #productPageView .tabs-shell,
-    #productPageView .article-block,
-    #productPageView .editorial-card {
-      background: transparent !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-    }
-
-    #infoPageView .benefit-item,
     #shopHowView .benefit-item,
     #committeeSignupView .benefit-item {
       background: transparent !important;
@@ -6041,14 +5509,12 @@
       padding: 20px 0 !important;
     }
 
-    #infoPageView .benefit-item:first-of-type,
     #shopHowView .benefit-item:first-of-type,
     #committeeSignupView .benefit-item:first-of-type {
       border-top: 0 !important;
       padding-top: 0 !important;
     }
 
-    #infoPageView .faq-list,
     #shopHowView .faq-list,
     #committeeSignupView .faq-list {
       display: grid;
@@ -6056,7 +5522,6 @@
       border-top: 1.5px solid #B85C2E;
     }
 
-    #infoPageView .faq-item,
     #shopHowView .faq-item,
     #committeeSignupView .faq-item {
       border-bottom: 1.5px solid #B85C2E;
@@ -6064,7 +5529,6 @@
       overflow: hidden;
     }
 
-    #infoPageView .faq-question,
     #shopHowView .faq-question,
     #committeeSignupView .faq-question {
       width: 100%;
@@ -6080,7 +5544,6 @@
       min-height: 0;
     }
 
-    #infoPageView .faq-question::after,
     #shopHowView .faq-question::after,
     #committeeSignupView .faq-question::after {
       content: "";
@@ -6097,13 +5560,11 @@
       transition: transform 180ms ease;
     }
 
-    #infoPageView .faq-question[aria-expanded="true"]::after,
     #shopHowView .faq-question[aria-expanded="true"]::after,
     #committeeSignupView .faq-question[aria-expanded="true"]::after {
       transform: translateY(-50%) rotate(180deg);
     }
 
-    #infoPageView .faq-answer,
     #shopHowView .faq-answer,
     #committeeSignupView .faq-answer {
       display: none;
@@ -6115,7 +5576,6 @@
       background: transparent;
     }
 
-    #infoPageView .faq-answer.open,
     #shopHowView .faq-answer.open,
     #committeeSignupView .faq-answer.open {
       display: block;
@@ -6265,24 +5725,6 @@
       margin-top: 3px;
     }
 
-    /* ── Filter-chip checkboxar ──────────────────────────────────────────── */
-    #productPageView .filter-chip::before {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      flex: 0 0 16px;
-      margin-right: 6px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.5' y='1.5' width='13' height='13' rx='3' fill='none' stroke='%239eb3cb' stroke-width='1.5'/%3E%3C/svg%3E");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      vertical-align: middle;
-    }
-
-    #productPageView .filter-chip.active::before {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.5' y='1.5' width='13' height='13' rx='3' fill='%23cc6633' stroke='%23cc6633' stroke-width='1.5'/%3E%3Cpath d='M4.5 8l2.5 2.5 4.5-5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
-    }
 
   
     /* ── Brödtextlänkar ──────────────────────────────────────────────────── */
@@ -6296,6 +5738,18 @@
     .article-block p a:hover,
     .article-block li a:hover {
       color: var(--copper-dark);
+    }
+
+    .faktablock p a,
+    .faktablock li a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 600;
+      text-underline-offset: 3px;
+    }
+    .faktablock p a:hover,
+    .faktablock li a:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
     }
 
   
@@ -6322,6 +5776,10 @@
         padding: 0 !important;
         min-height: 0 !important;
         border-bottom: none !important;
+      }
+
+      header.header-layout-variant::after {
+        display: none;
       }
 
       /* Visa mobilheadern */
@@ -7549,15 +7007,6 @@
 
   
 
-    /* Visa träffar hover */
-    #useProductPageSyntaxButton:hover {
-      background: #A55229 !important;
-      border-color: #A55229 !important;
-    }
-    #showProductResultsButton:hover {
-      background: #A55229 !important;
-      border-color: #A55229 !important;
-    }
 
     /* ── Chattbubbla ───────────────────────────────────────────────── */
     #chatBubbleBtn {

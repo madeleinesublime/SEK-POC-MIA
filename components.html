@@ -27,6 +27,35 @@
     .ds-swatch { display: flex; flex-direction: column; gap: 6px; }
     .ds-swatch-color { width: 72px; height: 72px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.07); }
     .ds-swatch-label { font-size: 11px; color: var(--muted); }
+    .ds-group {
+      margin: 64px 0 0;
+      padding-top: 40px;
+      border-top: 2px solid var(--primary-dark);
+    }
+    .ds-group-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin: 0 0 40px;
+    }
+    .ds-note-block {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px dashed var(--gray-mid);
+    }
+    .ds-note-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-style: italic;
+    }
+    .ds-note-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -36,6 +65,8 @@
     <p style="color:var(--muted);margin:0 0 56px;">Komponenter och tokens från POC:en, samlade på ett ställe.</p>
 
     <!-- ── Färger ─────────────────────────────────────────────── -->
+    <div class="ds-group">
+      <h2 class="ds-group-title">Färger</h2>
     <section class="ds-section">
       <h2 class="ds-section-title">Varumärkesfärger</h2>
       <div class="ds-row">
@@ -140,23 +171,75 @@
       </div>
     </section>
 
-    <!-- ── Knappar ─────────────────────────────────────────────── -->
+    </div><!-- /ds-group Färger -->
+
+    <!-- ── Typografi ───────────────────────────────────────────── -->
+    <div class="ds-group">
+      <h2 class="ds-group-title">Typografi</h2>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">Rubriker</h2>
+        <div style="display:flex; flex-direction:column; gap:40px;">
+
+          <div>
+            <p class="ds-note-label">Eyebrow — 14px, uppercase, letter-spacing 0.08em, line-height 1.2, navy</p>
+            <span class="eyebrow">Standarder &amp; föreskrifter<br>Svenska Elektriska Kommissionen</span>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Hero — 48px, weight 800, letter-spacing -0.03em, line-height 1.25</p>
+            <p style="margin:0; font-size:48px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+          </div>
+
+          <div>
+            <p class="ds-note-label">H1 — .page-title / 38px, weight 800, letter-spacing -0.03em, line-height 1.1</p>
+            <h1 class="page-title" style="margin:0;">Så köper du standarder<br>och e-Standards</h1>
+          </div>
+
+          <div>
+            <p class="ds-note-label">H2 — 24px, weight 800, letter-spacing -0.03em, line-height 1.25</p>
+            <h2 style="margin:0; font-size:24px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+          </div>
+
+          <div>
+            <p class="ds-note-label">H3 — 20px, weight 700, letter-spacing -0.02em, line-height 1.25</p>
+            <h3 style="margin:0; font-size:20px; line-height:1.25; letter-spacing:-0.02em; color:var(--text); font-weight:700;">Kommittéarbete<br>och deltagande</h3>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">Löptext</h2>
+        <div style="display:flex; flex-direction:column; gap:32px; max-width:640px;">
+
+          <div>
+            <p class="ds-note-label">Ingress — .page-ingress / 20px, line-height 1.45, accent</p>
+            <p class="page-ingress" style="margin:0;">Standarder är grunden för säkra och hållbara produkter. Här guidar vi dig genom processen – från val av standard till fullständig implementering i din verksamhet.</p>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Brödtext — 16px, text, line-height 1.5</p>
+            <p style="margin:0; font-size:16px; line-height:1.5; color:var(--text);">Svenska Elektriska Kommissionen (SEK) är en ideell organisation<br>vars uppgift är att vara nationellt organ för standardisering<br>inom det elektrotekniska området.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /ds-group Typografi -->
+
+    <!-- ── Knappar & länkar ──────────────────────────────────── -->
+    <div class="ds-group">
+      <h2 class="ds-group-title">Knappar &amp; länkar</h2>
     <section class="ds-section">
       <h2 class="ds-section-title">Knappar</h2>
 
       <div class="ds-row" style="align-items:center; margin-bottom: 12px;">
         <a class="cta" href="#">Köp standard</a>
         <a class="cta-outline" href="#">Hitta kommittéer</a>
-        <a class="link-ghost" href="#">Så fungerar det</a>
-        <div class="home-editorial-grid-header" style="display:contents;">
-          <a class="link-ghost" href="#">Se alla nyheter</a>
-        </div>
       </div>
 
-      <div class="ds-row" style="align-items:center; background: var(--navy); padding: 20px 24px; border-radius: 12px;">
-        <a class="cta" href="#">Köp standard</a>
-        <a class="hero-cta-secondary" href="#">Gå med i kommitté</a>
-      </div>
+
     </section>
 
     <!-- ── Länkknappar ────────────────────────────────────────── -->
@@ -164,18 +247,23 @@
       <h2 class="ds-section-title">Länkknappar</h2>
       <div class="ds-row" style="align-items:center; flex-direction: column; align-items: flex-start;">
         <a class="link-arrow" href="#">Utforska handböcker</a>
-        <a class="home-committee-inline-link" href="#">Se mer information</a>
+        <div class="home-editorial-grid-header" style="display:contents;">
+          <a class="link-ghost" href="#">Se alla nyheter</a>
+        </div>
+        <p style="margin:8px 0 0;font-size:12px;color:var(--muted);font-style:italic;">Bakgrund används när länkknappen kombineras bredvid en rubrik.</p>
       </div>
     </section>
 
-    <!-- ── Chips & pills ──────────────────────────────────────── -->
+
+    <!-- ── Brödtextlänkar ───────────────────────────────────────── -->
     <section class="ds-section">
-      <h2 class="ds-section-title">Chips &amp; pills</h2>
-      <div class="ds-row" style="align-items:center;">
-        <div class="mobile-search-chips" style="display:contents;">
-          <button>EMC-direktiv</button>
-          <button>Lågspänning</button>
-          <button>Maskindirektivet</button>
+      <h2 class="ds-section-title">Brödtextlänkar</h2>
+      <div class="ds-row" style="flex-direction:column; align-items:flex-start; gap:24px;">
+        <div class="article-block" style="margin:0; padding:0; box-shadow:none; background:none;">
+          <p style="margin:0;">Läs mer om <a href="#">våra tekniska kommittéer</a> eller gå direkt till <a href="#">anmälan</a>.</p>
+        </div>
+        <div class="faktablock" style="background:var(--navy); border-radius:8px; padding:20px 24px;">
+          <p style="margin:0; color:#fff; font-size:16px; line-height:1.6;">Läs mer om <a href="#">våra tekniska kommittéer</a> eller gå direkt till <a href="#">anmälan</a>.</p>
         </div>
       </div>
     </section>
@@ -188,6 +276,31 @@
         <button class="home-shop-more open" type="button">Visa färre</button>
       </div>
     </section>
+
+    <!-- ── Generella avstånd ─────────────────────────────────── -->
+    <div class="ds-note-block">
+      <h3 class="ds-note-title">Generella avstånd i kontext</h3>
+
+      <p class="ds-note-label">Rubrik + länkknapp — redaktionsgrid på startsidan (gap 16px)</p>
+      <div class="home-editorial-grid-header" style="padding-top:0; margin-bottom: 40px;">
+        <h3>Nyheter</h3>
+        <a class="link-ghost" href="#">Visa alla nyheter</a>
+      </div>
+
+      <p class="ds-note-label">Knapp + länkknapp — kommittésektionen på startsidan (gap 22px)</p>
+      <div class="home-committee-highlight-actions" style="margin-bottom: 40px;">
+        <a class="cta" href="#">Ansök – bli deltagare</a>
+        <a class="home-committee-inline-link" href="#">Så fungerar det</a>
+      </div>
+
+      <p class="ds-note-label">Brödtext + länkknapp — puffar (p margin-bottom 18px + länk margin-top 14px)</p>
+      <div>
+        <p style="margin:0 0 18px;max-width:480px;">Överväger du en installation av t ex en laddbox, en solcellsanläggning eller ett husbatteri måste du som anläggningsinnehavare tänka på EMC.</p>
+        <a class="link-arrow" href="#" style="margin-top:14px;">Läs mer om EMC</a>
+      </div>
+    </div>
+
+    </div><!-- /ds-group Knappar & länkar -->
 
   </div>
 </body>
