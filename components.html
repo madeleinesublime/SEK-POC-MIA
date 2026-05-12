@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
@@ -182,13 +182,12 @@
         <div style="display:flex; flex-direction:column; gap:40px;">
 
           <div>
-            <p class="ds-note-label">Eyebrow — 14px, uppercase, letter-spacing 0.08em, line-height 1.2, navy (med border)</p>
-            <span class="eyebrow">Standarder &amp; föreskrifter<br>Svenska Elektriska Kommissionen</span>
-          </div>
-
-          <div>
-            <p class="ds-note-label">Puffetikett — 14px, uppercase, letter-spacing 0.08em, weight 600, navy (utan border, i kort)</p>
-            <span style="display:inline-block; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:#1d3461; line-height:1.2;">Kommitté</span>
+            <p class="ds-note-label">Eyebrow — .eyebrow / 14px, weight 700, uppercase, letter-spacing 0.08em, line-height 1.2, navy — används som sektionsetikett och nyhetstypsetikett</p>
+            <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:center;">
+              <span class="eyebrow">Kommitté</span>
+              <span class="eyebrow">Nyhet</span>
+              <span class="eyebrow">Pressmeddelande</span>
+            </div>
           </div>
 
           <div>
@@ -241,6 +240,24 @@
         <div style="display:flex; flex-direction:column; gap:32px; max-width:640px;">
 
           <div>
+            <p class="ds-note-label">Hero-ingress — .home-hero p / weight 700, line-height 1.5, vit på mörkbakgrund</p>
+            <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+              <div style="flex:1; min-width:240px;">
+                <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥901px — 20px</p>
+                <div style="background:var(--navy); border-radius:8px; padding:20px 24px;">
+                  <p style="margin:0; font-size:20px; font-weight:700; line-height:1.5; color:rgba(255,255,255,0.92);">Hitta, köp och använd standarder<br>som förenklar och kvalitetssäkrar ditt arbete.</p>
+                </div>
+              </div>
+              <div style="flex:1; min-width:240px;">
+                <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤900px — 19px</p>
+                <div style="background:var(--navy); border-radius:8px; padding:20px 24px;">
+                  <p style="margin:0; font-size:19px; font-weight:700; line-height:1.5; color:rgba(255,255,255,0.92);">Hitta, köp och använd standarder<br>som förenklar och kvalitetssäkrar ditt arbete.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
             <p class="ds-note-label">Ingress — .page-ingress / 20px, line-height 1.45, accent</p>
             <p class="page-ingress" style="margin:0;">Standarder är grunden för säkra och hållbara produkter. Här guidar vi dig genom processen – från val av standard till fullständig implementering i din verksamhet.</p>
           </div>
@@ -253,6 +270,21 @@
           <div>
             <p class="ds-note-label">Brödtext — 16px, text, line-height 1.5</p>
             <p style="margin:0; font-size:16px; line-height:1.5; color:var(--text);">Svenska Elektriska Kommissionen (SEK) är en ideell organisation<br>vars uppgift är att vara nationellt organ för standardisering<br>inom det elektrotekniska området.</p>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Metadatatext — .text-meta / 14px, weight 400, line-height 1.2 — datum, byline, sekundär info</p>
+            <div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start;">
+              <div>
+                <p style="margin:0 0 4px; font-size:12px; color:var(--muted); font-style:italic;">Ljus bakgrund (datum i nyheter)</p>
+                <p class="text-meta" style="margin:0;">2026-03-24</p>
+              </div>
+              <div style="background:var(--navy); padding:16px 20px; border-radius:var(--radius-md);">
+                <p style="margin:0 0 4px; font-size:12px; color:rgba(255,255,255,0.6); font-style:italic;">Mörk bakgrund (citatattribution)</p>
+                <p style="margin:0; font-size:14px; font-weight:600; line-height:1.2; color:#fff;">Anna Lindström</p>
+                <p style="margin:3px 0 0; font-size:14px; line-height:1.2; color:rgba(255,255,255,0.75);">Standardiseringsexpert, SEK</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -350,7 +382,7 @@
                 <div class="news-item-content">
                   <div class="event-item-meta">
                     <span>2026-03-24</span>
-                    <span class="event-tag">Nyhet</span>
+                    <span class="eyebrow">Nyhet</span>
                   </div>
                   <h2>SEK Handbok 452 – Utgåva 3 av Åskskyddshandboken</h2>
                   <span class="news-item-excerpt">Nu är den släppt, utgåva 3 av Åskskyddshandboken, SEK Handbok 452! Från riskbedömning till rätt åtgärder. Beställ här!</span>
@@ -369,7 +401,7 @@
                 <div class="news-item-content">
                   <div class="event-item-meta">
                     <span>2026-03-24</span>
-                    <span class="event-tag">Nyhet</span>
+                    <span class="eyebrow">Nyhet</span>
                   </div>
                   <h2>SEK Handbok 452 – Utgåva 3 av Åskskyddshandboken</h2>
                   <span class="news-item-excerpt">Nu är den släppt, utgåva 3 av Åskskyddshandboken, SEK Handbok 452! Från riskbedömning till rätt åtgärder. Beställ här!</span>
@@ -435,6 +467,252 @@
 
     </div><!-- /ds-group Puffar -->
 
+    <!-- ── Ikoner ───────────────────────────────────────────── -->
+    <div class="ds-group">
+      <h2 class="ds-group-title">Ikoner</h2>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">UI-ikoner</h2>
+        <p class="ds-note-label">24×24px, stroke-baserade — svart/currentColor, används i header, navigering och gränssnitt</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11.195 19.6124C15.8436 19.6124 19.6121 15.8439 19.6121 11.1952C19.6121 6.54656 15.8436 2.77808 11.195 2.77808C6.54631 2.77808 2.77783 6.54656 2.77783 11.1952C2.77783 15.8439 6.54631 19.6124 11.195 19.6124Z"/>
+                <path d="M17.0493 17.4866L20.3493 20.778"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Sök</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5.54102 19.9996C5.54102 17.891 7.20466 15.2656 11.9998 15.2656C16.794 15.2656 18.4576 17.8719 18.4576 19.9815"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1254 8.12567C16.1254 10.4043 14.2784 12.2513 11.9997 12.2513C9.722 12.2513 7.875 10.4043 7.875 8.12567C7.875 5.847 9.722 4 11.9997 4C14.2784 4 16.1254 5.847 16.1254 8.12567Z"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Konto</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3.24609L5.02379 3.59636L5.96076 14.7593C6.03568 15.67 6.79849 16.3705 7.71211 16.3676H18.3263C19.199 16.3696 19.9395 15.7274 20.063 14.8634L20.9864 8.48264C21.0895 7.76945 20.5953 7.10783 19.8821 7.00469C19.8198 6.99593 5.34876 6.99107 5.34876 6.99107"/>
+                <path d="M7.28903 20.2452V20.3633M7.7678 20.2706C7.7678 20.5365 7.55203 20.7521 7.28609 20.7521C7.02016 20.7521 6.80469 20.5365 6.80469 20.2706C6.80469 20.0046 7.02016 19.7891 7.28609 19.7891C7.55203 19.7891 7.7678 20.0046 7.7678 20.2706Z"/>
+                <path d="M18.3125 20.2452V20.3633M18.7912 20.2706C18.7912 20.5365 18.5755 20.7521 18.3095 20.7521C18.0436 20.7521 17.8281 20.5365 17.8281 20.2706C17.8281 20.0046 18.0436 19.7891 18.3095 19.7891C18.5755 19.7891 18.7912 20.0046 18.7912 20.2706Z"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Varukorg</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Meny</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron ned</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron höger</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron vänster</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h11"/>
+                <path d="M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Pil höger</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">Illustrativa ikoner</h2>
+        <p class="ds-note-label">42×42px (viewBox 0 0 100 100), copper var(--copper) — används i mega-menyns produktkort</p>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M62.5 80H12C9.79086 80 8 78.2091 8 76V32C8 29.7909 9.79086 28 12 28H74C76.2091 28 78 29.7909 78 32V56" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 32L43 56L77 32" stroke="#B85C2E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M78 88C86.8366 88 94 80.8366 94 72C94 63.1634 86.8366 56 78 56C69.1634 56 62 63.1634 62 72C62 80.8366 69.1634 88 78 88Z" stroke="#B85C2E" stroke-width="4"/>
+                <path d="M78 63V81" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+                <path d="M69 72H87" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">e-Standard</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M50 10L88 30L50 50L12 30L50 10Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 30V68L50 88V50L12 30Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M88 30V68L50 88V50L88 30Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M69 20L31 40" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Produkter</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M68 49C74.6274 49 80 43.8513 80 37.5C80 31.1487 74.6274 26 68 26C61.3726 26 56 31.1487 56 37.5C56 43.8513 61.3726 49 68 49Z" stroke="#B85C2E" stroke-width="4"/>
+                <path d="M49 55.9692C60.9157 43.4523 90 47.7959 90 69" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+                <path d="M37.5 55C44.9558 55 51 48.732 51 41C51 33.268 44.9558 27 37.5 27C30.0442 27 24 33.268 24 41C24 48.732 30.0442 55 37.5 55Z" stroke="#B85C2E" stroke-width="4"/>
+                <path d="M12 76C12 48 67 48 67 76" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Kommittéer</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M37.4286 12H19.5714C17.599 12 16 13.6416 16 15.6667V85.3333C16 87.3584 17.599 89 19.5714 89H37.4286C39.401 89 41 87.3584 41 85.3333V15.6667C41 13.6416 39.401 12 37.4286 12Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M29 25H41" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M29 43H41" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M29 61H41" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M29 79H41" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 34H40" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 52H40" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M26 70H40" stroke="#B85C2E" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M79.6429 12H62.3571C61.0553 12 60 13.0745 60 14.4V17.6C60 18.9255 61.0553 20 62.3571 20H79.6429C80.9447 20 82 18.9255 82 17.6V14.4C82 13.0745 80.9447 12 79.6429 12Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M80.4286 20H61.5714C60.7036 20 60 20.8656 60 21.9333V76.0667C60 77.1344 60.7036 78 61.5714 78H80.4286C81.2964 78 82 77.1344 82 76.0667V21.9333C82 20.8656 81.2964 20 80.4286 20Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M61 78L71 89L81 78" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Publikation</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M21 12V88H78V29.1L60.9 12H21Z" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M61 13V30H78" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M38 79V71" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M50 79V69" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M56 78V65" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M44 78V65" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M61 79V61" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 79L65 79" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 37L65 37" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 43L65 43" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 49L65 49" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Dokument</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <div style="width:64px; height:64px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <path d="M36.5 48C43.9558 48 50 41.732 50 34C50 26.268 43.9558 20 36.5 20C29.0442 20 23 26.268 23 34C23 41.732 29.0442 48 36.5 48Z" stroke="#B85C2E" stroke-width="4"/>
+                <path d="M11 69C11 47.5167 43.3779 42.5167 58.4491 54" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+                <path d="M60 56V53C60 51 61 50 63 50H73C75 50 76 51 76 53V56" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M82 56L55.5 56C53.2909 56 51.9999 55.7909 51.9999 58L51.9999 74.5C51.9999 76.7091 51.7909 78 54 78H80.9999C83.2091 78 83.9999 77.7091 83.9999 75.5V59.5C83.9999 57.2909 84.2091 56 82 56Z" stroke="#B85C2E" stroke-width="4"/>
+                <path d="M52 67H84" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Jobba hos oss</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">Kommittéblock — illustrationer</h2>
+        <p class="ds-note-label">62×62px, rund beskärning — används i kommittéblocket på startsidan</p>
+        <div style="display:flex; flex-wrap:wrap; gap:24px;">
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <img src="committee-feature-network.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Internationellt nätverk</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <img src="committee-feature-future.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Ligg steget före</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
+            <img src="committee-feature-safety.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
+            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Arbeta tryggare</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /ds-group Ikoner -->
+
+    <!-- ── Logotyp ───────────────────────────────────────────── -->
+    <div class="ds-group">
+      <h2 class="ds-group-title">Logotyp</h2>
+
+      <section class="ds-section">
+        <h2 class="ds-section-title">Storlekar</h2>
+        <div style="display:flex; flex-direction:column; gap:32px;">
+
+          <div>
+            <p class="ds-note-label">Stor — 190×85px — desktop expanderad header</p>
+            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+              <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:190px; height:85px; display:block; object-fit:contain;" />
+            </div>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Standard — 154×61px — desktop standard</p>
+            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+              <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:154px; height:61px; display:block; object-fit:contain;" />
+            </div>
+          </div>
+
+          <div>
+            <p class="ds-note-label">Kompakt — 130×51px — scrollad header, söklayout, mobil</p>
+            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+              <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:130px; height:51px; display:block; object-fit:contain;" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /ds-group Logotyp -->
+
   </div>
 </body>
 </html>
+

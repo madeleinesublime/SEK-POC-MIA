@@ -399,12 +399,22 @@
     .eyebrow {
       display: inline-block;
       font-size: 14px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #1d3461;
-      border: 1px dashed var(--line);
-      padding: 4px 8px;
+      line-height: 1.2;
+      color: var(--navy);
+      border: 0;
+      background: transparent;
+      padding: 0;
       margin-bottom: 14px;
+    }
+
+    .text-meta {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--muted);
     }
 
     .hero h1 {
@@ -1128,17 +1138,6 @@
       transform: none;
     }
 
-    .eyebrow {
-      border: 0;
-      background: transparent;
-      color: #1d3461;
-      border-radius: 0;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      font-size: 11px;
-      line-height: 1.2;
-      padding: 0;
-    }
 
     .hero h1,
     .page-title {
@@ -2083,7 +2082,7 @@
     }
 
     .home-entry-cards .entry-card p {
-      margin: 0;
+      margin: 0 0 18px;
       font-size: 16px;
       line-height: 1.45;
       color: var(--accent);
@@ -4803,9 +4802,6 @@
       z-index: 1;
     }
 
-    .header-layout-variant .shop-mega-footer {
-      display: none;
-    }
 
     .header-layout-variant .shop-mega-card {
       background: transparent;
@@ -5368,31 +5364,16 @@
     }
 
     .home-editorial-grid .event-item-meta > span:first-child {
-      font-size: 14px !important;
-      font-weight: 400 !important;
-      letter-spacing: 0 !important;
-      text-transform: none !important;
-      color: var(--muted) !important;
-      line-height: 1.2 !important;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
     }
 
-    .home-editorial-grid .event-tag {
-      display: inline-block !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      background: transparent !important;
-      color: #31508a !important;
-      font-family: inherit !important;
-      font-size: 14px !important;
-      font-style: normal !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
-      line-height: 1.2 !important;
-      white-space: nowrap;
-      vertical-align: baseline;
+    .home-editorial-grid .eyebrow {
+      margin-bottom: 0;
     }
 
     .home-editorial-grid .link-ghost {
@@ -5577,9 +5558,6 @@
       background: #1d3461 !important;
     }
 
-    .home-hero.is-mid {
-      background: #007CAD !important;
-    }
 
     .home-hero::before {
       content: none !important;
@@ -5701,12 +5679,15 @@
     }
 
     .quote-author-name {
+      font-size: 14px;
       font-weight: 600;
+      line-height: 1.2;
       color: #fff;
     }
 
     .quote-author-role {
       font-size: 14px;
+      line-height: 1.2;
       color: rgba(255, 255, 255, 0.75);
       margin-top: 3px;
     }
