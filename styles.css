@@ -1235,7 +1235,7 @@
       transition: box-shadow 0.28s ease;
     }
 
-    .entry-card .link-ghost {
+    .entry-card > .link-ghost {
       margin-top: auto;
       align-self: flex-start;
     }
@@ -2098,13 +2098,14 @@
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      margin-top: 24px;
-      padding-top: 0;
+      margin-top: auto;
+      padding-top: 24px;
     }
 
     .home-entry-card-actions .cta,
     .home-entry-card-actions .link-ghost {
       white-space: nowrap;
+      align-self: center !important;
     }
 
     .home-entry-card-actions .cta {
