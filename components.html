@@ -115,18 +115,10 @@
           <span class="ds-swatch-label">--surface<br>#ffffff</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--gray-pale);border:1px solid var(--gray-light);"></div>
-          <span class="ds-swatch-label">--gray-pale<br>#fafafa</span>
-        </div>
-        <div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--warm-white);"></div>
           <span class="ds-swatch-label">--warm-white<br>#faf7f2</span>
         </div>
-        <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--gray-soft);"></div>
-          <span class="ds-swatch-label">--gray-soft<br>#f2f3f5</span>
-        </div>
-        <div class="ds-swatch">
+<div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--gray-faint);border:1px solid var(--gray-light);"></div>
           <span class="ds-swatch-label">--gray-faint<br>#f8f8f8</span>
         </div>
@@ -137,10 +129,6 @@
         <div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--gray-mid);"></div>
           <span class="ds-swatch-label">--gray-mid<br>#DFE3EA</span>
-        </div>
-        <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--line);"></div>
-          <span class="ds-swatch-label">--line<br>#d6dfeb</span>
         </div>
         <div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--gray-strong);"></div>
@@ -209,8 +197,17 @@
           </div>
 
           <div>
-            <p class="ds-note-label">H1 — .page-title / 38px, weight 800, letter-spacing -0.03em, line-height 1.1</p>
-            <h1 class="page-title" style="margin:0;">Så köper du standarder<br>och e-Standards</h1>
+            <p class="ds-note-label">H1 — .page-title / weight 800, letter-spacing -0.03em, line-height 1.1</p>
+            <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-end;">
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥601px — 38px</p>
+                <h1 class="page-title" style="margin:0; font-size:38px;">Så köper du standarder<br>och e-Standards</h1>
+              </div>
+              <div>
+                <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤600px — 30px</p>
+                <h1 class="page-title" style="margin:0; font-size:30px;">Så köper du standarder<br>och e-Standards</h1>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -332,6 +329,32 @@
       </div>
     </section>
 
+    <!-- ── Brödsmulor ───────────────────────────────────────── -->
+    <section class="ds-section">
+      <h2 class="ds-section-title">Brödsmulor</h2>
+
+      <p class="ds-note-label">Sidbrödsmula — .page-breadcrumb-row margin: 36px 0 24px</p>
+      <div style="margin-bottom:32px;">
+        <div class="page-breadcrumb-row">
+          <div class="breadcrumb">
+            <span class="breadcrumb-current">Delta &amp; Påverka</span> &gt;
+            <a href="#">Tekniska Kommittéer</a> &gt;
+            <span class="breadcrumb-current">Anmäl dig</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:32px;">
+        <p class="ds-note-label">Mobilmenyns tillbaka-knapp (color: --primary, label: --muted)</p>
+        <div class="mobile-menu-panel" style="position:relative; transform:none; top:0; width:320px; height:auto;">
+          <button class="mobile-menu-back" style="pointer-events:none;">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            Tillbaka <span class="mobile-menu-back-label">/ Köp produkter</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ── Toggle-knapp ───────────────────────────────────────── -->
     <section class="ds-section">
       <h2 class="ds-section-title">Toggle</h2>
@@ -357,10 +380,10 @@
         <a class="home-committee-inline-link" href="#">Så fungerar det</a>
       </div>
 
-      <p class="ds-note-label">Brödtext + länkknapp — puffar (p margin-bottom 18px + länk margin-top 14px)</p>
+      <p class="ds-note-label">Brödtext + länkknapp — puffar (.link-arrow margin-top 24px, generell regel)</p>
       <div>
-        <p style="margin:0 0 18px;max-width:480px;">Överväger du en installation av t ex en laddbox, en solcellsanläggning eller ett husbatteri måste du som anläggningsinnehavare tänka på EMC.</p>
-        <a class="link-arrow" href="#" style="margin-top:14px;">Läs mer om EMC</a>
+        <p style="margin:0;max-width:480px;">Överväger du en installation av t ex en laddbox, en solcellsanläggning eller ett husbatteri måste du som anläggningsinnehavare tänka på EMC.</p>
+        <a class="link-arrow" href="#">Läs mer om EMC</a>
       </div>
     </div>
 
@@ -553,6 +576,20 @@
             <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Pil höger</span>
           </div>
 
+        </div>
+
+        <p class="ds-note-label" style="margin-top:24px;">Notisindikation — .mobile-cart-badge, copper, 14×14px, vit ring box-shadow 0 0 0 1.5px #fff</p>
+        <div style="display:flex; align-items:center; gap:32px; margin-top:0;">
+          <div style="position:relative; display:inline-flex;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3.24609L5.02379 3.59636L5.96076 14.7593C6.03568 15.67 6.79849 16.3705 7.71211 16.3676H18.3263C19.199 16.3696 19.9395 15.7274 20.063 14.8634L20.9864 8.48264C21.0895 7.76945 20.5953 7.10783 19.8821 7.00469C19.8198 6.99593 5.34876 6.99107 5.34876 6.99107"/>
+                <path d="M7.28903 20.2452V20.3633M7.7678 20.2706C7.7678 20.5365 7.55203 20.7521 7.28609 20.7521C7.02016 20.7521 6.80469 20.5365 6.80469 20.2706C6.80469 20.0046 7.02016 19.7891 7.28609 19.7891C7.55203 19.7891 7.7678 20.0046 7.7678 20.2706Z"/>
+                <path d="M18.3125 20.2452V20.3633M18.7912 20.2706C18.7912 20.5365 18.5755 20.7521 18.3095 20.7521C18.0436 20.7521 17.8281 20.5365 17.8281 20.2706C17.8281 20.0046 18.0436 19.7891 18.3095 19.7891C18.5755 19.7891 18.7912 20.0046 18.7912 20.2706Z"/>
+              </svg>
+            </div>
+            <div style="position:absolute; top:2px; right:4px; min-width:14px; height:14px; padding:0 3px; background:var(--copper); color:#fff; font-size:9px; font-weight:700; border-radius:999px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 1.5px #fff; line-height:1;">2</div>
+          </div>
         </div>
       </section>
 
