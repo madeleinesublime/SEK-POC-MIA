@@ -65,7 +65,7 @@
             <button type="button" class="link-ghost" id="headerSearchClose" aria-label="St&auml;ng s&ouml;k">&times;</button>
           </div>
           <div style="max-width:720px;margin:18px auto 0;">
-            <p style="font-size:14px;color:var(--muted);font-style:italic;margin:0;">Sök är inte färdigdesignat utan görs efter att konceptet är klart.</p>
+            <p style="font-size:14px;color:var(--text-muted);font-style:italic;margin:0;">Sök är inte färdigdesignat utan görs efter att konceptet är klart.</p>
           </div>
         </div>
       </div>
@@ -171,11 +171,12 @@
       </button>
       <!-- Meny -->
       <button class="mobile-header-btn" type="button" aria-label="Meny" id="mobileMenuBtn">
-        <span class="mobile-hamburger" aria-hidden="true">
-          <span class="mobile-hamburger-bar"></span>
-          <span class="mobile-hamburger-bar"></span>
-          <span class="mobile-hamburger-bar"></span>
-        </span>
+        <svg class="mobile-hamburger" aria-hidden="true" viewBox="0 0 28 28" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="5" y1="8"  x2="23" y2="8"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="5" y1="14" x2="23" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="5" y1="20" x2="23" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="mobile-btn-label">Meny</span>
       </button>
     </div>
   </header>
@@ -499,10 +500,10 @@
             <p>Arbetet sker i en öppen och inkluderande miljö där olika perspektiv välkomnas. Det spelar ingen roll om du representerar ett stort företag, en myndighet eller är enskild expert – din kunskap är värdefull.</p>
 
             <div style="display:flex;gap:20px;align-items:flex-start;margin:32px 0;">
-              <div style="font-size:120px;line-height:0.8;color:var(--brand-blue);font-family:Georgia,serif;flex:0 0 auto;margin-top:4px;">&ldquo;</div>
+              <div style="font-size:120px;line-height:0.8;color:var(--blue);font-family:Georgia,serif;flex:0 0 auto;margin-top:4px;">&ldquo;</div>
               <div>
-                <p style="font-size:20px;line-height:1.5;font-weight:500;color:var(--text);margin:0 0 12px;">Deltagandet i SEK:s tekniska kommitté har gett oss möjlighet att påverka standarder som direkt berör vår verksamhet. Det är ett av de mest värdefulla sätten vi investerar vår kompetens.</p>
-                <p style="font-size:16px;color:var(--muted);margin:0;font-weight:600;">Anna Lindström &mdash; Teknisk chef, Elektriska Sverige AB</p>
+                <p style="font-size:20px;line-height:1.5;font-weight:500;color:var(--text-default);margin:0 0 12px;">Deltagandet i SEK:s tekniska kommitté har gett oss möjlighet att påverka standarder som direkt berör vår verksamhet. Det är ett av de mest värdefulla sätten vi investerar vår kompetens.</p>
+                <p style="font-size:16px;color:var(--text-muted);margin:0;font-weight:600;">Anna Lindström &mdash; Teknisk chef, Elektriska Sverige AB</p>
               </div>
             </div>
 
@@ -510,7 +511,7 @@
 
             <!-- Faktablock -->
             <div class="faktablock" style="background:#1d3461;border-radius:8px;padding:28px;margin:32px 0;">
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:var(--brand-blue-light) !important;">Visste du att</div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:var(--blue-light) !important;">Visste du att</div>
               <p style="font-size:18px;font-weight:600;line-height:1.5;margin:0 0 20px;color:var(--text-inverted) !important;">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec och representerar Sverige i det globala standardiseringsarbetet.</p>
               <ul style="margin:0;padding-left:20px;color:rgba(255,255,255,0.85);line-height:1.8;">
                 <li>Mer än 1 500 svenska experter deltar aktivt i kommittéarbete</li>
@@ -599,7 +600,7 @@
           </div>
 
           <div class="faktablock" style="background:#1d3461;border-radius:8px;padding:28px;margin:10px 0 0;">
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:var(--brand-blue-light) !important;">Visste du att</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;color:var(--blue-light) !important;">Visste du att</div>
             <p style="font-size:18px;font-weight:600;line-height:1.5;margin:0 0 20px;color:var(--text-inverted) !important;">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec och representerar Sverige i det globala standardiseringsarbetet.</p>
             <ul style="margin:0;padding-left:20px;color:rgba(255,255,255,0.85);line-height:1.8;">
               <li style="color:var(--text-inverted) !important;">Mer än 1 500 svenska experter deltar aktivt i kommittéarbete</li>
@@ -645,10 +646,10 @@ av den elektrotekniska utvecklingen</h1>
             <p>Du f&aring;r tillg&aring;ng till SEKs deltagarm&auml;rke efter att du har g&aring;tt v&aring;r introduktionskurs f&ouml;r nya ledam&ouml;ter och experter. M&auml;rket kan anv&auml;ndas i din e-postsignatur f&ouml;r att l&auml;nka direkt till den tekniska kommitt&eacute; d&auml;r du &auml;r aktiv.</p>
             <p>Introduktionskursen &auml;r kostnadsfri och ger en introduktion till hur standardiseringsarbetet fungerar, hur du b&auml;st utnyttjar de olika databaserna du har till ditt f&ouml;rfogande samt hur du som deltagare kan f&aring; ut mest av ditt engagemang. &Auml;ven om du redan g&aring;tt kursen tidigare &auml;r du varmt v&auml;lkommen att delta igen &ndash; inneh&aring;llet uppdateras regelbundet och &auml;r relevant &auml;ven f&ouml;r erfarna deltagare. <a href="#">Se datum f&ouml;r v&aring;ra kommande introduktionskurser och boka h&auml;r.</a></p>
             <div style="display:flex;gap:20px;align-items:flex-start;margin: 52px 0 32px;">
-              <div style="font-size:120px;line-height:0.8;color:var(--brand-blue);font-family:Georgia,serif;flex:0 0 auto;margin-top:4px;">&ldquo;</div>
+              <div style="font-size:120px;line-height:0.8;color:var(--blue);font-family:Georgia,serif;flex:0 0 auto;margin-top:4px;">&ldquo;</div>
               <div>
-                <p style="font-size:20px;line-height:1.5;font-weight:500;color:var(--text);margin:0 0 12px;">Det &auml;r inspirerande att arbeta tillsammans med andra deltagare f&ouml;r att tillsammans ta fram och kvalitetss&auml;kra framtida arbetss&auml;tt.</p>
-                <p style="font-size:16px;color:var(--muted);margin:0;font-weight:600;">Anna Andersson, deltagare teknisk kommitt&eacute; 123</p>
+                <p style="font-size:20px;line-height:1.5;font-weight:500;color:var(--text-default);margin:0 0 12px;">Det &auml;r inspirerande att arbeta tillsammans med andra deltagare f&ouml;r att tillsammans ta fram och kvalitetss&auml;kra framtida arbetss&auml;tt.</p>
+                <p style="font-size:16px;color:var(--text-muted);margin:0;font-weight:600;">Anna Andersson, deltagare teknisk kommitt&eacute; 123</p>
               </div>
             </div>
           </div>
@@ -877,7 +878,7 @@ av den elektrotekniska utvecklingen</h1>
           </div>
           <button type="button" class="modal-close" id="siteSearchClose" aria-label="St&auml;ng">&times;</button>
         </div>
-        <p style="margin: 0 0 16px; line-height: 1.5; color: var(--text);">
+        <p style="margin: 0 0 16px; line-height: 1.5; color: var(--text-default);">
           S&ouml;k p&aring; hela webbplatsen med fritext
         </p>
         <div class="form-row">

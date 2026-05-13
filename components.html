@@ -18,7 +18,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--text-muted);
       border-bottom: 1px solid #e0e4eb;
       padding-bottom: 10px;
       margin: 0 0 32px;
@@ -26,7 +26,7 @@
     .ds-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
     .ds-swatch { display: flex; flex-direction: column; gap: 6px; }
     .ds-swatch-color { width: 72px; height: 72px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.07); }
-    .ds-swatch-label { font-size: 11px; color: var(--muted); }
+    .ds-swatch-label { font-size: 11px; color: var(--text-muted); }
     .ds-group {
       margin: 64px 0 0;
       padding-top: 40px;
@@ -46,13 +46,13 @@
     .ds-note-title {
       font-size: 13px;
       font-weight: 700;
-      color: var(--muted);
+      color: var(--text-muted);
       margin: 0 0 24px;
       font-style: italic;
     }
     .ds-note-label {
       font-size: 11px;
-      color: var(--muted);
+      color: var(--text-muted);
       margin: 0 0 10px;
       font-style: italic;
     }
@@ -77,7 +77,7 @@
   <div class="ds-page">
 
     <h1 style="font-size:28px;font-weight:800;color:var(--primary-dark);margin:0 0 8px;">SEK Designsystem</h1>
-    <p style="color:var(--muted);margin:0 0 56px;">Komponenter och tokens från POC:en, samlade på ett ställe.</p>
+    <p style="color:var(--text-muted);margin:0 0 56px;">Komponenter och tokens från POC:en, samlade på ett ställe.</p>
 
     <!-- ── Färger ─────────────────────────────────────────────── -->
     <div class="ds-group">
@@ -98,12 +98,12 @@
               <span class="ds-swatch-label">--copper-dark<br>#A55229</span>
             </div>
             <div class="ds-swatch">
-              <div class="ds-swatch-color" style="background:var(--brand-blue);"></div>
-              <span class="ds-swatch-label">--brand-blue<br>#009bd9</span>
+              <div class="ds-swatch-color" style="background:var(--blue);"></div>
+              <span class="ds-swatch-label">--blue<br>#009bd9</span>
             </div>
             <div class="ds-swatch">
-              <div class="ds-swatch-color" style="background:var(--brand-blue-light);"></div>
-              <span class="ds-swatch-label">--brand-blue-light<br>#66c6ec</span>
+              <div class="ds-swatch-color" style="background:var(--blue-light);"></div>
+              <span class="ds-swatch-label">--blue-light<br>#66c6ec</span>
             </div>
             <div class="ds-swatch">
               <div class="ds-swatch-color" style="background:var(--navy);"></div>
@@ -199,16 +199,16 @@
       <h2 class="ds-section-title">Text</h2>
       <div class="ds-row">
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--text);"></div>
-          <span class="ds-swatch-label">--text<br>→ black</span>
+          <div class="ds-swatch-color" style="background:var(--text-default);"></div>
+          <span class="ds-swatch-label">--text-default<br>→ black</span>
         </div>
         <div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--text-inverted);border:1px solid var(--gray-light);"></div>
           <span class="ds-swatch-label">--text-inverted<br>→ white</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--muted);"></div>
-          <span class="ds-swatch-label">--muted<br>→ dark-grey</span>
+          <div class="ds-swatch-color" style="background:var(--text-muted);"></div>
+          <span class="ds-swatch-label">--text-muted<br>→ dark-grey</span>
         </div>
       </div>
     </section>
@@ -217,12 +217,12 @@
       <h2 class="ds-section-title">Background</h2>
       <div class="ds-row">
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--bg);border:1px solid var(--gray-light);"></div>
+          <div class="ds-swatch-color" style="background:var(--background-page);border:1px solid var(--gray-light);"></div>
           <span class="ds-swatch-label">--bg<br>→ white</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--surface);border:1px solid var(--gray-light);"></div>
-          <span class="ds-swatch-label">--surface<br>→ white</span>
+          <div class="ds-swatch-color" style="background:var(--background-surface);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--background-surface<br>→ white</span>
         </div>
       </div>
     </section>
@@ -231,12 +231,12 @@
       <h2 class="ds-section-title">Focus</h2>
       <div class="ds-row">
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--focus);"></div>
+          <div class="ds-swatch-color" style="background:var(--focus-ring);"></div>
           <span class="ds-swatch-label">--focus<br>→ brand-blue</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--focus-offset-bg);border:1px solid var(--gray-light);"></div>
-          <span class="ds-swatch-label">--focus-offset-bg<br>→ white</span>
+          <div class="ds-swatch-color" style="background:var(--focus-offset);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--focus-offset<br>→ white</span>
         </div>
       </div>
     </section>
@@ -249,8 +249,8 @@
           <span class="ds-swatch-label">--success<br>→ green-dark</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--success-bg);"></div>
-          <span class="ds-swatch-label">--success-bg<br>→ green-light</span>
+          <div class="ds-swatch-color" style="background:var(--success-background);"></div>
+          <span class="ds-swatch-label">--success-background<br>→ green-light</span>
         </div>
         <div class="ds-swatch">
           <div class="ds-swatch-color" style="background:var(--success-dark);"></div>
@@ -261,12 +261,12 @@
           <span class="ds-swatch-label">--error<br>→ red</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--error-bg);"></div>
-          <span class="ds-swatch-label">--error-bg<br>→ red-light</span>
+          <div class="ds-swatch-color" style="background:var(--error-background);"></div>
+          <span class="ds-swatch-label">--error-background<br>→ red-light</span>
         </div>
         <div class="ds-swatch">
-          <div class="ds-swatch-color" style="background:var(--error-bg-light);border:1px solid var(--gray-light);"></div>
-          <span class="ds-swatch-label">--error-bg-light<br>→ red-faint</span>
+          <div class="ds-swatch-color" style="background:var(--error-subtle);border:1px solid var(--gray-light);"></div>
+          <span class="ds-swatch-label">--error-subtle<br>→ red-faint</span>
         </div>
       </div>
     </section>
@@ -297,15 +297,15 @@
             <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-end;">
               <div>
                 <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥1301px — 48px</p>
-                <p style="margin:0; font-size:48px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+                <p style="margin:0; font-size:48px; line-height:1.25; letter-spacing:-0.03em; color:var(--text-default); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
               </div>
               <div>
                 <p class="ds-note-label" style="margin-bottom:8px;">Tablet 901–1300px — 44px</p>
-                <p style="margin:0; font-size:44px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+                <p style="margin:0; font-size:44px; line-height:1.25; letter-spacing:-0.03em; color:var(--text-default); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
               </div>
               <div>
                 <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤900px — 38px</p>
-                <p style="margin:0; font-size:38px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
+                <p style="margin:0; font-size:38px; line-height:1.25; letter-spacing:-0.03em; color:var(--text-default); font-weight:800;">Hitta rätt standard<br>för din bransch</p>
               </div>
             </div>
           </div>
@@ -329,18 +329,18 @@
             <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-end;">
               <div>
                 <p class="ds-note-label" style="margin-bottom:8px;">Desktop ≥601px — 28px</p>
-                <h2 style="margin:0; font-size:28px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+                <h2 style="margin:0; font-size:28px; line-height:1.25; letter-spacing:-0.03em; color:var(--text-default); font-weight:800;">Vanliga frågor<br>om standarder</h2>
               </div>
               <div>
                 <p class="ds-note-label" style="margin-bottom:8px;">Mobil ≤600px — 24px</p>
-                <h2 style="margin:0; font-size:24px; line-height:1.25; letter-spacing:-0.03em; color:var(--text); font-weight:800;">Vanliga frågor<br>om standarder</h2>
+                <h2 style="margin:0; font-size:24px; line-height:1.25; letter-spacing:-0.03em; color:var(--text-default); font-weight:800;">Vanliga frågor<br>om standarder</h2>
               </div>
             </div>
           </div>
 
           <div>
             <p class="ds-note-label">H3 — 20px, weight 700, letter-spacing -0.02em, line-height 1.25</p>
-            <h3 style="margin:0; font-size:20px; line-height:1.25; letter-spacing:-0.02em; color:var(--text); font-weight:700;">Kommittéarbete<br>och deltagande</h3>
+            <h3 style="margin:0; font-size:20px; line-height:1.25; letter-spacing:-0.02em; color:var(--text-default); font-weight:700;">Kommittéarbete<br>och deltagande</h3>
           </div>
 
         </div>
@@ -375,19 +375,19 @@
 
           <div>
             <p class="ds-note-label">Faktablock-lead / korttitel — 18px, weight 600, line-height 1.5, text</p>
-            <p style="margin:0; font-size:18px; font-weight:600; line-height:1.5; color:var(--text);">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec.</p>
+            <p style="margin:0; font-size:18px; font-weight:600; line-height:1.5; color:var(--text-default);">SEK deltar i över 200 internationella tekniska kommittéer inom IEC och Cenelec.</p>
           </div>
 
           <div>
             <p class="ds-note-label">Brödtext — 16px, text, line-height 1.5</p>
-            <p style="margin:0; font-size:16px; line-height:1.5; color:var(--text);">Svenska Elektriska Kommissionen (SEK) är en ideell organisation<br>vars uppgift är att vara nationellt organ för standardisering<br>inom det elektrotekniska området.</p>
+            <p style="margin:0; font-size:16px; line-height:1.5; color:var(--text-default);">Svenska Elektriska Kommissionen (SEK) är en ideell organisation<br>vars uppgift är att vara nationellt organ för standardisering<br>inom det elektrotekniska området.</p>
           </div>
 
           <div>
             <p class="ds-note-label">Metadatatext — .text-meta / 14px, weight 400, line-height 1.2 — datum, byline, sekundär info</p>
             <div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start;">
               <div>
-                <p style="margin:0 0 4px; font-size:12px; color:var(--muted); font-style:italic;">Ljus bakgrund (datum i nyheter)</p>
+                <p style="margin:0 0 4px; font-size:12px; color:var(--text-muted); font-style:italic;">Ljus bakgrund (datum i nyheter)</p>
                 <p class="text-meta" style="margin:0;">2026-03-24</p>
               </div>
               <div style="background:var(--navy); padding:16px 20px; border-radius:var(--radius-md);">
@@ -425,7 +425,7 @@
         <div class="home-editorial-grid-header" style="display:contents;">
           <a class="link-ghost" href="#">Se alla nyheter</a>
         </div>
-        <p style="margin:8px 0 0;font-size:12px;color:var(--muted);font-style:italic;">Bakgrund används när länkknappen kombineras bredvid en rubrik.</p>
+        <p style="margin:8px 0 0;font-size:12px;color:var(--text-muted);font-style:italic;">Bakgrund används när länkknappen kombineras bredvid en rubrik.</p>
       </div>
     </section>
 
@@ -459,7 +459,7 @@
       </div>
 
       <div style="margin-bottom:32px;">
-        <p class="ds-note-label">Mobilmenyns tillbaka-knapp (color: --primary, label: --muted)</p>
+        <p class="ds-note-label">Mobilmenyns tillbaka-knapp (color: --primary, label: --text-muted)</p>
         <div class="mobile-menu-panel" style="position:relative; transform:none; top:0; width:320px; height:auto;">
           <button class="mobile-menu-back" style="pointer-events:none;">
             <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
@@ -615,79 +615,89 @@
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11.195 19.6124C15.8436 19.6124 19.6121 15.8439 19.6121 11.1952C19.6121 6.54656 15.8436 2.77808 11.195 2.77808C6.54631 2.77808 2.77783 6.54656 2.77783 11.1952C2.77783 15.8439 6.54631 19.6124 11.195 19.6124Z"/>
                 <path d="M17.0493 17.4866L20.3493 20.778"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Sök</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Sök</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5.54102 19.9996C5.54102 17.891 7.20466 15.2656 11.9998 15.2656C16.794 15.2656 18.4576 17.8719 18.4576 19.9815"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1254 8.12567C16.1254 10.4043 14.2784 12.2513 11.9997 12.2513C9.722 12.2513 7.875 10.4043 7.875 8.12567C7.875 5.847 9.722 4 11.9997 4C14.2784 4 16.1254 5.847 16.1254 8.12567Z"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Konto</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Konto</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3.24609L5.02379 3.59636L5.96076 14.7593C6.03568 15.67 6.79849 16.3705 7.71211 16.3676H18.3263C19.199 16.3696 19.9395 15.7274 20.063 14.8634L20.9864 8.48264C21.0895 7.76945 20.5953 7.10783 19.8821 7.00469C19.8198 6.99593 5.34876 6.99107 5.34876 6.99107"/>
                 <path d="M7.28903 20.2452V20.3633M7.7678 20.2706C7.7678 20.5365 7.55203 20.7521 7.28609 20.7521C7.02016 20.7521 6.80469 20.5365 6.80469 20.2706C6.80469 20.0046 7.02016 19.7891 7.28609 19.7891C7.55203 19.7891 7.7678 20.0046 7.7678 20.2706Z"/>
                 <path d="M18.3125 20.2452V20.3633M18.7912 20.2706C18.7912 20.5365 18.5755 20.7521 18.3095 20.7521C18.0436 20.7521 17.8281 20.5365 17.8281 20.2706C17.8281 20.0046 18.0436 19.7891 18.3095 19.7891C18.5755 19.7891 18.7912 20.0046 18.7912 20.2706Z"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Varukorg</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Varukorg</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round">
                 <path d="M4 6h16M4 12h16M4 18h16"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Meny</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Meny</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round">
+                <line x1="5" y1="5" x2="19" y2="19"/>
+                <line x1="19" y1="5" x2="5" y2="19"/>
+              </svg>
+            </div>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Stäng</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
+            <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6 6-6"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron ned</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Chevron ned</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 18l6-6-6-6"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron höger</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Chevron höger</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M15 18l-6-6 6-6"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Chevron vänster</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Chevron vänster</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:80px;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h11"/>
                 <path d="M12 5l7 7-7 7"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Pil höger</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Pil höger</span>
           </div>
 
         </div>
@@ -696,7 +706,7 @@
         <div style="display:flex; align-items:center; gap:32px; margin-top:0;">
           <div style="position:relative; display:inline-flex;">
             <div style="width:48px; height:48px; background:#f5f5f5; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3.24609L5.02379 3.59636L5.96076 14.7593C6.03568 15.67 6.79849 16.3705 7.71211 16.3676H18.3263C19.199 16.3696 19.9395 15.7274 20.063 14.8634L20.9864 8.48264C21.0895 7.76945 20.5953 7.10783 19.8821 7.00469C19.8198 6.99593 5.34876 6.99107 5.34876 6.99107"/>
                 <path d="M7.28903 20.2452V20.3633M7.7678 20.2706C7.7678 20.5365 7.55203 20.7521 7.28609 20.7521C7.02016 20.7521 6.80469 20.5365 6.80469 20.2706C6.80469 20.0046 7.02016 19.7891 7.28609 19.7891C7.55203 19.7891 7.7678 20.0046 7.7678 20.2706Z"/>
                 <path d="M18.3125 20.2452V20.3633M18.7912 20.2706C18.7912 20.5365 18.5755 20.7521 18.3095 20.7521C18.0436 20.7521 17.8281 20.5365 17.8281 20.2706C17.8281 20.0046 18.0436 19.7891 18.3095 19.7891C18.5755 19.7891 18.7912 20.0046 18.7912 20.2706Z"/>
@@ -722,7 +732,7 @@
                 <path d="M69 72H87" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">e-Standard</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">e-Standard</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
@@ -734,7 +744,7 @@
                 <path d="M69 20L31 40" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Produkter</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Produkter</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
@@ -746,7 +756,7 @@
                 <path d="M12 76C12 48 67 48 67 76" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Kommittéer</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Kommittéer</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
@@ -765,7 +775,7 @@
                 <path d="M61 78L71 89L81 78" stroke="#B85C2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Publikation</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Publikation</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
@@ -784,7 +794,7 @@
                 <path d="M34 49L65 49" stroke="#B85C2E" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Dokument</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Dokument</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
@@ -797,7 +807,7 @@
                 <path d="M52 67H84" stroke="#B85C2E" stroke-width="4" stroke-linecap="round"/>
               </svg>
             </div>
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Jobba hos oss</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Jobba hos oss</span>
           </div>
 
         </div>
@@ -811,17 +821,17 @@
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
             <img src="committee-feature-network.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Internationellt nätverk</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Internationellt nätverk</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
             <img src="committee-feature-future.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Ligg steget före</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Ligg steget före</span>
           </div>
 
           <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100px;">
             <img src="committee-feature-safety.png" alt="" style="width:62px; height:62px; border-radius:50%; object-fit:contain; box-shadow:0 0 0 2px #1d3461, 0 0 0 4.5px #fff; display:block;" />
-            <span style="font-size:11px; color:var(--muted); text-align:center; line-height:1.3;">Arbeta tryggare</span>
+            <span style="font-size:11px; color:var(--text-muted); text-align:center; line-height:1.3;">Arbeta tryggare</span>
           </div>
 
         </div>
@@ -839,21 +849,21 @@
 
           <div>
             <p class="ds-note-label">Stor — 190×85px — desktop expanderad header</p>
-            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+            <div style="background:var(--background-surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
               <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:190px; height:85px; display:block; object-fit:contain;" />
             </div>
           </div>
 
           <div>
             <p class="ds-note-label">Standard — 154×61px — desktop standard</p>
-            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+            <div style="background:var(--background-surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
               <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:154px; height:61px; display:block; object-fit:contain;" />
             </div>
           </div>
 
           <div>
             <p class="ds-note-label">Kompakt — 130×51px — scrollad header, söklayout, mobil</p>
-            <div style="background:var(--surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
+            <div style="background:var(--background-surface); border:1px solid rgba(29,52,97,0.1); border-radius:8px; padding:24px; display:inline-block;">
               <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:130px; height:51px; display:block; object-fit:contain;" />
             </div>
           </div>
