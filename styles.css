@@ -1,6 +1,7 @@
 ﻿    :root {
       --background-page: #ffffff;
       --background-surface: #ffffff;
+      --background-elevated: var(--warm-white);
       --gray-strong: #c8d0dc;
       --black: #333333;
       --white: #ffffff;
@@ -2059,11 +2060,11 @@
     }
 
     .home-entry-cards .entry-card.entry-card--soft {
-      background: var(--warm-white);
+      background: var(--background-elevated);
     }
 
     .home-entry-cards .entry-card.entry-card--light {
-      background: var(--warm-white);
+      background: var(--background-elevated);
     }
 
     .home-entry-cards .entry-card:hover {
@@ -2073,11 +2074,11 @@
     }
 
     .home-entry-cards .entry-card.entry-card--soft:hover {
-      background: var(--warm-white) !important;
+      background: var(--background-elevated) !important;
     }
 
     .home-entry-cards .entry-card.entry-card--light:hover {
-      background: var(--warm-white) !important;
+      background: var(--background-elevated) !important;
     }
 
     .home-entry-cards .entry-card .eyebrow {
@@ -2384,7 +2385,7 @@
 
     .home-committee-highlight {
       margin: 0 calc(50% - 50vw);
-      background: var(--warm-white);
+      background: var(--background-elevated);
     }
 
     .home-committee-highlight-inner {
@@ -6202,7 +6203,7 @@
     .faq-item:has(.faq-answer.open),
     #shopHowView .faq-item:has(.faq-answer.open),
     #committeeSignupView .faq-item:has(.faq-answer.open) {
-      background: var(--warm-white);
+      background: var(--background-elevated);
     }
 
   
@@ -6258,7 +6259,7 @@
     #shopHowView .content-layout > aside > .faktablock,
     #committeeSignupView .content-layout > aside > .sidebar-block,
     #committeeSignupView .content-layout > aside > .faktablock {
-      background: var(--warm-white);
+      background: var(--background-elevated);
       box-shadow: none;
       border-radius: 8px;
     }
@@ -6364,7 +6365,7 @@
       gap: 14px;
       min-height: 100%;
       padding: 28px;
-      background: var(--warm-white);
+      background: var(--background-elevated);
       border: 0;
       border-radius: 8px;
       box-shadow: none;

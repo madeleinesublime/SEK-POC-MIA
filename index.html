@@ -2058,25 +2058,6 @@ av den elektrotekniska utvecklingen</h1>
       if (lastTrigger) lastTrigger.focus();
     }
 
-    function openLoginModal(event) {
-      event.preventDefault();
-      if (isLoggedIn) {
-        accountWrap.classList.toggle('open');
-        return;
-      }
-      lastTrigger = event.currentTarget;
-      loginModalOverlay.classList.add('open');
-      loginModalOverlay.setAttribute('aria-hidden', 'false');
-      const input = loginModalOverlay.querySelector('input');
-      if (input) input.focus();
-    }
-
-    function closeLoginModal() {
-      loginModalOverlay.classList.remove('open');
-      loginModalOverlay.setAttribute('aria-hidden', 'true');
-      if (lastTrigger) lastTrigger.focus();
-    }
-
     function utilityLinkMarkup(type, label) {
       const icons = {
         user: '<span class="utility-link-icon" aria-hidden="true"><img src="icon-user.svg" alt="" /></span>'
@@ -2112,7 +2093,6 @@ av den elektrotekniska utvecklingen</h1>
     function logInDemo(event) {
       event.preventDefault();
       isLoggedIn = true;
-      closeLoginModal();
       updateLoginUi();
     }
 
