@@ -1362,7 +1362,7 @@
       font-weight: 800;
       line-height: 1;
       letter-spacing: -0.02em;
-      color: var(--blue);
+      color: var(--navy);
       flex-shrink: 0;
       white-space: nowrap;
     }
@@ -2055,10 +2055,6 @@
       object-position: center;
     }
 
-    .home-entry-cards.show-images .home-entry-card-figure {
-      display: block;
-    }
-
     .home-entry-cards .entry-card.entry-card--soft {
       background: var(--background-elevated);
     }
@@ -2391,40 +2387,11 @@
     .home-committee-highlight-inner {
       width: min(1280px, calc(100% - 48px));
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.28fr) minmax(360px, 0.72fr);
-      gap: 0;
-      align-items: stretch;
     }
 
     .home-committee-highlight-copy {
-      padding: 46px 0px 48px 24px;
+      padding: 52px 24px 56px;
       min-width: 0;
-    }
-
-    .home-committee-highlight-figure {
-      min-width: 0;
-      min-height: 100%;
-      height: 100%;
-      align-self: stretch;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      overflow: hidden;
-      position: relative;
-      padding-right: 24px;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 30%, black 50%);
-      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 30%, black 50%);
-    }
-
-    .home-committee-highlight-figure img {
-      position: absolute;
-      top: 0;
-      right: 24px;
-      bottom: 0;
-      width: auto;
-      height: 100%;
-      display: block;
     }
 
     .home-committee-highlight .eyebrow {
@@ -2459,7 +2426,7 @@
       align-items: center;
       gap: 22px;
       flex-wrap: wrap;
-      margin-bottom: 64px;
+      margin-bottom: 40px;
     }
 
     .home-committee-highlight-actions .cta {
@@ -2528,21 +2495,8 @@
 
     .home-committee-feature {
       min-width: 0;
-      padding-right: 16px;
-    }
-
-    .home-committee-feature-icon {
-      display: block;
-      margin-bottom: 16px;
-    }
-
-    .home-committee-feature-icon img {
-      width: 62px;
-      height: 62px;
-      display: block;
-      object-fit: contain;
-      border-radius: 50%;
-      box-shadow: 0 0 0 2px #1d3461, 0 0 0 4.5px #fff;
+      padding-right: 32px;
+      padding-top: 0;
     }
 
     .home-committee-feature h3 {
@@ -2551,7 +2505,6 @@
       line-height: 1.25;
       letter-spacing: -0.02em;
       color: var(--text-default);
-      max-width: 18ch;
     }
 
     .home-committee-feature p {
@@ -2559,7 +2512,6 @@
       font-size: 16px;
       line-height: 1.45;
       color: var(--text-default);
-      max-width: 24ch;
     }
 
     .tabs-shell {
@@ -3519,17 +3471,8 @@
         overflow: hidden !important;
       }
 
-      .home-committee-highlight-inner {
-        grid-template-columns: 1fr !important;
-        width: min(1280px, calc(100% - 48px));
-      }
-
       .home-committee-highlight-copy {
-        padding: 24px 0 24px;
-      }
-
-      .home-committee-highlight-figure {
-        min-height: 320px;
+        padding: 28px 16px 0;
       }
 
       .home-committee-feature-grid {
@@ -5275,26 +5218,6 @@
       object-position: center;
     }
 
-    .home-editorial-grid.show-images .news-item-image {
-      display: block;
-    }
-
-    .home-editorial-grid.show-images .list-item {
-      display: grid;
-      grid-template-columns: 184px minmax(0, 1fr);
-      column-gap: 16px;
-      align-items: start;
-      padding-right: 40px;
-      position: relative !important;
-    }
-
-    @media (max-width: 600px) {
-      .home-editorial-grid.show-images .list-item::after {
-        display: none !important;
-        content: none !important;
-      }
-    }
-
     .home-editorial-grid .news-item-content {
       min-width: 0;
     }
@@ -5311,24 +5234,6 @@
       color: var(--text-default);
     }
 
-    .home-editorial-grid.show-images .news-item-content br {
-      display: none;
-    }
-
-    .home-editorial-grid.show-images .news-item-content h2 {
-      margin-bottom: 0;
-    }
-
-    .home-editorial-grid.show-images .news-item-content {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .home-editorial-grid.show-images .news-item-content > :not(.event-item-meta):not(h2):not(.news-item-excerpt) {
-      display: none;
-    }
-
     .home-editorial-grid .list-item h2 {
       color: var(--text-default) !important;
       display: block;
@@ -5337,13 +5242,6 @@
       margin: 0 0 8px;
       font-weight: 600;
       text-decoration: none !important;
-    }
-
-    @media (max-width: 600px) {
-      .home-editorial-grid.show-images .list-item h2 {
-        text-decoration: underline !important;
-        text-underline-offset: 3px;
-      }
     }
 
     .home-editorial-grid .list-item::after {
@@ -5559,10 +5457,6 @@
       overflow: hidden;
       background: var(--blue) !important;
       
-    }
-
-    .home-hero.is-dark {
-      background: var(--navy) !important;
     }
 
 
@@ -6500,57 +6394,16 @@
       }
 
       /* Beige block – dölj sidobild */
-      .home-committee-highlight-figure {
-        display: none !important;
-      }
-
       .home-committee-highlight {
         padding-bottom: 32px !important;
       }
 
-      /* Beige block – en kolumn, centrera puffar */
       .home-committee-highlight-inner {
         width: calc(100% - 32px) !important;
-        grid-template-columns: 1fr !important;
-      }
-
-      .home-committee-feature-list {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-      }
-
-      .home-committee-feature {
-        display: grid !important;
-        grid-template-columns: auto 1fr !important;
-        grid-template-rows: auto auto !important;
-        column-gap: 24px !important;
-        row-gap: 0 !important;
-        align-items: center !important;
-        text-align: left !important;
-        width: 100% !important;
-      }
-
-      .home-committee-feature-icon {
-        grid-column: 1 !important;
-        grid-row: 1 / 3 !important;
-        margin-bottom: 0 !important;
       }
 
       .home-committee-feature h3 {
-        grid-column: 2 !important;
-        grid-row: 1 !important;
-        text-align: left !important;
-        max-width: none !important;
         font-size: 18px !important;
-      }
-
-      .home-committee-feature p {
-        grid-column: 2 !important;
-        grid-row: 2 !important;
-        text-align: left !important;
-        max-width: none !important;
       }
 
       #committeeSignupView h3 {
@@ -6618,41 +6471,6 @@
       .home-editorial-grid .list-block + .list-block .list-item:first-of-type {
         border-top: 1px solid var(--gray-strong) !important;
         padding-top: 24px !important;
-      }
-
-      /* Nyheter med bild – bild ovanför, rubrik utan understrykning, pil bredvid */
-      .show-images .list-item {
-        grid-template-columns: 1fr !important;
-        display: flex !important;
-        flex-direction: column !important;
-        padding-right: 0 !important;
-      }
-      .show-images .news-item-image {
-        width: 100% !important;
-        height: auto !important;
-        flex: none !important;
-        margin: 0 0 12px !important;
-      }
-      .home-editorial-grid .list-item .news-item-content h2 {
-        text-decoration: none !important;
-      }
-
-      .home-editorial-grid.show-images .list-item .news-item-content h2 {
-        display: inline !important;
-        text-decoration: none !important;
-      }
-
-      .home-editorial-grid.show-images .list-item .news-item-content h2::after {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-left: 10px;
-        vertical-align: -3px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 20px 20px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 12h12' stroke='%23B85C2E' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M12 6l6 6-6 6' stroke='%23B85C2E' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       }
 
       /* Citat – slider, en puff i taget, lite av nästa */
@@ -6950,15 +6768,6 @@
       #chatBubbleBtn span {
         font-size: 14px !important;
       }
-      /* I show-images mobil: ta bort pil-utrymme */
-      .home-editorial-grid.show-images .list-item {
-        padding-right: 0 !important;
-        position: static !important;
-      }
-      .home-editorial-grid.show-images .list-item::after {
-        display: none !important;
-        content: none !important;
-      }
     }
 
   
@@ -7030,7 +6839,7 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background-color: var(--blue);
+      background-color: var(--navy);
     }
 
     /* Hero H1 – 38px upp till 900px */
