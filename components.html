@@ -71,13 +71,40 @@
       border-radius: 4px;
       margin: 0 0 32px;
     }
+
+    /* ── Utskrift / PDF ─────────────────────────────────────── */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: #fff; }
+      .ds-page { padding: 0; }
+
+      /* Varje grupp börjar på ny sida — utom den första */
+      .ds-group + .ds-group { break-before: page; }
+
+      /* Minska luft i toppen när en ny sida börjar */
+      .ds-group { margin-top: 0; padding-top: 12px; border-top: none; }
+      .ds-group-title { margin-bottom: 24px; }
+
+      /* Håll ihop sektioner, rader och swatchar */
+      .ds-section    { break-inside: avoid; }
+      .ds-tier       { break-inside: avoid; }
+      .ds-row        { break-inside: avoid; }
+      .ds-note-block { break-inside: avoid; }
+      .ds-swatch     { break-inside: avoid; }
+
+      /* Håll rubriker och etiketter ihop med innehållet under dem */
+      .ds-group-title   { break-after: avoid; }
+      .ds-tier-title    { break-after: avoid; }
+      .ds-section-title { break-after: avoid; }
+      .ds-note-label    { break-after: avoid; }
+    }
   </style>
 </head>
 <body>
   <div class="ds-page">
 
-    <h1 style="font-size:28px;font-weight:800;color:var(--primary-dark);margin:0 0 8px;">SEK Designsystem</h1>
-    <p style="color:var(--text-muted);margin:0 0 56px;">Komponenter och tokens från POC:en, samlade på ett ställe.</p>
+    <img src="SEK%20logo_standard.svg" alt="SEK Svensk Elstandard" style="width:220px; height:auto; display:block; margin-bottom:24px;" />
+    <h1 style="font-size:36px;font-weight:800;color:var(--primary-dark);margin:0 0 56px;">SEK Designsystem</h1>
 
     <!-- ── Färger ─────────────────────────────────────────────── -->
     <div class="ds-group">
@@ -514,81 +541,37 @@
       <!-- Nyhetspuff -->
       <section class="ds-section">
         <h2 class="ds-section-title">Nyhetspuff</h2>
-        <div class="ds-row" style="align-items:flex-start; gap:48px;">
-
-          <div style="flex:1; min-width:300px; max-width:500px;">
-            <p class="ds-note-label">Utan bild</p>
-            <div class="home-editorial-grid" style="display:block;">
-              <div class="list-item">
-                <div class="news-item-content">
-                  <div class="event-item-meta">
-                    <span>2026-03-24</span>
-                    <span class="eyebrow">Nyhet</span>
-                  </div>
-                  <h2>SEK Handbok 452 – Utgåva 3 av Åskskyddshandboken</h2>
-                  <span class="news-item-excerpt">Nu är den släppt, utgåva 3 av Åskskyddshandboken, SEK Handbok 452! Från riskbedömning till rätt åtgärder. Beställ här!</span>
+        <div style="max-width:500px;">
+          <div class="home-editorial-grid" style="display:block;">
+            <div class="list-item">
+              <div class="news-item-content">
+                <div class="event-item-meta">
+                  <span>2026-03-24</span>
+                  <span class="eyebrow">Nyhet</span>
                 </div>
+                <h2>SEK Handbok 452 – Utgåva 3 av Åskskyddshandboken</h2>
+                <span class="news-item-excerpt">Nu är den släppt, utgåva 3 av Åskskyddshandboken, SEK Handbok 452! Från riskbedömning till rätt åtgärder. Beställ här!</span>
               </div>
             </div>
           </div>
-
-          <div style="flex:1; min-width:300px; max-width:500px;">
-            <p class="ds-note-label">Med bild</p>
-            <div class="home-editorial-grid show-images" style="display:block;">
-              <div class="list-item">
-                <figure class="news-item-image" aria-hidden="true">
-                  <img src="https://cdn.filestackcontent.com/auto_image/2HzdRurxSEmULmU5Z9aO" alt="" />
-                </figure>
-                <div class="news-item-content">
-                  <div class="event-item-meta">
-                    <span>2026-03-24</span>
-                    <span class="eyebrow">Nyhet</span>
-                  </div>
-                  <h2>SEK Handbok 452 – Utgåva 3 av Åskskyddshandboken</h2>
-                  <span class="news-item-excerpt">Nu är den släppt, utgåva 3 av Åskskyddshandboken, SEK Handbok 452! Från riskbedömning till rätt åtgärder. Beställ här!</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
       <!-- Standardpuff -->
       <section class="ds-section">
         <h2 class="ds-section-title">Standardpuff</h2>
-        <div class="ds-row" style="align-items:flex-start; gap:24px;">
-
-          <div style="flex:1; min-width:240px; max-width:320px;">
-            <p class="ds-note-label">Utan bild</p>
-            <div class="home-entry-cards" style="display:block;">
-              <article class="card entry-card entry-card--light" style="min-height:0;">
-                <figure class="home-entry-card-figure" aria-hidden="true"></figure>
-                <div class="eyebrow">KOMMITTÉ</div>
-                <h3>Standarder förenklar, kvalitetssäkrar och spar resurser</h3>
-                <p>Att utgå från standard är det bästa, enklaste och säkraste sättet att arbeta på.</p>
-                <div class="home-entry-card-actions">
-                  <a class="link-ghost" href="#">Så fungerar det</a>
-                </div>
-              </article>
-            </div>
+        <div style="max-width:320px;">
+          <div class="home-entry-cards" style="display:block;">
+            <article class="card entry-card entry-card--light" style="min-height:0;">
+              <figure class="home-entry-card-figure" aria-hidden="true"></figure>
+              <div class="eyebrow">KOMMITTÉ</div>
+              <h3>Standarder förenklar, kvalitetssäkrar och spar resurser</h3>
+              <p>Att utgå från standard är det bästa, enklaste och säkraste sättet att arbeta på.</p>
+              <div class="home-entry-card-actions">
+                <a class="link-ghost" href="#">Så fungerar det</a>
+              </div>
+            </article>
           </div>
-
-          <div style="flex:1; min-width:240px; max-width:320px;">
-            <p class="ds-note-label">Med bild</p>
-            <div class="home-entry-cards show-images" style="display:block;">
-              <article class="card entry-card entry-card--light" style="min-height:0;">
-                <figure class="home-entry-card-figure" aria-hidden="true" style="background:rgba(29,52,97,0.08);"></figure>
-                <div class="eyebrow">KOMMITTÉ</div>
-                <h3>Standarder förenklar, kvalitetssäkrar och spar resurser</h3>
-                <p>Att utgå från standard är det bästa, enklaste och säkraste sättet att arbeta på.</p>
-                <div class="home-entry-card-actions">
-                  <a class="link-ghost" href="#">Så fungerar det</a>
-                </div>
-              </article>
-            </div>
-          </div>
-
         </div>
       </section>
 
