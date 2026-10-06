@@ -4095,8 +4095,7 @@
       border-radius: 0;
       margin-top: 0;
       background:
-        linear-gradient(90deg, rgba(29, 52, 97, 0.68) 0%, rgba(29, 52, 97, 0.38) 34%, rgba(29, 52, 97, 0.18) 56%, rgba(29, 52, 97, 0.06) 100%),
-        url('herobild1.jpg');
+        linear-gradient(90deg, rgba(29, 52, 97, 0.68) 0%, rgba(29, 52, 97, 0.38) 34%, rgba(29, 52, 97, 0.18) 56%, rgba(29, 52, 97, 0.06) 100%);
       background-repeat: no-repeat;
       background-size: 100% auto;
       background-position: center center;

@@ -1,0 +1,9 @@
+{
+  "name": "sek-poc-mia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/sublime-lab/collect.mjs dist && node scripts/sublime-lab/inline-svg.mjs dist && node scripts/sublime-lab/check.mjs dist && node scripts/sublime-lab/zip.mjs dist sek-prototyp.zip",
+    "preview": "node scripts/sublime-lab/preview.mjs dist --strict"
+  }
+}

@@ -10,6 +10,10 @@ This is a single-file HTML wireframe/prototype for **SEK** (Svenska Elektriska K
 
 No build system. Open `index.html` directly in a browser. All code lives in that one file.
 
+### Publishing to Sublime Lab
+
+`npm run build` copies the HTML/CSS pages and the assets they reference into `dist/`, inlines SVGs, checks the Sublime Lab rules and writes `sek-prototyp.zip` (upload that file). `npm run preview` serves `dist/` in a sandboxed iframe like the platform. Keep asset paths relative and filenames lowercase with `a-z 0-9 - .` only. New pages must be linked from `index.html`.
+
 ## Architecture
 
 Everything is in `index.html` (~11 600 lines): HTML structure, embedded `<style>` block, and embedded `<script>` block.
